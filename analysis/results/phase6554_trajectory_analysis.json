@@ -1,0 +1,4406 @@
+{
+  "NARROW-GATE__L1-RD-01__01": {
+    "summary": {
+      "collision_time_s": 20.85,
+      "collision_pair": [
+        "ROBOT",
+        "DYN-GATE-1"
+      ],
+      "gate_entry_time_s": 13.05,
+      "gate_exit_time_s": 15.4,
+      "min_instantaneous_clearance_m": -0.021721373238143826,
+      "min_swept_clearance_m": -0.021721373238143826,
+      "total_steps": 417
+    },
+    "last_25_steps": [
+      {
+        "t_s": 19.65,
+        "robot_gt": {
+          "x_m": 13.66945043610592,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.719999999999732,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.679999999999733,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.23405397495051394,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.30167424528389875,
+          "swept_m": 0.30167424528389875,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 19.7,
+        "robot_gt": {
+          "x_m": 13.711117102772587,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.759999999999732,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.719999999999732,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8000000000000285,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.2323892438441122,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.300009363811385,
+          "swept_m": 0.300009363811385,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 19.75,
+        "robot_gt": {
+          "x_m": 13.752783769439253,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.79999999999973,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.759999999999732,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.23072451914261505,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.2983444880120638,
+          "swept_m": 0.2983444880120638,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 19.8,
+        "robot_gt": {
+          "x_m": 13.794450436105919,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.83999999999973,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.79999999999973,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.22905980087806754,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.2966796179130069,
+          "swept_m": 0.2966796179130069,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 19.85,
+        "robot_gt": {
+          "x_m": 13.836117102772585,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.879999999999729,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.83999999999973,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.227395089082435,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.2950147535414589,
+          "swept_m": 0.2950147535414589,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 19.9,
+        "robot_gt": {
+          "x_m": 13.877783769439251,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.919999999999728,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.879999999999729,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.22573038378796828,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.29334989492483765,
+          "swept_m": 0.29334989492483765,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 19.95,
+        "robot_gt": {
+          "x_m": 13.919450436105917,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.959999999999727,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.919999999999728,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8000000000000285,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.22406568502720536,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.291685042090736,
+          "swept_m": 0.291685042090736,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.0,
+        "robot_gt": {
+          "x_m": 13.961117102772583,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.999999999999726,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.959999999999727,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.22240099283261017,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.2900201950669241,
+          "swept_m": 0.2900201950669241,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.05,
+        "robot_gt": {
+          "x_m": 14.00278376943925,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.039999999999726,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.999999999999726,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.22073630723730076,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.2883553538813497,
+          "swept_m": 0.2883553538813497,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.1,
+        "robot_gt": {
+          "x_m": 14.044450436105915,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.079999999999725,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.039999999999726,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.21907162827432458,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.28669051856214,
+          "swept_m": 0.28669051856214,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.15,
+        "robot_gt": {
+          "x_m": 14.086117102772581,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.119999999999724,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.079999999999725,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.21740695597702342,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.28502568913760307,
+          "swept_m": 0.28502568913760307,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.2,
+        "robot_gt": {
+          "x_m": 14.127783769439247,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.159999999999723,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.119999999999724,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8000000000000285,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.2157422903790377,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.2833608656362292,
+          "swept_m": 0.2833608656362292,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.25,
+        "robot_gt": {
+          "x_m": 14.169450436105913,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.199999999999722,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.159999999999723,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.21407763151393489,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.2816960480866926,
+          "swept_m": 0.2816960480866926,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.3,
+        "robot_gt": {
+          "x_m": 14.21111710277258,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.239999999999721,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.199999999999722,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.2124129794159575,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.280031236517853,
+          "swept_m": 0.280031236517853,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.35,
+        "robot_gt": {
+          "x_m": 14.252783769439246,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.27999999999972,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.239999999999721,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.21074833411927907,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.27836643095875635,
+          "swept_m": 0.27836643095875635,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.4,
+        "robot_gt": {
+          "x_m": 14.294450436105912,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.31999999999972,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.27999999999972,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.20908369565837925,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.27670163143863724,
+          "swept_m": 0.27670163143863724,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.45,
+        "robot_gt": {
+          "x_m": 14.336117102772578,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.359999999999719,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.31999999999972,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8000000000000285,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.20741906406804556,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.27503683798692036,
+          "swept_m": 0.27503683798692036,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.5,
+        "robot_gt": {
+          "x_m": 14.377783769439244,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.399999999999718,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.359999999999719,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.2057544393830023,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.2733720506332211,
+          "swept_m": 0.2733720506332211,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.55,
+        "robot_gt": {
+          "x_m": 14.41945043610591,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.439999999999717,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.399999999999718,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.20408982163865874,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.27170726940734835,
+          "swept_m": 0.27170726940734835,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.6,
+        "robot_gt": {
+          "x_m": 14.461117102772576,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.479999999999716,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.439999999999717,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.20242521087036502,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.27004249433930494,
+          "swept_m": 0.27004249433930494,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.65,
+        "robot_gt": {
+          "x_m": 14.502783769439242,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.480000000000285,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.479999999999716,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.20076060711378718,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.22842521087097534,
+          "swept_m": 0.22842521087097534,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.7,
+        "robot_gt": {
+          "x_m": 14.544442103050349,
+          "y_m": 7.45054232509395,
+          "theta_rad": -0.040000000000000924,
+          "v_mps": 0.833333333333333,
+          "omega_radps": -0.8,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.440000000000285,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.480000000000285,
+          "y_m": 7.5,
+          "est_vx_mps": 1.136868377216225e-11,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": -0.8,
+          "pred_c_m": 0.14347474827835338,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 2,
+          "reason": "SAFETY_MARGIN_VIOLATION"
+        },
+        "clearance": {
+          "inst_m": 0.14692252084363788,
+          "swept_m": 0.14692252084363788,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 20.75,
+        "robot_gt": {
+          "x_m": 14.573515486150843,
+          "y_m": 7.448211479853183,
+          "theta_rad": -0.120000000000001,
+          "v_mps": 0.583333333333333,
+          "omega_radps": -1.6,
+          "accel_mps2": -5.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.400000000000286,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.440000000000285,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.583333333333333,
+          "omega_radps": -1.6,
+          "pred_c_m": -0.12815116300172913,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 5,
+          "reason": "PHYSICAL_COLLISION_RISK"
+        },
+        "clearance": {
+          "inst_m": 0.0781054899298449,
+          "swept_m": 0.0781054899298449,
+          "stop_dist_m": 0.09236111111111106
+        }
+      },
+      {
+        "t_s": 20.8,
+        "robot_gt": {
+          "x_m": 14.589912881030644,
+          "y_m": 7.445227653629419,
+          "theta_rad": -0.2400000000000011,
+          "v_mps": 0.33333333333333304,
+          "omega_radps": -2.4000000000000004,
+          "accel_mps2": -5.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.360000000000287,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.400000000000286,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.33333333333333304,
+          "omega_radps": -2.4000000000000004,
+          "pred_c_m": -0.035344407686418,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 5,
+          "reason": "PHYSICAL_COLLISION_RISK"
+        },
+        "clearance": {
+          "inst_m": 0.022032499788645077,
+          "swept_m": 0.022032499788645077,
+          "stop_dist_m": 0.0444444444444444
+        }
+      },
+      {
+        "t_s": 20.85,
+        "robot_gt": {
+          "x_m": 14.593880937571834,
+          "y_m": 7.443956575977571,
+          "theta_rad": -0.3800000000000012,
+          "v_mps": 0.08333333333333304,
+          "omega_radps": -2.8,
+          "accel_mps2": -5.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.320000000000288,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.360000000000287,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.08333333333333304,
+          "omega_radps": -2.8,
+          "pred_c_m": -0.022721373238143827,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 5,
+          "reason": "PHYSICAL_COLLISION_RISK"
+        },
+        "clearance": {
+          "inst_m": -0.021721373238143826,
+          "swept_m": -0.021721373238143826,
+          "stop_dist_m": 0.009027777777777744
+        }
+      }
+    ],
+    "gate_exit_window_steps": [
+      {
+        "t_s": 14.9,
+        "robot_gt": {
+          "x_m": 9.61111710277265,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 10.919999999999813,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 10.879999999999814,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.4921487716320665,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5597857728078113,
+          "swept_m": 0.5597857728078113,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 14.95,
+        "robot_gt": {
+          "x_m": 9.656950436105982,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666652
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 10.959999999999813,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 10.919999999999813,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.38223734021509714,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5539564785528246,
+          "swept_m": 0.5539564785528246,
+          "stop_dist_m": 0.17569444444444435
+        }
+      },
+      {
+        "t_s": 15.0,
+        "robot_gt": {
+          "x_m": 9.698617102772648,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 10.999999999999812,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 10.959999999999813,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.48465431960292404,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5522909725523506,
+          "swept_m": 0.5522909725523506,
+          "stop_dist_m": 0.15277777777777768
+        }
+      },
+      {
+        "t_s": 15.05,
+        "robot_gt": {
+          "x_m": 9.740283769439314,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 2.220446049250313e-15
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.03999999999981,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 10.999999999999812,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.4829888947919003,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5506254695254769,
+          "swept_m": 0.5506254695254769,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 15.1,
+        "robot_gt": {
+          "x_m": 9.78195043610598,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.07999999999981,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.03999999999981,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.48132347327201175,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5489599694836413,
+          "swept_m": 0.5489599694836413,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 15.15,
+        "robot_gt": {
+          "x_m": 9.827783769439312,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666652
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.11999999999981,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.07999999999981,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.37141364775346974,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.543130743010914,
+          "swept_m": 0.543130743010914,
+          "stop_dist_m": 0.17569444444444435
+        }
+      },
+      {
+        "t_s": 15.2,
+        "robot_gt": {
+          "x_m": 9.873617102772645,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.159999999999808,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.11999999999981,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.36558558141485964,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5373015537450929,
+          "swept_m": 0.5373015537450929,
+          "stop_dist_m": 0.17569444444444435
+        }
+      },
+      {
+        "t_s": 15.25,
+        "robot_gt": {
+          "x_m": 9.915283769439311,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.199999999999807,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.159999999999808,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.4680002211786798,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5356360780024612,
+          "swept_m": 0.5356360780024612,
+          "stop_dist_m": 0.15277777777777768
+        }
+      },
+      {
+        "t_s": 15.3,
+        "robot_gt": {
+          "x_m": 9.956950436105977,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 2.220446049250313e-15
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.239999999999807,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.199999999999807,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.46633482987638253,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5339706053504987,
+          "swept_m": 0.5339706053504987,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 15.35,
+        "robot_gt": {
+          "x_m": 9.998617102772643,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.279999999999806,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.239999999999807,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.46466944199935867,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.532305135801248,
+          "swept_m": 0.532305135801248,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 15.4,
+        "robot_gt": {
+          "x_m": 10.044450436105976,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666652
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.319999999999805,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.279999999999806,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.354762173751755,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5264760169880662,
+          "swept_m": 0.5264760169880662,
+          "stop_dist_m": 0.17569444444444435
+        }
+      },
+      {
+        "t_s": 15.45,
+        "robot_gt": {
+          "x_m": 10.086117102772642,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.359999999999804,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.319999999999805,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.45717523931215576,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5248105615517344,
+          "swept_m": 0.5248105615517344,
+          "stop_dist_m": 0.15277777777777768
+        }
+      },
+      {
+        "t_s": 15.5,
+        "robot_gt": {
+          "x_m": 10.127783769439308,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 2.220446049250313e-15
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.399999999999803,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.359999999999804,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.45550987052286995,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5231451092854795,
+          "swept_m": 0.5231451092854795,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 15.55,
+        "robot_gt": {
+          "x_m": 10.169450436105974,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.439999999999802,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.399999999999803,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.45384450524987074,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5214796602017577,
+          "swept_m": 0.5214796602017577,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 15.6,
+        "robot_gt": {
+          "x_m": 10.21111710277264,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.479999999999801,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.439999999999802,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.45217914350756927,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5198142143130919,
+          "swept_m": 0.5198142143130919,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 15.65,
+        "robot_gt": {
+          "x_m": 10.256950436105972,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666652
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.5199999999998,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.479999999999801,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.3422738653048185,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5139851790461665,
+          "swept_m": 0.5139851790461665,
+          "stop_dist_m": 0.17569444444444435
+        }
+      },
+      {
+        "t_s": 15.7,
+        "robot_gt": {
+          "x_m": 10.298617102772639,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.5599999999998,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.5199999999998,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.44468505974660744,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5123197476919892,
+          "swept_m": 0.5123197476919892,
+          "stop_dist_m": 0.15277777777777768
+        }
+      },
+      {
+        "t_s": 15.75,
+        "robot_gt": {
+          "x_m": 10.340283769439305,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 2.220446049250313e-15
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.599999999999799,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.5599999999998,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.44301971768216597,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5106543196029276,
+          "swept_m": 0.5106543196029276,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 15.8,
+        "robot_gt": {
+          "x_m": 10.38195043610597,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.639999999999798,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.599999999999799,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.4413543792432091,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5089888947919394,
+          "swept_m": 0.5089888947919394,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 15.85,
+        "robot_gt": {
+          "x_m": 10.427783769439303,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666652
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.679999999999797,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.639999999999798,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.3314508780404961,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.5031599339569999,
+          "swept_m": 0.5031599339569999,
+          "stop_dist_m": 0.17569444444444435
+        }
+      },
+      {
+        "t_s": 15.9,
+        "robot_gt": {
+          "x_m": 10.473617102772636,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.719999999999796,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.679999999999797,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.32562319991132727,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.49733101400404167,
+          "swept_m": 0.49733101400404167,
+          "stop_dist_m": 0.17569444444444435
+        }
+      },
+      {
+        "t_s": 15.95,
+        "robot_gt": {
+          "x_m": 10.515283769439302,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.759999999999796,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.719999999999796,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.4280318040571047,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.49566561589244484,
+          "swept_m": 0.49566561589244484,
+          "stop_dist_m": 0.15277777777777768
+        }
+      },
+      {
+        "t_s": 16.0,
+        "robot_gt": {
+          "x_m": 10.556950436105968,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 2.220446049250313e-15
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.799999999999795,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.759999999999796,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.4263664989286293,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.49400022117868336,
+          "swept_m": 0.49400022117868336,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 16.05,
+        "robot_gt": {
+          "x_m": 10.598617102772634,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.839999999999794,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.799999999999795,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.42470119757838054,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.49233482987642163,
+          "swept_m": 0.49233482987642163,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 16.1,
+        "robot_gt": {
+          "x_m": 10.644450436105966,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666652
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.879999999999793,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.839999999999794,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.3148005294933034,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.4865059873830797,
+          "swept_m": 0.4865059873830797,
+          "stop_dist_m": 0.17569444444444435
+        }
+      },
+      {
+        "t_s": 16.15,
+        "robot_gt": {
+          "x_m": 10.686117102772632,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.919999999999792,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.879999999999793,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.41720738868301943,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.484840611603647,
+          "swept_m": 0.484840611603647,
+          "stop_dist_m": 0.15277777777777768
+        }
+      },
+      {
+        "t_s": 16.2,
+        "robot_gt": {
+          "x_m": 10.727783769439299,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 2.220446049250313e-15
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.959999999999791,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.919999999999792,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8000000000000285,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.4155421083972788,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.48317523931219486,
+          "swept_m": 0.48317523931219486,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 16.25,
+        "robot_gt": {
+          "x_m": 10.769450436105965,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.99999999999979,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.959999999999791,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.41387683199359904,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.48150987052287353,
+          "swept_m": 0.48150987052287353,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 16.3,
+        "robot_gt": {
+          "x_m": 10.81111710277263,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.03999999999979,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.99999999999979,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.833333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.4122115594885212,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.47984450524990985,
+          "swept_m": 0.47984450524990985,
+          "stop_dist_m": 0.1527777777777777
+        }
+      },
+      {
+        "t_s": 16.35,
+        "robot_gt": {
+          "x_m": 10.856950436105963,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666652
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.079999999999789,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.03999999999979,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.9166666666666663,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.30231309895542746,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.47401575469307433,
+          "swept_m": 0.47401575469307433,
+          "stop_dist_m": 0.17569444444444435
+        }
+      },
+      {
+        "t_s": 16.4,
+        "robot_gt": {
+          "x_m": 10.89861710277263,
+          "y_m": 7.451375602872839,
+          "theta_rad": -8.881784197001252e-16,
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.119999999999788,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.079999999999789,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333329,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.40471788190225033,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.4723504054218608,
+          "swept_m": 0.4723504054218608,
+          "stop_dist_m": 0.15277777777777768
+        }
+      }
+    ]
+  },
+  "NARROW-GATE__L1-SG-01__01": {
+    "summary": {
+      "collision_time_s": 21.3,
+      "collision_pair": [
+        "ROBOT",
+        "DYN-GATE-1"
+      ],
+      "gate_entry_time_s": 13.05,
+      "gate_exit_time_s": 15.5,
+      "min_instantaneous_clearance_m": -0.009610327992257806,
+      "min_swept_clearance_m": -0.009610327992257806,
+      "total_steps": 426
+    },
+    "last_25_steps": [
+      {
+        "t_s": 20.1,
+        "robot_gt": {
+          "x_m": 13.688166580932718,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.079999999999725,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.039999999999726,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5741667524002981,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6418334190670069,
+          "swept_m": 0.6418334190670069,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 20.15,
+        "robot_gt": {
+          "x_m": 13.729833247599384,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.119999999999724,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.079999999999725,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5725000857336313,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6401667524003399,
+          "swept_m": 0.6401667524003399,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 20.2,
+        "robot_gt": {
+          "x_m": 13.77149991426605,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.159999999999723,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.119999999999724,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8000000000000285,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.570833419067039,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.638500085733673,
+          "swept_m": 0.638500085733673,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 20.25,
+        "robot_gt": {
+          "x_m": 13.80899991426605,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.199999999999722,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.159999999999723,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6375000857336731,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6410000857336725,
+          "swept_m": 0.638500085733673,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 20.3,
+        "robot_gt": {
+          "x_m": 13.84649991426605,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.239999999999721,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.199999999999722,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6400000857336726,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.643500085733672,
+          "swept_m": 0.6410000857336725,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 20.35,
+        "robot_gt": {
+          "x_m": 13.888166580932715,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.27999999999972,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.239999999999721,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5741667524002964,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6418334190670051,
+          "swept_m": 0.6418334190670051,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 20.4,
+        "robot_gt": {
+          "x_m": 13.929833247599381,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.31999999999972,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.27999999999972,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5725000857336295,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6401667524003382,
+          "swept_m": 0.6401667524003382,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 20.45,
+        "robot_gt": {
+          "x_m": 13.971499914266047,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.359999999999719,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.31999999999972,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8000000000000285,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5708334190670372,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6385000857336712,
+          "swept_m": 0.6385000857336712,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 20.5,
+        "robot_gt": {
+          "x_m": 14.008999914266047,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.399999999999718,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.359999999999719,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6375000857336713,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6410000857336707,
+          "swept_m": 0.6385000857336712,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 20.55,
+        "robot_gt": {
+          "x_m": 14.046499914266047,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.439999999999717,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.399999999999718,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6400000857336708,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6435000857336702,
+          "swept_m": 0.6410000857336707,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 20.6,
+        "robot_gt": {
+          "x_m": 14.088166580932713,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.479999999999716,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.439999999999717,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5741667524002946,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6418334190670033,
+          "swept_m": 0.6418334190670033,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 20.65,
+        "robot_gt": {
+          "x_m": 14.129833247599379,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.480000000000285,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.479999999999716,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5725000857336278,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6001667524009057,
+          "swept_m": 0.6001667524009057,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 20.7,
+        "robot_gt": {
+          "x_m": 14.15899663307757,
+          "y_m": 7.4995625164060655,
+          "theta_rad": -0.029999999999999805,
+          "v_mps": 0.5833333333333333,
+          "omega_radps": -0.6000000000000001,
+          "accel_mps2": -5.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.440000000000285,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.480000000000285,
+          "y_m": 7.5,
+          "est_vx_mps": 1.136868377216225e-11,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.5833333333333333,
+          "omega_radps": -0.6000000000000001,
+          "pred_c_m": 0.1418285261714839,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": 1,
+          "reason": "SAFE_STANDSTILL_BRAKING"
+        },
+        "clearance": {
+          "inst_m": 0.5310034416266143,
+          "swept_m": 0.5310034416266143,
+          "stop_dist_m": 0.09236111111111109
+        }
+      },
+      {
+        "t_s": 20.75,
+        "robot_gt": {
+          "x_m": 14.183943839169352,
+          "y_m": 7.497938660435196,
+          "theta_rad": -0.09999999999999964,
+          "v_mps": 0.4999999999999999,
+          "omega_radps": -1.4000000000000001,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.400000000000286,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.440000000000285,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.4999999999999999,
+          "omega_radps": -1.4000000000000001,
+          "pred_c_m": 0.1410004735660455,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 2,
+          "reason": "SAFETY_MARGIN_VIOLATION"
+        },
+        "clearance": {
+          "inst_m": 0.4660579079203724,
+          "swept_m": 0.4660579079203724,
+          "stop_dist_m": 0.07499999999999998
+        }
+      },
+      {
+        "t_s": 20.8,
+        "robot_gt": {
+          "x_m": 14.196325861159508,
+          "y_m": 7.496225321170691,
+          "theta_rad": -0.17499999999999982,
+          "v_mps": 0.2499999999999999,
+          "omega_radps": -1.5,
+          "accel_mps2": -5.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.360000000000287,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.400000000000286,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.2499999999999999,
+          "omega_radps": -1.5,
+          "pred_c_m": 0.14989995920766208,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 2,
+          "reason": "SAFETY_MARGIN_VIOLATION"
+        },
+        "clearance": {
+          "inst_m": 0.41368026089948495,
+          "swept_m": 0.41368026089948495,
+          "stop_dist_m": 0.031249999999999986
+        }
+      },
+      {
+        "t_s": 20.85,
+        "robot_gt": {
+          "x_m": 14.200380417030694,
+          "y_m": 7.495265275443367,
+          "theta_rad": -0.29000000000000004,
+          "v_mps": 0.08333333333333331,
+          "omega_radps": -2.3,
+          "accel_mps2": -3.3333333333333313
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.320000000000288,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.360000000000287,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.08333333333333331,
+          "omega_radps": -2.3,
+          "pred_c_m": 0.14651412499403493,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 2,
+          "reason": "SAFETY_MARGIN_VIOLATION"
+        },
+        "clearance": {
+          "inst_m": 0.3696295941898089,
+          "swept_m": 0.3696295941898089,
+          "stop_dist_m": 0.009027777777777775
+        }
+      },
+      {
+        "t_s": 20.9,
+        "robot_gt": {
+          "x_m": 14.216025885840603,
+          "y_m": 7.489520966651531,
+          "theta_rad": -0.41374999999999984,
+          "v_mps": 0.3333333333333333,
+          "omega_radps": -2.4749999999999996,
+          "accel_mps2": 5.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.280000000000289,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.320000000000288,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.3333333333333333,
+          "omega_radps": -2.4749999999999996,
+          "pred_c_m": 0.1496737715602482,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 2,
+          "reason": "SAFETY_MARGIN_VIOLATION"
+        },
+        "clearance": {
+          "inst_m": 0.3140257166731484,
+          "swept_m": 0.3140257166731484,
+          "stop_dist_m": 0.04444444444444444
+        }
+      },
+      {
+        "t_s": 20.95,
+        "robot_gt": {
+          "x_m": 14.219714456749994,
+          "y_m": 7.487583041018927,
+          "theta_rad": -0.55375,
+          "v_mps": 0.08333333333333331,
+          "omega_radps": -2.8,
+          "accel_mps2": -5.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.24000000000029,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.280000000000289,
+          "y_m": 7.5,
+          "est_vx_mps": -0.8000000000000285,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.08333333333333331,
+          "omega_radps": -2.8,
+          "pred_c_m": 0.13755047465114956,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 2,
+          "reason": "SAFETY_MARGIN_VIOLATION"
+        },
+        "clearance": {
+          "inst_m": 0.2703610981588276,
+          "swept_m": 0.2703610981588276,
+          "stop_dist_m": 0.009027777777777775
+        }
+      },
+      {
+        "t_s": 21.0,
+        "robot_gt": {
+          "x_m": 14.219714456749994,
+          "y_m": 7.487583041018927,
+          "theta_rad": -0.65375,
+          "v_mps": 0.0,
+          "omega_radps": -1.9999999999999998,
+          "accel_mps2": -1.6666666666666663
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.20000000000029,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.24000000000029,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.0,
+          "omega_radps": -1.9999999999999998,
+          "pred_c_m": 0.10637514887158561,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 2,
+          "reason": "SAFETY_MARGIN_VIOLATION"
+        },
+        "clearance": {
+          "inst_m": 0.23036418089191057,
+          "swept_m": 0.23036418089191057,
+          "stop_dist_m": 0.0
+        }
+      },
+      {
+        "t_s": 21.05,
+        "robot_gt": {
+          "x_m": 14.219714456749994,
+          "y_m": 7.487583041018927,
+          "theta_rad": -0.7137500000000001,
+          "v_mps": 0.0,
+          "omega_radps": -1.1999999999999997,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.160000000000291,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.20000000000029,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.0,
+          "omega_radps": -1.1999999999999997,
+          "pred_c_m": 0.1483711680500579,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 2,
+          "reason": "SAFETY_MARGIN_VIOLATION"
+        },
+        "clearance": {
+          "inst_m": 0.1903675258726476,
+          "swept_m": 0.1903675258726476,
+          "stop_dist_m": 0.0
+        }
+      },
+      {
+        "t_s": 21.1,
+        "robot_gt": {
+          "x_m": 14.219714456749994,
+          "y_m": 7.487583041018927,
+          "theta_rad": -0.7337500000000001,
+          "v_mps": 0.0,
+          "omega_radps": -0.3999999999999997,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.120000000000292,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.160000000000291,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.0,
+          "omega_radps": -0.3999999999999997,
+          "pred_c_m": 0.10837514887158561,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 2,
+          "reason": "SAFETY_MARGIN_VIOLATION"
+        },
+        "clearance": {
+          "inst_m": 0.15037116805005613,
+          "swept_m": 0.15037116805005613,
+          "stop_dist_m": 0.0
+        }
+      },
+      {
+        "t_s": 21.15,
+        "robot_gt": {
+          "x_m": 14.219714456749994,
+          "y_m": 7.487583041018927,
+          "theta_rad": -0.7337500000000001,
+          "v_mps": 0.0,
+          "omega_radps": 4.440892098500626e-16,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.080000000000293,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.120000000000292,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.0,
+          "omega_radps": 4.440892098500626e-16,
+          "pred_c_m": 0.06837951786705421,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 2,
+          "reason": "SAFETY_MARGIN_VIOLATION"
+        },
+        "clearance": {
+          "inst_m": 0.11037514887158384,
+          "swept_m": 0.11037514887158384,
+          "stop_dist_m": 0.0
+        }
+      },
+      {
+        "t_s": 21.2,
+        "robot_gt": {
+          "x_m": 14.219714456749994,
+          "y_m": 7.487583041018927,
+          "theta_rad": -0.6937500000000001,
+          "v_mps": 0.0,
+          "omega_radps": 0.8000000000000005,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.040000000000294,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.080000000000293,
+          "y_m": 7.5,
+          "est_vx_mps": -0.8000000000000285,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.0,
+          "omega_radps": 0.8000000000000005,
+          "pred_c_m": -0.05360438111329069,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 5,
+          "reason": "PHYSICAL_COLLISION_RISK"
+        },
+        "clearance": {
+          "inst_m": 0.07037951786705243,
+          "swept_m": 0.07037951786705243,
+          "stop_dist_m": 0.0
+        }
+      },
+      {
+        "t_s": 21.25,
+        "robot_gt": {
+          "x_m": 14.219714456749994,
+          "y_m": 7.487583041018927,
+          "theta_rad": -0.61375,
+          "v_mps": 0.0,
+          "omega_radps": 1.6000000000000005,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.000000000000295,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.040000000000294,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.0,
+          "omega_radps": 1.6000000000000005,
+          "pred_c_m": -0.011610327992256031,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 5,
+          "reason": "PHYSICAL_COLLISION_RISK"
+        },
+        "clearance": {
+          "inst_m": 0.030384334719601336,
+          "swept_m": 0.030384334719601336,
+          "stop_dist_m": 0.0
+        }
+      },
+      {
+        "t_s": 21.3,
+        "robot_gt": {
+          "x_m": 14.219714456749994,
+          "y_m": 7.487583041018927,
+          "theta_rad": -0.4937499999999999,
+          "v_mps": 0.0,
+          "omega_radps": 2.4000000000000004,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 14.960000000000296,
+          "y_m": 7.5,
+          "vx_mps": -0.8,
+          "vy_mps": -0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 15.000000000000295,
+          "y_m": 7.5,
+          "est_vx_mps": -0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.0,
+          "omega_radps": 2.4000000000000004,
+          "pred_c_m": -0.010610327992257806,
+          "ws": "GATE_CLEAR_HOLD_UNSAFE",
+          "prio": 5,
+          "reason": "PHYSICAL_COLLISION_RISK"
+        },
+        "clearance": {
+          "inst_m": -0.009610327992257806,
+          "swept_m": -0.009610327992257806,
+          "stop_dist_m": 0.0
+        }
+      }
+    ],
+    "gate_exit_window_steps": [
+      {
+        "t_s": 15.0,
+        "robot_gt": {
+          "x_m": 9.608999914266102,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 10.999999999999812,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 10.959999999999813,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6375000857337104,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6410000857337098,
+          "swept_m": 0.6385000857337103,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 15.05,
+        "robot_gt": {
+          "x_m": 9.646499914266101,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.03999999999981,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 10.999999999999812,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6400000857337099,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6435000857337093,
+          "swept_m": 0.6410000857337098,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 15.1,
+        "robot_gt": {
+          "x_m": 9.688166580932768,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.07999999999981,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.03999999999981,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5741667524003337,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6418334190670424,
+          "swept_m": 0.6418334190670424,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 15.15,
+        "robot_gt": {
+          "x_m": 9.729833247599434,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.11999999999981,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.07999999999981,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5725000857337024,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6401667524003755,
+          "swept_m": 0.6401667524003755,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 15.2,
+        "robot_gt": {
+          "x_m": 9.7714999142661,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.159999999999808,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.11999999999981,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5708334190669999,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6385000857337085,
+          "swept_m": 0.6385000857337085,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 15.25,
+        "robot_gt": {
+          "x_m": 9.8089999142661,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.199999999999807,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.159999999999808,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6375000857337086,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.641000085733708,
+          "swept_m": 0.6385000857337085,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 15.3,
+        "robot_gt": {
+          "x_m": 9.846499914266099,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.239999999999807,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.199999999999807,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6400000857337081,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6435000857337075,
+          "swept_m": 0.641000085733708,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 15.35,
+        "robot_gt": {
+          "x_m": 9.888166580932765,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.279999999999806,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.239999999999807,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5741667524003319,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6418334190670406,
+          "swept_m": 0.6418334190670406,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 15.4,
+        "robot_gt": {
+          "x_m": 9.929833247599431,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.319999999999805,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.279999999999806,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5725000857337006,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6401667524003737,
+          "swept_m": 0.6401667524003737,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 15.45,
+        "robot_gt": {
+          "x_m": 9.971499914266097,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.359999999999804,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.319999999999805,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5708334190669981,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6385000857337068,
+          "swept_m": 0.6385000857337068,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 15.5,
+        "robot_gt": {
+          "x_m": 10.008999914266097,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.399999999999803,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.359999999999804,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6375000857337069,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6410000857337063,
+          "swept_m": 0.6385000857337068,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 15.55,
+        "robot_gt": {
+          "x_m": 10.046499914266096,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.439999999999802,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.399999999999803,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6400000857337064,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6435000857337058,
+          "swept_m": 0.6410000857337063,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 15.6,
+        "robot_gt": {
+          "x_m": 10.088166580932763,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.479999999999801,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.439999999999802,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5741667524003301,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6418334190670388,
+          "swept_m": 0.6418334190670388,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 15.65,
+        "robot_gt": {
+          "x_m": 10.129833247599429,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.5199999999998,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.479999999999801,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5725000857336988,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6401667524003719,
+          "swept_m": 0.6401667524003719,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 15.7,
+        "robot_gt": {
+          "x_m": 10.171499914266095,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.5599999999998,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.5199999999998,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5708334190669964,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.638500085733705,
+          "swept_m": 0.638500085733705,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 15.75,
+        "robot_gt": {
+          "x_m": 10.208999914266094,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.599999999999799,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.5599999999998,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6375000857337051,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6410000857337045,
+          "swept_m": 0.638500085733705,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 15.8,
+        "robot_gt": {
+          "x_m": 10.246499914266094,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.639999999999798,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.599999999999799,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6400000857337046,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.643500085733704,
+          "swept_m": 0.6410000857337045,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 15.85,
+        "robot_gt": {
+          "x_m": 10.28816658093276,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.679999999999797,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.639999999999798,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5741667524003283,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6418334190670371,
+          "swept_m": 0.6418334190670371,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 15.9,
+        "robot_gt": {
+          "x_m": 10.329833247599426,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.719999999999796,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.679999999999797,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.572500085733697,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6401667524003701,
+          "swept_m": 0.6401667524003701,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 15.95,
+        "robot_gt": {
+          "x_m": 10.371499914266092,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.759999999999796,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.719999999999796,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5708334190669946,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6385000857337032,
+          "swept_m": 0.6385000857337032,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 16.0,
+        "robot_gt": {
+          "x_m": 10.408999914266092,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.799999999999795,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.759999999999796,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6375000857337033,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6410000857337027,
+          "swept_m": 0.6385000857337032,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 16.05,
+        "robot_gt": {
+          "x_m": 10.446499914266091,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.839999999999794,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.799999999999795,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6400000857337028,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6435000857337022,
+          "swept_m": 0.6410000857337027,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 16.1,
+        "robot_gt": {
+          "x_m": 10.488166580932758,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.879999999999793,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.839999999999794,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5741667524003266,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6418334190670353,
+          "swept_m": 0.6418334190670353,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 16.15,
+        "robot_gt": {
+          "x_m": 10.529833247599424,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.919999999999792,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.879999999999793,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5725000857336597,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6401667524003684,
+          "swept_m": 0.6401667524003684,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 16.2,
+        "robot_gt": {
+          "x_m": 10.57149991426609,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.959999999999791,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.919999999999792,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8000000000000285,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5708334190670656,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6385000857337014,
+          "swept_m": 0.6385000857337014,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 16.25,
+        "robot_gt": {
+          "x_m": 10.60899991426609,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.99999999999979,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.959999999999791,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6375000857337015,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6410000857337009,
+          "swept_m": 0.6385000857337014,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 16.3,
+        "robot_gt": {
+          "x_m": 10.646499914266089,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.03999999999979,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 11.99999999999979,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.640000085733701,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6435000857337004,
+          "swept_m": 0.6410000857337009,
+          "stop_dist_m": 0.13124999999999998
+        }
+      },
+      {
+        "t_s": 16.35,
+        "robot_gt": {
+          "x_m": 10.688166580932755,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.079999999999789,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.03999999999979,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5741667524003248,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6418334190670335,
+          "swept_m": 0.6418334190670335,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 16.4,
+        "robot_gt": {
+          "x_m": 10.729833247599421,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.119999999999788,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.079999999999789,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.572500085733658,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6401667524003666,
+          "swept_m": 0.6401667524003666,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 16.45,
+        "robot_gt": {
+          "x_m": 10.771499914266087,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "accel_mps2": 0.0
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.159999999999787,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.119999999999788,
+          "y_m": 7.5,
+          "est_vx_mps": 0.8000000000000285,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.8333333333333333,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.5708334190670639,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6385000857336997,
+          "swept_m": 0.6385000857336997,
+          "stop_dist_m": 0.15277777777777776
+        }
+      },
+      {
+        "t_s": 16.5,
+        "robot_gt": {
+          "x_m": 10.808999914266087,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "accel_mps2": -1.6666666666666674
+        },
+        "obs_gt_eval_only": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.199999999999786,
+          "y_m": 7.5,
+          "vx_mps": 0.8,
+          "vy_mps": 0.0
+        },
+        "controller_visible_obs": {
+          "id": "DYN-GATE-1",
+          "x_m": 12.159999999999787,
+          "y_m": 7.5,
+          "est_vx_mps": 0.7999999999999716,
+          "est_vy_mps": 0.0,
+          "obs_age_s": 0.0
+        },
+        "dwa_cmd": {
+          "v_mps": 0.7499999999999999,
+          "omega_radps": 0.0,
+          "pred_c_m": 0.6375000857336998,
+          "ws": "GATE_CLEAR_HOLD_SAFE",
+          "prio": null,
+          "reason": null
+        },
+        "clearance": {
+          "inst_m": 0.6410000857336992,
+          "swept_m": 0.6385000857336997,
+          "stop_dist_m": 0.13124999999999998
+        }
+      }
+    ]
+  }
+}

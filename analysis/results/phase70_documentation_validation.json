@@ -1,0 +1,17 @@
+{
+  "phase": "7.0",
+  "status": "PASS",
+  "referenced_paths_checked": 32,
+  "missing_paths": [],
+  "outdated_statements_remaining": [],
+  "numerical_claims_verified": {
+    "pytest_191": true,
+    "baseline_8_of_8": true,
+    "baseline_min_swept_0.152024": true,
+    "narrow_gate_14_of_14": true,
+    "narrow_gate_min_swept_0.150019": true,
+    "p99_232.48": true,
+    "over_50ms_17.25": true
+  },
+  "source_or_historical_files_modified": false
+}

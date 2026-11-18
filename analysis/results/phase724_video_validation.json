@@ -1,0 +1,100 @@
+{
+  "video_path": "C:\\Users\\Legolas\\Desktop\\DYNAMIC-NAV\\analysis\\results\\phase724_dynamic_nav_final_demo.mp4",
+  "duration_s": 229.733333,
+  "size_bytes": 9930018,
+  "streams": [
+    {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_type": "video",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1"
+    },
+    {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_type": "audio",
+      "sample_rate": "44100",
+      "channels": 2,
+      "r_frame_rate": "0/0"
+    }
+  ],
+  "scenarios_recorded": [
+    {
+      "scenario": "HEAD-ON",
+      "video_start_s": 35.0,
+      "video_end_s": 53.63,
+      "sim_steps": 469,
+      "sim_time_s": 15.67,
+      "reached": true,
+      "collision": false
+    },
+    {
+      "scenario": "CROSSING",
+      "video_start_s": 53.63,
+      "video_end_s": 70.73,
+      "sim_steps": 423,
+      "sim_time_s": 14.13,
+      "reached": true,
+      "collision": false
+    },
+    {
+      "scenario": "CORRIDOR",
+      "video_start_s": 70.73,
+      "video_end_s": 93.6,
+      "sim_steps": 596,
+      "sim_time_s": 19.9,
+      "reached": true,
+      "collision": false
+    },
+    {
+      "scenario": "NARROW-GATE",
+      "video_start_s": 93.6,
+      "video_end_s": 119.6,
+      "sim_steps": 690,
+      "sim_time_s": 23.03,
+      "reached": true,
+      "collision": false
+    },
+    {
+      "scenario": "STOP-AND-GO",
+      "video_start_s": 119.6,
+      "video_end_s": 133.1,
+      "sim_steps": 345,
+      "sim_time_s": 11.53,
+      "reached": true,
+      "collision": false
+    },
+    {
+      "scenario": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "video_start_s": 133.1,
+      "video_end_s": 153.1,
+      "sim_steps": 540,
+      "sim_time_s": 18.03,
+      "reached": true,
+      "collision": false
+    },
+    {
+      "scenario": "SUDDEN-STOP",
+      "video_start_s": 153.1,
+      "video_end_s": 168.33,
+      "sim_steps": 397,
+      "sim_time_s": 13.27,
+      "reached": true,
+      "collision": false
+    },
+    {
+      "scenario": "SUDDEN-STOP-FINITE-DECEL",
+      "video_start_s": 168.33,
+      "video_end_s": 187.73,
+      "sim_steps": 522,
+      "sim_time_s": 17.43,
+      "reached": true,
+      "collision": false
+    }
+  ],
+  "subtitles_path": "C:\\Users\\Legolas\\Desktop\\DYNAMIC-NAV\\demo_assets\\phase724_altyazilar.srt",
+  "audio_status": "silent_aac_no_turkish_tts_available",
+  "simulation_frozen_runs_ge_2s": 0
+}

@@ -1,0 +1,1082 @@
+{
+  "total_unsafe_or_failed_variants": 25,
+  "collision_variants": 18,
+  "margin_violation_only_variants": 7,
+  "root_cause_groups": {
+    "GEOMETRIC_WIDTH_REDUCTION_INFEASIBLE": {
+      "count": 1,
+      "variants": [
+        "CORRIDOR__L1-SG-01__01"
+      ]
+    },
+    "NARROW_GATE_TIMING_AND_HOLDING_MARGIN": {
+      "count": 8,
+      "variants": [
+        "NARROW-GATE__L1-IC-01__02",
+        "NARROW-GATE__L1-IC-02__01",
+        "NARROW-GATE__L1-IC-02__02",
+        "NARROW-GATE__L1-IC-04__01",
+        "NARROW-GATE__L1-IC-05__01",
+        "NARROW-GATE__L1-DO-01__01",
+        "NARROW-GATE__L1-RD-01__01",
+        "NARROW-GATE__L1-RD-02__01"
+      ]
+    },
+    "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP": {
+      "count": 6,
+      "variants": [
+        "SUDDEN-STOP__L1-IC-02__01",
+        "SUDDEN-STOP__L1-IC-02__02",
+        "SUDDEN-STOP__L1-DO-01__01",
+        "SUDDEN-STOP__L1-DO-02__01",
+        "SUDDEN-STOP__L1-DO-03__01",
+        "SUDDEN-STOP__L1-DO-03__02"
+      ]
+    },
+    "CORRIDOR_HEADING_PERTURBATION_PASSING_TIMING": {
+      "count": 2,
+      "variants": [
+        "CORRIDOR__L1-IC-02__01",
+        "CORRIDOR__L1-IC-02__02"
+      ]
+    },
+    "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP": {
+      "count": 8,
+      "variants": [
+        "CORRIDOR__L1-IC-01__02",
+        "CORRIDOR__L1-IC-04__01",
+        "CORRIDOR__L1-IC-05__01",
+        "STOP-AND-GO__L1-DO-01__01",
+        "MULTIPLE-DYNAMIC-OBSTACLES__L1-DO-01__02",
+        "STOP-AND-GO__L1-DO-03__01",
+        "CORRIDOR__L1-RD-02__01",
+        "MULTIPLE-DYNAMIC-OBSTACLES__L1-RD-01__01"
+      ]
+    }
+  },
+  "failures": [
+    {
+      "variant_id": "CORRIDOR__L1-IC-01__02",
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-IC-01",
+      "category": "A_initial_conditions",
+      "param": "robot_start_xy_offset_m",
+      "value": [
+        0.3,
+        -0.3
+      ],
+      "termination_reason": "GOAL_REACHED",
+      "goal_reached": true,
+      "collisions": 0,
+      "margin_violation_episodes": 2,
+      "min_inst_clearance_m": 0.1438928751575751,
+      "min_swept_clearance_m": 0.1435678822733374,
+      "first_failure_snapshot": {
+        "sim_time_s": 11.6,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          4.951353689689506,
+          8.502023506816082,
+          -0.15451466563742056,
+          1.1527777777777772
+        ],
+        "inst_clearance_m": 0.15034693090952178,
+        "swept_clearance_m": 0.14940308354873255,
+        "fallback_reason": null,
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-CORR-1",
+            "x": 8.750000000000075,
+            "y": 7.5,
+            "vx": 1.0,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "feasibility": "MARGIN_OR_DYNAMICS_SENSITIVITY"
+    },
+    {
+      "variant_id": "CORRIDOR__L1-IC-02__01",
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-IC-02",
+      "category": "A_initial_conditions",
+      "param": "robot_start_heading_rad",
+      "value": -0.26,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 2,
+      "min_inst_clearance_m": -0.020606590965778104,
+      "min_swept_clearance_m": -0.020606590965778104,
+      "first_failure_snapshot": {
+        "sim_time_s": 11.6,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          4.989629230311195,
+          8.500081871612922,
+          -0.08682894083240411,
+          1.468749999999999
+        ],
+        "inst_clearance_m": 0.15002568729414012,
+        "swept_clearance_m": 0.14911372187969885,
+        "fallback_reason": null,
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-CORR-1",
+            "x": 8.750000000000075,
+            "y": 7.5,
+            "vx": 1.0,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "CORRIDOR_HEADING_PERTURBATION_PASSING_TIMING",
+      "feasibility": "ALGORITHMIC_CONTROL_TIMING"
+    },
+    {
+      "variant_id": "CORRIDOR__L1-IC-02__02",
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-IC-02",
+      "category": "A_initial_conditions",
+      "param": "robot_start_heading_rad",
+      "value": 0.26,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 2,
+      "min_inst_clearance_m": -0.0455892804477428,
+      "min_swept_clearance_m": -0.0455892804477428,
+      "first_failure_snapshot": {
+        "sim_time_s": 11.6,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          4.989629230311197,
+          6.499918128387073,
+          0.08682894083240589,
+          1.468749999999999
+        ],
+        "inst_clearance_m": 0.1500256872941348,
+        "swept_clearance_m": 0.14911372187969335,
+        "fallback_reason": null,
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-CORR-1",
+            "x": 8.750000000000075,
+            "y": 7.5,
+            "vx": 1.0,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "CORRIDOR_HEADING_PERTURBATION_PASSING_TIMING",
+      "feasibility": "ALGORITHMIC_CONTROL_TIMING"
+    },
+    {
+      "variant_id": "CORRIDOR__L1-IC-04__01",
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-IC-04",
+      "category": "A_initial_conditions",
+      "param": "dyn_obs_start_offset_m",
+      "value": -0.4,
+      "termination_reason": "GOAL_REACHED",
+      "goal_reached": true,
+      "collisions": 0,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": 0.1501538700233811,
+      "min_swept_clearance_m": 0.14922577596291547,
+      "first_failure_snapshot": {
+        "sim_time_s": 14.3,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          4.964995563024509,
+          8.499939736241252,
+          -0.1564708073986596,
+          1.516672461642026
+        ],
+        "inst_clearance_m": 0.1512839295234184,
+        "swept_clearance_m": 0.14922577596291547,
+        "fallback_reason": null,
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-CORR-1",
+            "x": 11.05000000000011,
+            "y": 7.5,
+            "vx": 1.0,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "feasibility": "MARGIN_OR_DYNAMICS_SENSITIVITY"
+    },
+    {
+      "variant_id": "CORRIDOR__L1-IC-05__01",
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-IC-05",
+      "category": "A_initial_conditions",
+      "param": "robot_init_v_mps",
+      "value": 1.0,
+      "termination_reason": "GOAL_REACHED",
+      "goal_reached": true,
+      "collisions": 0,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": 0.13295616816389044,
+      "min_swept_clearance_m": 0.1309738906432072,
+      "first_failure_snapshot": {
+        "sim_time_s": 17.3,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          14.108911106840191,
+          8.362030527191282,
+          0.2425695800781278,
+          1.916666666666666
+        ],
+        "inst_clearance_m": 0.13295616816389044,
+        "swept_clearance_m": 0.13295616816389044,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-CORR-1",
+            "x": 14.349999999999845,
+            "y": 7.5,
+            "vx": -1.0,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "feasibility": "MARGIN_OR_DYNAMICS_SENSITIVITY"
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-IC-01__02",
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-IC-01",
+      "category": "A_initial_conditions",
+      "param": "robot_start_xy_offset_m",
+      "value": [
+        0.3,
+        -0.3
+      ],
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": -0.03422379006976206,
+      "min_swept_clearance_m": -0.03422379006976206,
+      "first_failure_snapshot": {
+        "sim_time_s": 6.9,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          7.645828206794436,
+          7.259525519133679,
+          -0.7086535379301724,
+          0.0
+        ],
+        "inst_clearance_m": 0.11814201403221447,
+        "swept_clearance_m": 0.11814201403221447,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-GATE-1",
+            "x": 8.520000000000117,
+            "y": 7.5,
+            "vx": -0.7999999999999858,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "feasibility": "ALGORITHMIC_TIMING_OR_HOLDING_FAILURE"
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-IC-02__01",
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-IC-02",
+      "category": "A_initial_conditions",
+      "param": "robot_start_heading_rad",
+      "value": -0.26,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": -0.030494007963033254,
+      "min_swept_clearance_m": -0.030494007963033254,
+      "first_failure_snapshot": {
+        "sim_time_s": 6.95,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          7.561618143435227,
+          7.459795762219947,
+          -0.9181838516591432,
+          0.0
+        ],
+        "inst_clearance_m": 0.12930146518578023,
+        "swept_clearance_m": 0.12930146518578023,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-GATE-1",
+            "x": 8.480000000000118,
+            "y": 7.5,
+            "vx": -0.7999999999999858,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "feasibility": "ALGORITHMIC_TIMING_OR_HOLDING_FAILURE"
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-IC-02__02",
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-IC-02",
+      "category": "A_initial_conditions",
+      "param": "robot_start_heading_rad",
+      "value": 0.26,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": -0.030494007963033254,
+      "min_swept_clearance_m": -0.030494007963033254,
+      "first_failure_snapshot": {
+        "sim_time_s": 6.95,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          7.561618143435227,
+          7.540204237780053,
+          0.9181838516591432,
+          0.0
+        ],
+        "inst_clearance_m": 0.12930146518578023,
+        "swept_clearance_m": 0.12930146518578023,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-GATE-1",
+            "x": 8.480000000000118,
+            "y": 7.5,
+            "vx": -0.7999999999999858,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "feasibility": "ALGORITHMIC_TIMING_OR_HOLDING_FAILURE"
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-IC-04__01",
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-IC-04",
+      "category": "A_initial_conditions",
+      "param": "dyn_obs_start_offset_m",
+      "value": -0.4,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": -0.015428904299999435,
+      "min_swept_clearance_m": -0.015428904299999435,
+      "first_failure_snapshot": {
+        "sim_time_s": 7.4,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          7.585791783696214,
+          7.476913429234199,
+          -0.9200000000000008,
+          0.0
+        ],
+        "inst_clearance_m": 0.14450618994792086,
+        "swept_clearance_m": 0.14450618994792086,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-GATE-1",
+            "x": 8.520000000000124,
+            "y": 7.5,
+            "vx": -0.7999999999999858,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "feasibility": "ALGORITHMIC_TIMING_OR_HOLDING_FAILURE"
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-IC-05__01",
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-IC-05",
+      "category": "A_initial_conditions",
+      "param": "robot_init_v_mps",
+      "value": 1.0,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": -0.002276760106969755,
+      "min_swept_clearance_m": -0.002276760106969755,
+      "first_failure_snapshot": {
+        "sim_time_s": 7.0,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          7.53341106362891,
+          7.4588295790131705,
+          -0.9418749999999996,
+          0.0
+        ],
+        "inst_clearance_m": 0.11756635953984318,
+        "swept_clearance_m": 0.11756635953984318,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-GATE-1",
+            "x": 8.440000000000119,
+            "y": 7.5,
+            "vx": -0.7999999999999858,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "feasibility": "ALGORITHMIC_TIMING_OR_HOLDING_FAILURE"
+    },
+    {
+      "variant_id": "SUDDEN-STOP__L1-IC-02__01",
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-IC-02",
+      "category": "A_initial_conditions",
+      "param": "robot_start_heading_rad",
+      "value": -0.26,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 2,
+      "min_inst_clearance_m": -0.05219130352593998,
+      "min_swept_clearance_m": -0.05219130352593998,
+      "first_failure_snapshot": {
+        "sim_time_s": 14.55,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          15.67979626244644,
+          7.905376554602873,
+          -0.3399999999999972,
+          1.1388888888888908
+        ],
+        "inst_clearance_m": 0.11491219366487476,
+        "swept_clearance_m": 0.11491219366487476,
+        "fallback_reason": null,
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-SUDDEN-1",
+            "x": 16.49999999999887,
+            "y": 7.5,
+            "vx": 1.1999999999539852,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP",
+      "feasibility": "CAUSAL_UNOBSERVABLE_STOP_AND_GO_REVERSAL"
+    },
+    {
+      "variant_id": "SUDDEN-STOP__L1-IC-02__02",
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-IC-02",
+      "category": "A_initial_conditions",
+      "param": "robot_start_heading_rad",
+      "value": 0.26,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 2,
+      "min_inst_clearance_m": -0.052695577881707034,
+      "min_swept_clearance_m": -0.052695577881707034,
+      "first_failure_snapshot": {
+        "sim_time_s": 14.55,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          15.67979626244644,
+          7.0946234453971355,
+          0.3399999999999981,
+          1.1388888888888908
+        ],
+        "inst_clearance_m": 0.11491219366487088,
+        "swept_clearance_m": 0.11491219366487088,
+        "fallback_reason": null,
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-SUDDEN-1",
+            "x": 16.49999999999887,
+            "y": 7.5,
+            "vx": 1.1999999999539852,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP",
+      "feasibility": "CAUSAL_UNOBSERVABLE_STOP_AND_GO_REVERSAL"
+    },
+    {
+      "variant_id": "STOP-AND-GO__L1-DO-01__01",
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-DO-01",
+      "category": "B_dynamic_obstacles",
+      "param": "obs_speed_scale",
+      "value": 0.85,
+      "termination_reason": "GOAL_REACHED",
+      "goal_reached": true,
+      "collisions": 0,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": 0.1480230035468339,
+      "min_swept_clearance_m": 0.1480230035468339,
+      "first_failure_snapshot": {
+        "sim_time_s": 5.7,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          9.081941533245379,
+          7.523533793378166,
+          -0.24999999999999778,
+          0.24999999999999878
+        ],
+        "inst_clearance_m": 0.1480230035468339,
+        "swept_clearance_m": 0.1480230035468339,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-SG-1",
+            "x": 10.0,
+            "y": 7.759999999999989,
+            "vx": 0.0,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "feasibility": "MARGIN_OR_DYNAMICS_SENSITIVITY"
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-DO-01__01",
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-DO-01",
+      "category": "B_dynamic_obstacles",
+      "param": "obs_speed_scale",
+      "value": 0.85,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": -0.013499601802724026,
+      "min_swept_clearance_m": -0.013499601802724026,
+      "first_failure_snapshot": {
+        "sim_time_s": 8.0,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          7.68836777211305,
+          7.464250009250683,
+          -1.060000000000001,
+          0.0
+        ],
+        "inst_clearance_m": 0.12236506264868541,
+        "swept_clearance_m": 0.12236506264868541,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-GATE-1",
+            "x": 8.594000000000172,
+            "y": 7.5,
+            "vx": -0.6799999999999808,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "feasibility": "ALGORITHMIC_TIMING_OR_HOLDING_FAILURE"
+    },
+    {
+      "variant_id": "MULTIPLE-DYNAMIC-OBSTACLES__L1-DO-01__02",
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-DO-01",
+      "category": "B_dynamic_obstacles",
+      "param": "obs_speed_scale",
+      "value": 1.15,
+      "termination_reason": "GOAL_REACHED",
+      "goal_reached": true,
+      "collisions": 0,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": 0.12192997751405354,
+      "min_swept_clearance_m": 0.12188519723678459,
+      "first_failure_snapshot": {
+        "sim_time_s": 14.05,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          14.704850193695904,
+          7.375897376185079,
+          -0.061028508550123206,
+          1.7638888888888893
+        ],
+        "inst_clearance_m": 0.14048509783153118,
+        "swept_clearance_m": 0.14048509783153118,
+        "fallback_reason": null,
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-MULTI-1",
+            "x": 9.710000000000008,
+            "y": 7.5,
+            "vx": 1.2649999999999826,
+            "vy": 0.0
+          },
+          {
+            "id": "DYN-MULTI-2",
+            "x": 7.5,
+            "y": 3.929999999999966,
+            "vx": 0.0,
+            "vy": 1.4949999999999761
+          },
+          {
+            "id": "DYN-MULTI-3",
+            "x": 11.5,
+            "y": 12.319999999999967,
+            "vx": 0.0,
+            "vy": 1.3799999999999972
+          },
+          {
+            "id": "DYN-MULTI-4",
+            "x": 14.5,
+            "y": 8.29999999999993,
+            "vx": 0.0,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "feasibility": "MARGIN_OR_DYNAMICS_SENSITIVITY"
+    },
+    {
+      "variant_id": "SUDDEN-STOP__L1-DO-01__01",
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-DO-01",
+      "category": "B_dynamic_obstacles",
+      "param": "obs_speed_scale",
+      "value": 0.85,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 2,
+      "min_inst_clearance_m": -0.0203985895948397,
+      "min_swept_clearance_m": -0.0203985895948397,
+      "first_failure_snapshot": {
+        "sim_time_s": 14.6,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          14.314841441138752,
+          7.065043756986018,
+          0.27250000000000174,
+          0.7666666666666659
+        ],
+        "inst_clearance_m": 0.1416351479090589,
+        "swept_clearance_m": 0.1416351479090589,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-SUDDEN-1",
+            "x": 15.150000000001006,
+            "y": 7.5,
+            "vx": 0.0,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP",
+      "feasibility": "CAUSAL_UNOBSERVABLE_STOP_AND_GO_REVERSAL"
+    },
+    {
+      "variant_id": "SUDDEN-STOP__L1-DO-02__01",
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-DO-02",
+      "category": "B_dynamic_obstacles",
+      "param": "stop_duration_offset_s",
+      "value": -0.3,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 2,
+      "min_inst_clearance_m": -0.0430467159224624,
+      "min_swept_clearance_m": -0.0430467159224624,
+      "first_failure_snapshot": {
+        "sim_time_s": 14.05,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          15.637309622660638,
+          7.864880289845095,
+          -0.20999999999999464,
+          0.7166666666666663
+        ],
+        "inst_clearance_m": 0.1366815430387332,
+        "swept_clearance_m": 0.1366815430387332,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-SUDDEN-1",
+            "x": 16.49999999999887,
+            "y": 7.5,
+            "vx": 0.0,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP",
+      "feasibility": "CAUSAL_UNOBSERVABLE_STOP_AND_GO_REVERSAL"
+    },
+    {
+      "variant_id": "STOP-AND-GO__L1-DO-03__01",
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-DO-03",
+      "category": "B_dynamic_obstacles",
+      "param": "move_duration_offset_s",
+      "value": -0.3,
+      "termination_reason": "GOAL_REACHED",
+      "goal_reached": true,
+      "collisions": 0,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": 0.09318267428901134,
+      "min_swept_clearance_m": 0.09310130405649003,
+      "first_failure_snapshot": {
+        "sim_time_s": 5.05,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          9.103743468826229,
+          7.466934427432939,
+          -0.13500000000000023,
+          0.8333333333333324
+        ],
+        "inst_clearance_m": 0.14295450552808014,
+        "swept_clearance_m": 0.14295450552808014,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-SG-1",
+            "x": 10.0,
+            "y": 7.7600000000000104,
+            "vx": 0.0,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "feasibility": "MARGIN_OR_DYNAMICS_SENSITIVITY"
+    },
+    {
+      "variant_id": "SUDDEN-STOP__L1-DO-03__01",
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-DO-03",
+      "category": "B_dynamic_obstacles",
+      "param": "move_duration_offset_s",
+      "value": -0.3,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 2,
+      "min_inst_clearance_m": -0.06227830442084775,
+      "min_swept_clearance_m": -0.06227830442084775,
+      "first_failure_snapshot": {
+        "sim_time_s": 13.65,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          14.585836581621646,
+          7.0944120385541085,
+          0.310322265625004,
+          1.1500000000000001
+        ],
+        "inst_clearance_m": 0.12753986600595785,
+        "swept_clearance_m": 0.12753986600595785,
+        "fallback_reason": null,
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-SUDDEN-1",
+            "x": 15.419999999999913,
+            "y": 7.5,
+            "vx": 1.1999999999992468,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP",
+      "feasibility": "CAUSAL_UNOBSERVABLE_STOP_AND_GO_REVERSAL"
+    },
+    {
+      "variant_id": "SUDDEN-STOP__L1-DO-03__02",
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-DO-03",
+      "category": "B_dynamic_obstacles",
+      "param": "move_duration_offset_s",
+      "value": 0.3,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": -0.024415512433773323,
+      "min_swept_clearance_m": -0.024415512433773323,
+      "first_failure_snapshot": {
+        "sim_time_s": 14.55,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          15.739397731237762,
+          6.997553557441627,
+          0.3749999999999991,
+          1.0624999999999996
+        ],
+        "inst_clearance_m": 0.062146139951176405,
+        "swept_clearance_m": 0.062146139951176405,
+        "fallback_reason": null,
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-SUDDEN-1",
+            "x": 16.499999999998828,
+            "y": 7.5,
+            "vx": 1.1999999999531326,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP",
+      "feasibility": "CAUSAL_UNOBSERVABLE_STOP_AND_GO_REVERSAL"
+    },
+    {
+      "variant_id": "CORRIDOR__L1-SG-01__01",
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-SG-01",
+      "category": "C_static_geometry",
+      "param": "gate_or_corridor_width_delta_m",
+      "value": -0.2,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": -0.036470307565855564,
+      "min_swept_clearance_m": -0.036470307565855564,
+      "first_failure_snapshot": {
+        "sim_time_s": 17.55,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          13.18675204248375,
+          7.479950733572209,
+          -0.5762499999999999,
+          0.0
+        ],
+        "inst_clearance_m": 0.11348075209583852,
+        "swept_clearance_m": 0.11348075209583852,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-CORR-1",
+            "x": 14.099999999999842,
+            "y": 7.5,
+            "vx": -1.0,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "GEOMETRIC_WIDTH_REDUCTION_INFEASIBLE",
+      "feasibility": "GEOMETRICALLY_TIGHT_OR_INFEASIBLE"
+    },
+    {
+      "variant_id": "CORRIDOR__L1-RD-02__01",
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-RD-02",
+      "category": "D_robot_dynamics",
+      "param": "max_brake_decel_mps2",
+      "value": 4.0,
+      "termination_reason": "GOAL_REACHED",
+      "goal_reached": true,
+      "collisions": 0,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": 0.12390237530316928,
+      "min_swept_clearance_m": 0.12192694380065572,
+      "first_failure_snapshot": {
+        "sim_time_s": 17.3,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          14.085644040343135,
+          8.349139348808711,
+          0.24194335937500133,
+          1.9166666666666656
+        ],
+        "inst_clearance_m": 0.1257774324196932,
+        "swept_clearance_m": 0.1257774324196932,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-CORR-1",
+            "x": 14.349999999999845,
+            "y": 7.5,
+            "vx": -1.0,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "feasibility": "MARGIN_OR_DYNAMICS_SENSITIVITY"
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-RD-01__01",
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-RD-01",
+      "category": "D_robot_dynamics",
+      "param": "max_linear_speed_mps",
+      "value": 2.2,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": -0.015515705790926204,
+      "min_swept_clearance_m": -0.015515705790926204,
+      "first_failure_snapshot": {
+        "sim_time_s": 6.9,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          7.5865146258840666,
+          7.538293398878041,
+          0.9618749999999991,
+          0.0
+        ],
+        "inst_clearance_m": 0.14430559550800792,
+        "swept_clearance_m": 0.14430559550800792,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-GATE-1",
+            "x": 8.520000000000117,
+            "y": 7.5,
+            "vx": -0.7999999999999858,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "feasibility": "ALGORITHMIC_TIMING_OR_HOLDING_FAILURE"
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-RD-02__01",
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-RD-02",
+      "category": "D_robot_dynamics",
+      "param": "max_brake_decel_mps2",
+      "value": 4.0,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": -0.004019562271941446,
+      "min_swept_clearance_m": -0.004019562271941446,
+      "first_failure_snapshot": {
+        "sim_time_s": 7.05,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          7.494438782287455,
+          7.474994318330632,
+          -0.7949999999999999,
+          0.0
+        ],
+        "inst_clearance_m": 0.11592234393390133,
+        "swept_clearance_m": 0.11592234393390133,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-GATE-1",
+            "x": 8.40000000000012,
+            "y": 7.5,
+            "vx": -0.7999999999999858,
+            "vy": 0.0
+          }
+        ]
+      },
+      "root_cause_group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "feasibility": "ALGORITHMIC_TIMING_OR_HOLDING_FAILURE"
+    },
+    {
+      "variant_id": "MULTIPLE-DYNAMIC-OBSTACLES__L1-RD-01__01",
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-RD-01",
+      "category": "D_robot_dynamics",
+      "param": "max_linear_speed_mps",
+      "value": 2.2,
+      "termination_reason": "COLLISION_ABORT",
+      "goal_reached": false,
+      "collisions": 1,
+      "margin_violation_episodes": 1,
+      "min_inst_clearance_m": -0.023594357065742422,
+      "min_swept_clearance_m": -0.023594357065742422,
+      "first_failure_snapshot": {
+        "sim_time_s": 11.35,
+        "type": "MARGIN_VIOLATION",
+        "robot_pose": [
+          5.3577783025913215,
+          7.319460881238314,
+          1.8127263719651392,
+          0.4500000000000002
+        ],
+        "inst_clearance_m": 0.1412554846269094,
+        "swept_clearance_m": 0.1412554846269094,
+        "fallback_reason": "SAFETY_MARGIN_VIOLATION",
+        "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+        "observed_obstacles": [
+          {
+            "id": "DYN-MULTI-1",
+            "x": 4.429999999999936,
+            "y": 7.5,
+            "vx": 1.0999999999999788,
+            "vy": 0.0
+          },
+          {
+            "id": "DYN-MULTI-2",
+            "x": 7.5,
+            "y": 7.309999999999941,
+            "vx": 0.0,
+            "vy": -1.2999999999999894
+          },
+          {
+            "id": "DYN-MULTI-3",
+            "x": 11.5,
+            "y": 6.5599999999999925,
+            "vx": 0.0,
+            "vy": 1.199999999999975
+          },
+          {
+            "id": "DYN-MULTI-4",
+            "x": 14.5,
+            "y": 10.69999999999997,
+            "vx": 0.0,
+            "vy": -1.0
+          }
+        ]
+      },
+      "root_cause_group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "feasibility": "MARGIN_OR_DYNAMICS_SENSITIVITY"
+    }
+  ]
+}

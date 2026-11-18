@@ -1,0 +1,16 @@
+{
+  "phase": "7.3.1",
+  "institution": "Sakarya Uygulamalı Bilimler Üniversitesi",
+  "department": "Elektrik-Elektronik Mühendisliği",
+  "team": ["Eren Çakmaz", "Ahmet Gürlek", "Arda Başaran"],
+  "backup_directory": "analysis/results/backup_phase731",
+  "revised_documents": [
+    {"path": "analysis/results/phase71_akademik_rapor.md", "type": "markdown", "role": "Ana Akademik Proje Raporu"},
+    {"path": "analysis/results/phase71_akademik_rapor.pdf", "type": "pdf", "pages": 4, "role": "Ana Akademik Proje Raporu PDF"},
+    {"path": "analysis/results/phase71_ekip_gorev_dagilimi.md", "type": "markdown", "role": "Proje Görev Dağılımı"},
+    {"path": "analysis/results/phase73_yapay_zeka_kullanim_beyani.md", "type": "markdown", "role": "Yapay Zekâ Kullanım Beyanı"},
+    {"path": "analysis/results/phase73_yapay_zeka_kullanim_beyani.pdf", "type": "pdf", "pages": 1, "role": "Yapay Zekâ Kullanım Beyanı PDF"},
+    {"path": "analysis/results/phase73_ekip_katki_tablosu.md", "type": "markdown", "role": "Ekip Katkı Tablosu"},
+    {"path": "analysis/results/phase73_ekip_katki_tablosu.pdf", "type": "pdf", "pages": 1, "role": "Ekip Katkı Tablosu PDF"}
+  ]
+}

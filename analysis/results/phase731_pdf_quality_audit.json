@@ -1,0 +1,33 @@
+{
+  "phase": "7.3.1",
+  "pdfs_audited": [
+    {
+      "path": "analysis/results/phase71_akademik_rapor.pdf",
+      "pages": 4,
+      "extracted_chars": 10383,
+      "subu_present": true,
+      "turkish_chars_verified": true,
+      "forbidden_placeholders_found": [],
+      "vector_latex_equations": 9,
+      "vector_figures": 2,
+      "tables": 3,
+      "visual_inspection_passed": true
+    },
+    {
+      "path": "analysis/results/phase73_yapay_zeka_kullanim_beyani.pdf",
+      "pages": 1,
+      "subu_present": true,
+      "turkish_chars_verified": true,
+      "forbidden_placeholders_found": [],
+      "max_one_page_satisfied": true
+    },
+    {
+      "path": "analysis/results/phase73_ekip_katki_tablosu.pdf",
+      "pages": 1,
+      "subu_present": true,
+      "turkish_chars_verified": true,
+      "forbidden_placeholders_found": []
+    }
+  ],
+  "all_pdfs_passed": true
+}

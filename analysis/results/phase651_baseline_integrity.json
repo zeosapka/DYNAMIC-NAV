@@ -1,0 +1,90 @@
+{
+  "schema_version": "6.5.1",
+  "audit_timestamp": "2026-11-18T00:16:00+03:00",
+  "git_status": {
+    "git_available": false,
+    "note": "git CLI is not installed/on PATH in this Windows workspace; source integrity verified via direct file inspection and benchmark JSON hashes/counts."
+  },
+  "baseline_config": {
+    "world": {
+      "width_m": 20.0,
+      "height_m": 15.0,
+      "grid_resolution_m": 0.2
+    },
+    "robot": {
+      "radius_m": 0.35,
+      "max_linear_speed_mps": 3.0,
+      "max_angular_speed_radps": 2.8
+    },
+    "dwa": {
+      "min_linear_speed_mps": 0.0,
+      "min_reverse_speed_mps": -0.6,
+      "max_linear_accel_mps2": 5.0,
+      "max_angular_accel_radps2": 16.0,
+      "max_brake_decel_mps2": 5.0,
+      "reaction_time_s": 0.1,
+      "linear_samples": 7,
+      "angular_samples": 17,
+      "predict_time_s": 1.2,
+      "predict_dt_s": 0.1,
+      "safety_margin_m": 0.15,
+      "waiting_horizon_s": 2.5,
+      "waiting_dt_s": 0.1,
+      "waiting_uncertainty_pad_m": 0.05,
+      "waiting_lateral_offset_m": 1.4,
+      "deadlock_timeout_s": 2.5,
+      "fallback_replan_timeout_s": 1.5,
+      "replan_cooldown_s": 2.0
+    },
+    "experiment": {
+      "dt_s": 0.05,
+      "max_sim_time_s": 60.0,
+      "safety_margin_m": 0.15,
+      "stop_speed_threshold_mps": 0.05,
+      "goal_tolerance_m": 0.25
+    }
+  },
+  "stage24_benchmark_files": {
+    "benchmark_phase642_stage24_raw.json": {
+      "total_runs": 16,
+      "controllers": ["ASTAR_FOLLOWER", "ASTAR_DWA"],
+      "scenarios_count": 8,
+      "astar_dwa_total_steps": 2780,
+      "astar_dwa_goal_reached": "8/8",
+      "astar_dwa_collisions": 0,
+      "astar_dwa_margin_violations": 0
+    },
+    "benchmark_phase642_stage24_determinism.json": {
+      "total_runs": 24,
+      "runs_per_scenario": 3,
+      "controller": "ASTAR_DWA",
+      "physically_identical_all_8": true,
+      "total_dwa_calls": 8340,
+      "per_scenario_calls_3_runs": {
+        "HEAD-ON": 954,
+        "CROSSING": 831,
+        "CORRIDOR": 1497,
+        "STOP-AND-GO": 669,
+        "NARROW-GATE": 933,
+        "MULTIPLE-DYNAMIC-OBSTACLES": 1053,
+        "SUDDEN-STOP": 1401,
+        "SUDDEN-STOP-FINITE-DECEL": 1002
+      },
+      "overall_timing_ms": {
+        "avg_ms": 14.271492398081534,
+        "median_ms": 13.13485,
+        "p95_ms": 28.485225,
+        "p99_ms": 36.452431000000054,
+        "max_ms": 72.8753,
+        "over_50ms_count": 15,
+        "over_50ms_pct": 0.17985611510791366
+      }
+    },
+    "timing_discrepancy_resolution": {
+      "reported_8340_calls": "Exact persisted count in benchmark_phase642_stage24_determinism.json (3 runs x 2,780 steps across 8 scenarios).",
+      "reported_8400_calls": "Transient earlier background-task output before final benchmark_phase642_stage24_determinism.json write; not present in persisted JSON.",
+      "authoritative_dataset": "analysis/results/benchmark_phase642_stage24_determinism.json (8,340 calls)"
+    }
+  },
+  "determinism_mechanism": "Fully deterministic fixed-dt (0.05 s) simulation, deterministic velocity grid sampling, no RNG in A*, DWA, or scenario execution."
+}

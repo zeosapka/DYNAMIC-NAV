@@ -1,0 +1,33 @@
+{
+  "phase": "7.3",
+  "project": "DYNAMIC-NAV — P2 Dynamic Obstacle Avoidance",
+  "documents_created": [
+    "analysis/results/phase73_yapay_zeka_kullanim_beyani.md",
+    "analysis/results/phase73_yapay_zeka_kullanim_beyani.pdf",
+    "analysis/results/phase73_ekip_katki_tablosu.md",
+    "analysis/results/phase73_ekip_katki_tablosu.pdf",
+    "analysis/results/phase73_belge_dogrulama.json",
+    "analysis/results/phase73_rapor.md"
+  ],
+  "validation_checks": {
+    "turkish_academic_language": true,
+    "consistent_terminology_with_readme_and_phase71": true,
+    "ai_declaration_pdf_pages": 1,
+    "ai_declaration_max_one_page_satisfied": true,
+    "team_table_pdf_pages": 1,
+    "team_names_verified": [
+      "Eren Çakmaz",
+      "Ahmet Gürlek",
+      "Arda Başaran"
+    ],
+    "no_contradictory_claims": true,
+    "no_invented_individual_achievements": true,
+    "individual_git_attribution_available": false,
+    "items_marked_for_team_confirmation": true,
+    "source_code_tests_and_demo_video_untouched": true
+  },
+  "pending_team_or_submission_items": [
+    "Ekip üyelerinin bireysel sorumluluk paylaşımı için yazılı imzalı onayı ([EKİP ONAYI GEREKLİ])",
+    "Üniversite adı, danışman unvanı/adı ve teslim tarihi boşluklarının doldurulması"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "scenario": "CORRIDOR",
+  "first_proactive_replan_time_s": 9.65,
+  "proactive_replan_count": 2,
+  "replan_events": [
+    {
+      "sim_time_s": 9.65,
+      "robot_pose": [
+        5.134832818930044,
+        7.5,
+        1.2500000000000002
+      ],
+      "assessment": {
+        "path_obstructed": true,
+        "obstructing_obstacle_id": "DYN-CORR-1",
+        "min_path_clearance_m": -0.75,
+        "predicted_path_clearance_m": -0.774,
+        "estimated_ttc_s": 3.8606687242803743,
+        "braking_distance_m": 0.2812500000000001,
+        "lateral_clearance_left_m": 1.0,
+        "lateral_clearance_right_m": 1.0,
+        "trigger_replan": true,
+        "reason": "CORRIDOR_LATERAL_PASS_TRIGGERED"
+      },
+      "candidates": [
+        {
+          "side": "left",
+          "geometric_min_clearance_m": 0.15000000000000002,
+          "dwa_safe": true,
+          "dwa_v_mps": 1.5000000000000002,
+          "dwa_omega_radps": 0.6000000000000001,
+          "dwa_predicted_clearance_m": 0.2821524944023587,
+          "dwa_braking_clearance_m": 0.2821524944023587,
+          "goal_preserved": true,
+          "accepted": true,
+          "rejection_reason": null,
+          "path_len": 67
+        },
+        {
+          "side": "right",
+          "geometric_min_clearance_m": 0.15000000000000002,
+          "dwa_safe": true,
+          "dwa_v_mps": 1.5000000000000002,
+          "dwa_omega_radps": -0.6000000000000001,
+          "dwa_predicted_clearance_m": 0.28215249440236134,
+          "dwa_braking_clearance_m": 0.28215249440236134,
+          "goal_preserved": true,
+          "accepted": true,
+          "rejection_reason": null,
+          "path_len": 67
+        },
+        {
+          "side": "astar",
+          "geometric_min_clearance_m": 0.15000000000000002,
+          "dwa_safe": true,
+          "dwa_v_mps": 1.5000000000000002,
+          "dwa_omega_radps": -0.6000000000000001,
+          "dwa_predicted_clearance_m": 0.28215249440236134,
+          "dwa_braking_clearance_m": 0.28215249440236134,
+          "goal_preserved": true,
+          "accepted": true,
+          "rejection_reason": null,
+          "path_len": 67
+        }
+      ]
+    },
+    {
+      "sim_time_s": 12.2,
+      "robot_pose": [
+        8.940275372110401,
+        8.31791093930524,
+        1.3333333333333337
+      ],
+      "assessment": {
+        "path_obstructed": true,
+        "obstructing_obstacle_id": "DYN-CORR-1",
+        "min_path_clearance_m": 0.18825638187197336,
+        "predicted_path_clearance_m": 0.18825638187197336,
+        "estimated_ttc_s": null,
+        "braking_distance_m": 0.3111111111111112,
+        "lateral_clearance_left_m": 1.1,
+        "lateral_clearance_right_m": 1.1,
+        "trigger_replan": true,
+        "reason": "CORRIDOR_LATERAL_PASS_TRIGGERED"
+      },
+      "candidates": [
+        {
+          "side": "left",
+          "geometric_min_clearance_m": 0.15000000000000002,
+          "dwa_safe": true,
+          "dwa_v_mps": 1.3333333333333337,
+          "dwa_omega_radps": -0.09999999999999976,
+          "dwa_predicted_clearance_m": 0.16000968986489783,
+          "dwa_braking_clearance_m": 0.16000968986489783,
+          "goal_preserved": true,
+          "accepted": true,
+          "rejection_reason": null,
+          "path_len": 47
+        },
+        {
+          "side": "right",
+          "geometric_min_clearance_m": 0.15000000000000002,
+          "dwa_safe": true,
+          "dwa_v_mps": 1.0833333333333337,
+          "dwa_omega_radps": -0.19999999999999973,
+          "dwa_predicted_clearance_m": 0.15424426673969427,
+          "dwa_braking_clearance_m": 0.15424426673969427,
+          "goal_preserved": true,
+          "accepted": true,
+          "rejection_reason": null,
+          "path_len": 61
+        },
+        {
+          "side": "astar",
+          "geometric_min_clearance_m": 0.15000000000000002,
+          "dwa_safe": true,
+          "dwa_v_mps": 1.3333333333333337,
+          "dwa_omega_radps": -0.09999999999999976,
+          "dwa_predicted_clearance_m": 0.16000968986489783,
+          "dwa_braking_clearance_m": 0.16000968986489783,
+          "goal_preserved": true,
+          "accepted": true,
+          "rejection_reason": null,
+          "path_len": 47
+        }
+      ]
+    }
+  ]
+}

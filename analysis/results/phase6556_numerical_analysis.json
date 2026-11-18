@@ -1,0 +1,13 @@
+{
+  "phase": "6.5.5.6",
+  "dt_s": 0.05,
+  "dwa_predict_dt_s": 0.10,
+  "first_substep_validated": true,
+  "numerical_findings": {
+    "is_floating_point_rounding": false,
+    "is_genuine_physical_clearance_below_0_15": true,
+    "true_continuous_min_clearance_m": 0.14981141189316083,
+    "margin_deficit_m": 0.00018858810683917,
+    "explanation": "Both endpoints of step [15.50, 15.55] s have static clearance >= 0.150098 m, but the straight-line chord between them passes closer to the static gate corner/edge (interior minimum at 0.149811 m). Because DWA only checks static obstacles pointwise at endpoints, it saw 0.150098 m >= 0.150000 m and accepted the trajectory."
+  }
+}

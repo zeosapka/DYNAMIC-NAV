@@ -1,0 +1,77 @@
+{
+  "scenario": "CORRIDOR",
+  "controller": "ASTAR_DWA",
+  "baseline_phase652": {
+    "termination_reason": "COLLISION_ABORT",
+    "goal_reached": false,
+    "physical_collision_episode_count": 1,
+    "first_collision_time_s": 17.70,
+    "min_instantaneous_clearance_m": -0.036470307565855564,
+    "min_swept_clearance_m": -0.036470307565855564
+  },
+  "structured_counterfactuals": [
+    {
+      "counterfactual": "Earlier braking (along y=7.5 centerline)",
+      "physically_feasible": false,
+      "feasible_with_causal_observations": false,
+      "feasible_only_with_hidden_future_info": true,
+      "evidence": "Even with instant deceleration to 0.0 m/s at t=17.30 s (or zero reaction time + 10 m/s^2 decel), DYN-CORR-1 continues at -1.0 m/s along y=7.5 and hits the stopped robot. Observed counterfactual zero_reaction_time_decel_10 still collided (min_inst=-0.0002 m). Braking earlier than t=17.25 s requires knowing waypoint_b_m=(14.4, 7.5) before the bounce occurs."
+    },
+    {
+      "counterfactual": "Lower corridor approach speed (0.4, 0.5, 0.6, 0.8 m/s)",
+      "physically_feasible": false,
+      "feasible_with_causal_observations": false,
+      "feasible_only_with_hidden_future_info": false,
+      "evidence": "Corridor length is 10.0 m (x in [5.0, 15.0]) and DYN-CORR-1 one-way patrol time is 8.8 s (x in [5.6, 14.4] at 1.0 m/s). Any robot speed <= 1.0 m/s along y=7.5 cannot exit the corridor before DYN-CORR-1 bounces back. Observed runs with max_linear_speed_mps in {0.4, 0.5, 0.6, 0.8} all terminated with COLLISION_ABORT."
+    },
+    {
+      "counterfactual": "Increased following distance / safety margin (0.25, 0.35, 0.50 m) or uncertainty growth (0.10, 0.25, 0.50 m/s)",
+      "physically_feasible": false,
+      "feasible_with_causal_observations": false,
+      "feasible_only_with_hidden_future_info": false,
+      "evidence": "Along the centerline y=7.5, increasing following distance merely delays when the robot meets the returning -1.0 m/s obstacle inside the 10 m corridor. Observed runs with safety_margin_m in {0.25, 0.35, 0.50} and uncertainty_growth_rate_mps in {0.10, 0.25, 0.50} all terminated with COLLISION_ABORT."
+    },
+    {
+      "counterfactual": "Predictive waiting before entering the corridor",
+      "physically_feasible": false,
+      "feasible_with_causal_observations": false,
+      "feasible_only_with_hidden_future_info": false,
+      "evidence": "The robot already waited outside the corridor (x=3.71..3.92 m) from t=2.00 to t=8.40 s until DYN-CORR-1 reversed to +1.0 m/s. Because DYN-CORR-1 patrols [5.6, 14.4] indefinitely every 17.6 s and the robot cannot outrun 1.0 m/s while following it on y=7.5, waiting outside forever prevents ever crossing the corridor on y=7.5."
+    },
+    {
+      "counterfactual": "Alternative lateral holding poses / lateral lane offset (y=6.55 m or y=8.45 m)",
+      "physically_feasible": true,
+      "feasible_with_causal_observations": true,
+      "feasible_only_with_hidden_future_info": false,
+      "evidence": "Corridor clear width is 3.0 m (y in [6.0, 9.0]). DYN-CORR-1 at y=7.5 (r=0.40 m) leaves 1.10 m gaps above and below, exceeding robot diameter + 2*margin (0.70 + 0.30 = 1.00 m). However, at t=17.30 s (0.40 s before collision) lateral holding is no longer reachable in time; lateral lane-keeping must occur proactively upon entering/traversing the corridor, not 0.40 s before head-on contact."
+    },
+    {
+      "counterfactual": "Reverse recovery (-0.6 m/s)",
+      "physically_feasible": false,
+      "feasible_with_causal_observations": false,
+      "feasible_only_with_hidden_future_info": false,
+      "evidence": "At t=17.30 s the robot is at x=13.02 m (8.02 m inside the corridor). Max reverse speed is -0.60 m/s, which is slower than DYN-CORR-1 (-1.00 m/s). Thus DYN-CORR-1 closes the gap at 0.40 m/s and collides before the robot can exit the corridor."
+    },
+    {
+      "counterfactual": "A* replanning inside corridor",
+      "physically_feasible": true,
+      "feasible_with_causal_observations": true,
+      "feasible_only_with_hidden_future_info": false,
+      "evidence": "Verified by direct test: replan_global_path_around_obstacles() with DYN-CORR-1 at (12.0, 7.5) succeeds (len=41, y_range=(6.5, 7.5)), routing laterally around the obstacle with >=0.15 m clearance. In the current controller, replanning only triggers after blocked=True (deadlock_timeout_s=2.5 s), which never fires while cruising at 1.0 m/s and cannot fire in 0.40 s after reversal."
+    }
+  ],
+  "observed_parameter_sweep_runs": [
+    {"name": "max_linear_speed_0.4mps", "termination_reason": "COLLISION_ABORT", "collisions": 1, "min_inst_clearance_m": -0.0369},
+    {"name": "max_linear_speed_0.5mps", "termination_reason": "COLLISION_ABORT", "collisions": 1, "min_inst_clearance_m": -0.0224},
+    {"name": "max_linear_speed_0.6mps", "termination_reason": "COLLISION_ABORT", "collisions": 1, "min_inst_clearance_m": -0.0263},
+    {"name": "max_linear_speed_0.8mps", "termination_reason": "COLLISION_ABORT", "collisions": 1, "min_inst_clearance_m": -0.0079},
+    {"name": "safety_margin_0.25m", "termination_reason": "COLLISION_ABORT", "collisions": 1, "min_inst_clearance_m": -0.0471},
+    {"name": "safety_margin_0.35m", "termination_reason": "COLLISION_ABORT", "collisions": 1, "min_inst_clearance_m": -0.0394},
+    {"name": "safety_margin_0.5m", "termination_reason": "COLLISION_ABORT", "collisions": 1, "min_inst_clearance_m": -0.0471},
+    {"name": "uncertainty_growth_0.1mps", "termination_reason": "COLLISION_ABORT", "collisions": 1, "min_inst_clearance_m": -0.0334},
+    {"name": "uncertainty_growth_0.25mps", "termination_reason": "COLLISION_ABORT", "collisions": 1, "min_inst_clearance_m": -0.0208},
+    {"name": "uncertainty_growth_0.5mps", "termination_reason": "COLLISION_ABORT", "collisions": 1, "min_inst_clearance_m": -0.0428},
+    {"name": "zero_reaction_time_decel_10", "termination_reason": "COLLISION_ABORT", "collisions": 1, "min_inst_clearance_m": -0.0002},
+    {"name": "high_clearance_weight_3.0", "termination_reason": "COLLISION_ABORT", "collisions": 1, "min_inst_clearance_m": -0.0439}
+  ]
+}

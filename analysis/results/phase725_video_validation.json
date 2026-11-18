@@ -1,0 +1,34 @@
+{
+  "video_path": "C:\\Users\\Legolas\\Desktop\\DYNAMIC-NAV\\analysis\\results\\phase725_dynamic_nav_final_demo.mp4",
+  "narration_wav_path": "C:\\Users\\Legolas\\Desktop\\DYNAMIC-NAV\\analysis\\results\\phase725_turkish_narration.wav",
+  "subtitles_path": "C:\\Users\\Legolas\\Desktop\\DYNAMIC-NAV\\analysis\\results\\phase725_final_subtitles.srt",
+  "tts_engine": "edge-tts",
+  "tts_voice": "tr-TR-AhmetNeural",
+  "duration_s": 229.733333,
+  "narration_duration_s": 229.733333,
+  "size_bytes": 14046821,
+  "streams": [
+    {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_type": "video",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1"
+    },
+    {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_type": "audio",
+      "sample_rate": "44100",
+      "channels": 2,
+      "r_frame_rate": "0/0"
+    }
+  ],
+  "audio_mean_volume_db": -20.2,
+  "audio_max_volume_db": -4.6,
+  "audio_audible_non_silent": true,
+  "black_sections_ge_0_5s": 0,
+  "subtitles_burned_in": true,
+  "last_narration_end_s": 225.97
+}

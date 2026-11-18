@@ -1,0 +1,14 @@
+{
+  "baseline_8_scenarios": {
+    "mean_avg_dwa_ms": 11.853753610684334,
+    "mean_p95_dwa_ms": 36.98277125131426,
+    "max_dwa_ms": 246.87960000301246
+  },
+  "narrow_gate_42_runs": {
+    "mean_median_dwa_ms": 5.577765476724987,
+    "mean_p99_dwa_ms": 232.4849917623734,
+    "total_calls": 19014,
+    "calls_over_50ms_count": 3280,
+    "calls_over_50ms_pct": 17.25044703902388
+  }
+}

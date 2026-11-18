@@ -1,0 +1,30 @@
+{
+  "phase": "6.5.5.4",
+  "mode": "READ_ONLY",
+  "proposals": [
+    {
+      "id": "P6554-01",
+      "title": "Generalize Proactive Lateral Passing Beyond Confined Corridors (Slow Lead-Obstacle Overtaking)",
+      "physical_rationale": "In NARROW-GATE post-exit (x > 10.0 m, 15.0 m open width), the robot tailgates DYN-GATE-1 (+0.80 m/s) at 0.83 m/s and ~0.17 m surface clearance because CorridorPassingManager restricts proactive passing to confined walls (min_wall_dist <= 2.0 m). Allowing proactive lateral A* passing whenever a slower obstacle continuously obstructs the path ahead in passable space lets the robot overtake with >= 0.50 m lateral clearance.",
+      "required_observations": ["ObservedRobotState", "ObservedObstacle (position, causal velocity, radius)", "Static occupancy grid"],
+      "expected_collision_risk_effect": "Eliminates post-gate tailgating collisions in L1-RD-01__01 and L1-SG-01__01 without knowing waypoint_b_m.",
+      "potential_effect_on_other_scenarios": "Low risk if gated by hysteresis (e.g. >= 5 steps) and full DWA+braking validation; may also help SUDDEN-STOP wide-channel passing.",
+      "safety_margin_implications": "Strictly preserves 0.15 m safety margin; only accepts DWA- and braking-validated passing paths.",
+      "causal_without_hidden_future_info": true
+    },
+    {
+      "id": "P6554-02",
+      "title": "Causal Velocity-Dependent Following Standoff in DWA Scoring / Clearance",
+      "physical_rationale": "DWA currently treats 0.153 m surface clearance behind a +0.80 m/s moving obstacle identically to 0.153 m behind a static wall, allowing 0.83 m/s tailgating with only 0.17 m buffer (~0.10 s reaction time to any deceleration/reversal). Adding a soft velocity-proportional standoff preference (or braking-distance-aware clearance term) encourages DWA to either maintain >= 0.6-1.0 m following distance or steer laterally into open space.",
+      "required_observations": ["Robot speed v_mps", "Observed obstacle position and causal velocity"],
+      "expected_collision_risk_effect": "Increases reaction buffer before any unannounced obstacle deceleration or reversal.",
+      "potential_effect_on_other_scenarios": "Minimal impact on normal cruising; must be tuned carefully so it does not cause premature slowdowns in CROSSING or MULTIPLE-DYNAMIC-OBSTACLES.",
+      "safety_margin_implications": "Does not relax 0.15 m hard threshold; adds soft preference for larger dynamic buffer.",
+      "causal_without_hidden_future_info": true
+    }
+  ],
+  "recommended_regression_tests": [
+    "Existing: tests/test_phase6553_narrow_gate_standoff.py, test_phase642_stage22.py, test_phase642_stage24.py, test_phase654_corridor_passing.py, test_phase652_causal_observation.py",
+    "Minimum new tests: (1) Post-gate open-space overtaking of slower lead obstacle, (2) Causal isolation check ensuring no waypoint_b_m access during post-gate passing."
+  ]
+}

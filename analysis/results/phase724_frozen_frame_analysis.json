@@ -1,0 +1,52 @@
+{
+  "video": "C:\\Users\\Legolas\\Desktop\\DYNAMIC-NAV\\analysis\\results\\phase724_dynamic_nav_final_demo.mp4",
+  "sample_rate_fps": 2,
+  "total_sampled_frames": 459,
+  "simulation_window_s": [
+    35.0,
+    205.73
+  ],
+  "frozen_runs_in_simulation_window_ge_2s": [],
+  "all_static_cards_ge_2s": [
+    {
+      "start_s": 0.0,
+      "end_s": 7.5,
+      "duration_s": 7.5
+    },
+    {
+      "start_s": 7.5,
+      "end_s": 15.0,
+      "duration_s": 7.5
+    },
+    {
+      "start_s": 15.0,
+      "end_s": 22.0,
+      "duration_s": 7.0
+    },
+    {
+      "start_s": 22.0,
+      "end_s": 29.0,
+      "duration_s": 7.0
+    },
+    {
+      "start_s": 29.0,
+      "end_s": 35.0,
+      "duration_s": 6.0
+    },
+    {
+      "start_s": 205.5,
+      "end_s": 213.5,
+      "duration_s": 8.0
+    },
+    {
+      "start_s": 213.5,
+      "end_s": 221.5,
+      "duration_s": 8.0
+    },
+    {
+      "start_s": 221.5,
+      "end_s": 229.5,
+      "duration_s": 8.0
+    }
+  ]
+}

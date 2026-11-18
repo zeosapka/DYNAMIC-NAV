@@ -1,0 +1,27 @@
+{
+  "phase": "7.2.2",
+  "pytest_suite": {
+    "command": ".\\.venv\\Scripts\\pytest.exe -v",
+    "collected": 191,
+    "passed": 191,
+    "failed": 0,
+    "skipped": 0,
+    "duration_s": 218.16
+  },
+  "phase656_baseline_comparison": {
+    "phase656_pytest_passed": 191,
+    "phase722_pytest_passed": 191,
+    "algorithm_or_physics_changes": false,
+    "simulation_pygame_import": false,
+    "causal_observation_preserved": true,
+    "notes": "Tüm değişiklikler yalnızca interface/ ve WindowConfig/ThemeConfig görsel-etkileşim katmanıyla sınırlıdır; simülasyon fiziği, A* ve DWA algoritmaları değiştirilmemiştir."
+  },
+  "ui_and_scenario_verification": {
+    "home_buttons_tested": 12,
+    "guide_buttons_tested": 5,
+    "sim_buttons_tested": 34,
+    "all_buttons_passed": true,
+    "all_8_scenarios_opened_and_planned": true,
+    "pause_resume_reset_verified": true
+  }
+}

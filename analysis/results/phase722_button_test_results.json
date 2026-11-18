@@ -1,0 +1,368 @@
+{
+  "home_buttons": [
+    {
+      "label": "YENİ SİMÜLASYON BAŞLAT",
+      "ok": true,
+      "view": "SIMULATION"
+    },
+    {
+      "label": "KARŞIDAN GELEN",
+      "ok": true,
+      "view": "SIMULATION"
+    },
+    {
+      "label": "ÇAPRAZ GEÇİŞ",
+      "ok": true,
+      "view": "SIMULATION"
+    },
+    {
+      "label": "KORİDOR",
+      "ok": true,
+      "view": "SIMULATION"
+    },
+    {
+      "label": "DUR-KALK",
+      "ok": true,
+      "view": "SIMULATION"
+    },
+    {
+      "label": "DAR GEÇİT",
+      "ok": true,
+      "view": "SIMULATION"
+    },
+    {
+      "label": "ÇOKLU ENGEL",
+      "ok": true,
+      "view": "SIMULATION"
+    },
+    {
+      "label": "ANİ DURUŞ",
+      "ok": true,
+      "view": "SIMULATION"
+    },
+    {
+      "label": "SONLU FREN",
+      "ok": true,
+      "view": "SIMULATION"
+    },
+    {
+      "label": "KULLANIM KILAVUZU",
+      "ok": true,
+      "view": "GUIDE"
+    },
+    {
+      "label": "ALGORİTMA BİLGİSİ",
+      "ok": true,
+      "view": "GUIDE"
+    },
+    {
+      "label": "ÇIKIŞ",
+      "ok": true,
+      "note": "sets _running=False"
+    }
+  ],
+  "guide_buttons": [
+    {
+      "label": "ADIM ADIM REHBER",
+      "ok": true,
+      "view": "GUIDE",
+      "tab": "TUTORIAL"
+    },
+    {
+      "label": "ALGORİTMALAR",
+      "ok": true,
+      "view": "GUIDE",
+      "tab": "ALGORITHMS"
+    },
+    {
+      "label": "GÜVENLİK GÖSTERGELERİ",
+      "ok": true,
+      "view": "GUIDE",
+      "tab": "SAFETY"
+    },
+    {
+      "label": "GERİ DÖN",
+      "ok": true,
+      "view": "HOME",
+      "tab": "SAFETY"
+    },
+    {
+      "label": "ANA MENÜ",
+      "ok": true,
+      "view": "HOME",
+      "tab": "SAFETY"
+    }
+  ],
+  "sim_buttons": [
+    {
+      "label": "BAŞLAT",
+      "ok": true,
+      "new_label": "BAŞLAT",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "DURAKLAT",
+      "ok": true,
+      "new_label": "DURAKLAT",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "SIFIRLA",
+      "ok": true,
+      "new_label": "SIFIRLA",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "A* PLANLA",
+      "ok": true,
+      "new_label": "A* PLANLA",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "MOD: DWA",
+      "ok": true,
+      "new_label": "MOD: TAKİPÇİ",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "HIZ: 1.0x",
+      "ok": true,
+      "new_label": "HIZ: 1.5x",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "DEMO: AÇIK",
+      "ok": true,
+      "new_label": "DEMO: KAPALI",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "KILAVUZ",
+      "ok": true,
+      "new_label": "KILAVUZ",
+      "view": "GUIDE"
+    },
+    {
+      "label": "ANA MENÜ",
+      "ok": true,
+      "new_label": "ANA MENÜ",
+      "view": "HOME"
+    },
+    {
+      "label": "PANELİ GİZLE",
+      "ok": true,
+      "new_label": "GÜVENLİK PANELİ",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "SEÇ / TAŞI",
+      "ok": true,
+      "new_label": "SEÇ / TAŞI",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "ÖLÇÜM ARACI",
+      "ok": true,
+      "new_label": "ÖLÇÜM ARACI",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "NESNE EKLE",
+      "ok": true,
+      "new_label": "NESNE EKLE",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "KATEGORİ",
+      "ok": true,
+      "new_label": "KATEGORİ",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "KOPYALA",
+      "ok": true,
+      "new_label": "KOPYALA",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "SİL",
+      "ok": true,
+      "new_label": "SİL",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "DÖNDÜR +15°",
+      "ok": true,
+      "new_label": "DÖNDÜR +15°",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "DÖNDÜR -15°",
+      "ok": true,
+      "new_label": "DÖNDÜR -15°",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "SÜRÜŞ",
+      "ok": true,
+      "new_label": "SÜRÜŞ",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "BAŞLANGIÇ",
+      "ok": true,
+      "new_label": "BAŞLANGIÇ",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "HEDEF",
+      "ok": true,
+      "new_label": "HEDEF",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "STATİK ENGEL",
+      "ok": true,
+      "new_label": "STATİK ENGEL",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "8-YÖN",
+      "ok": true,
+      "new_label": "4-YÖN",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "TEMİZLE",
+      "ok": true,
+      "new_label": "TEMİZLE",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "KARŞIDAN GELEN",
+      "ok": true,
+      "new_label": "KARŞIDAN GELEN",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "ÇAPRAZ GEÇİŞ",
+      "ok": true,
+      "new_label": "ÇAPRAZ GEÇİŞ",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "KORİDOR",
+      "ok": true,
+      "new_label": "KORİDOR",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "DUR-KALK",
+      "ok": true,
+      "new_label": "DUR-KALK",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "DAR GEÇİT",
+      "ok": true,
+      "new_label": "DAR GEÇİT",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "ÇOKLU ENGEL",
+      "ok": true,
+      "new_label": "ÇOKLU ENGEL",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "ANİ DURUŞ",
+      "ok": true,
+      "new_label": "ANİ DURUŞ",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "SONLU FREN",
+      "ok": true,
+      "new_label": "SONLU FREN",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "DAVRANIŞ",
+      "ok": true,
+      "new_label": "DAVRANIŞ",
+      "view": "SIMULATION"
+    },
+    {
+      "label": "GEOMETRİ",
+      "ok": true,
+      "new_label": "GEOMETRİ",
+      "view": "SIMULATION"
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "HEAD-ON",
+      "astar_success": true,
+      "dwa_active_after_start": true,
+      "pause_ok": true,
+      "resume_ok": true,
+      "reset_ok": true
+    },
+    {
+      "scenario": "CROSSING",
+      "astar_success": true,
+      "dwa_active_after_start": true,
+      "pause_ok": true,
+      "resume_ok": true,
+      "reset_ok": true
+    },
+    {
+      "scenario": "CORRIDOR",
+      "astar_success": true,
+      "dwa_active_after_start": true,
+      "pause_ok": true,
+      "resume_ok": true,
+      "reset_ok": true
+    },
+    {
+      "scenario": "STOP-AND-GO",
+      "astar_success": true,
+      "dwa_active_after_start": true,
+      "pause_ok": true,
+      "resume_ok": true,
+      "reset_ok": true
+    },
+    {
+      "scenario": "NARROW-GATE",
+      "astar_success": true,
+      "dwa_active_after_start": true,
+      "pause_ok": true,
+      "resume_ok": true,
+      "reset_ok": true
+    },
+    {
+      "scenario": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "astar_success": true,
+      "dwa_active_after_start": true,
+      "pause_ok": true,
+      "resume_ok": true,
+      "reset_ok": true
+    },
+    {
+      "scenario": "SUDDEN-STOP",
+      "astar_success": true,
+      "dwa_active_after_start": true,
+      "pause_ok": true,
+      "resume_ok": true,
+      "reset_ok": true
+    },
+    {
+      "scenario": "SUDDEN-STOP-FINITE-DECEL",
+      "astar_success": true,
+      "dwa_active_after_start": true,
+      "pause_ok": true,
+      "resume_ok": true,
+      "reset_ok": true
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "exit_code": 0,
+  "total": 8,
+  "passed": 8,
+  "tests": [
+    {
+      "nodeid": "tests/test_phase6551_timer_fix.py::test_1_stop_duration_3_2_finite_termination_and_analytical_match",
+      "outcome": "passed",
+      "duration_s": 0.000690199995005969
+    },
+    {
+      "nodeid": "tests/test_phase6551_timer_fix.py::test_2_very_small_remaining_intervals",
+      "outcome": "passed",
+      "duration_s": 8.679999882588163e-05
+    },
+    {
+      "nodeid": "tests/test_phase6551_timer_fix.py::test_3_floating_point_representational_boundaries",
+      "outcome": "passed",
+      "duration_s": 7.479999476345256e-05
+    },
+    {
+      "nodeid": "tests/test_phase6551_timer_fix.py::test_4_multiple_transitions_in_single_step",
+      "outcome": "passed",
+      "duration_s": 0.00011749999976018444
+    },
+    {
+      "nodeid": "tests/test_phase6551_timer_fix.py::test_5_exact_transition_boundaries",
+      "outcome": "passed",
+      "duration_s": 9.010000212583691e-05
+    },
+    {
+      "nodeid": "tests/test_phase6551_timer_fix.py::test_6_large_simulation_timestamps",
+      "outcome": "passed",
+      "duration_s": 8.639999578008428e-05
+    },
+    {
+      "nodeid": "tests/test_phase6551_timer_fix.py::test_7_zero_and_invalid_dt_handling",
+      "outcome": "passed",
+      "duration_s": 6.569999823113903e-05
+    },
+    {
+      "nodeid": "tests/test_phase6551_timer_fix.py::test_8_deterministic_positions_and_velocities",
+      "outcome": "passed",
+      "duration_s": 0.0008089999973890372
+    }
+  ]
+}

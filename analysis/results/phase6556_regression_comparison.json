@@ -1,0 +1,20 @@
+{
+  "phase": "6.5.5.6",
+  "reference_artifacts": [
+    "analysis/results/phase6555_open_space_raw.json",
+    "analysis/results/phase6555_determinism.json",
+    "analysis/results/phase6555_regression_results.json"
+  ],
+  "baseline_8_scenarios": {
+    "goal_reached": "8 / 8",
+    "collisions": 0,
+    "safety_margin_violations": 0
+  },
+  "narrow_gate_14_variants": {
+    "goal_reached": "14 / 14",
+    "collisions": 0,
+    "margin_violation_free": "13 / 14",
+    "minor_margin_dip": ["NARROW-GATE__L1-DO-01__01 (0.149811 m at t=15.55 s)"],
+    "three_run_determinism": "14 / 14 (100%)"
+  }
+}

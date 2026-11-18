@@ -1,0 +1,15 @@
+{
+  "phase": "7.3.2/7.3.3",
+  "renderer": "Microsoft Edge Chromium Print-to-PDF + Native MathML (Cambria Math)",
+  "equations": [
+    {"id": "(1)", "name": "Sürekli zamanlı diferansiyel/tek-tekerlekli kinematik", "source": "simulation/entities.py::Robot.step", "verified": true},
+    {"id": "(2)-(3)", "name": "Ayrık orta nokta yönelim integrasyonu (dt_s = 0.05 s)", "source": "simulation/entities.py::Robot.step, config.py::ExperimentConfig", "verified": true},
+    {"id": "(4)", "name": "Kesin Öklid hücre-merkezi engel şişirme (0.50 m)", "source": "algorithms/astar.py::inflate_occupancy_grid", "verified": true},
+    {"id": "(5)-(6)", "name": "A* maliyet f(n)=g(n)+h_oct(n) ve oktil sezgisel", "source": "algorithms/astar.py::octile_heuristic_m", "verified": true},
+    {"id": "(7)", "name": "DWA dinamik hız penceresi V_d", "source": "algorithms/dwa.py::compute_dynamic_window, config.py::DWAConfig", "verified": true},
+    {"id": "(8)", "name": "DWA yörünge puanlama J(v, omega)", "source": "algorithms/dwa.py::score_trajectory, config.py::DWAConfig", "verified": true},
+    {"id": "(9)", "name": "Aktif frenleme duruş mesafesi d_stop(v)", "source": "algorithms/dwa.py::compute_stopping_distance_m, config.py::DWAConfig", "verified": true}
+  ],
+  "all_equations_rendered_with_cambria_math": true,
+  "raw_latex_or_broken_symbols_in_pdf": false
+}

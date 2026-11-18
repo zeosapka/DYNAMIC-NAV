@@ -1,0 +1,122 @@
+{
+  "exit_code": 0,
+  "total": 23,
+  "passed": 23,
+  "tests": [
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_1_narrow_gate_l1_ic_01_02_exact_failure_resolved",
+      "outcome": "passed",
+      "duration_s": 8.278860200000054
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_2_unsafe_p2_standstill_selects_safe_p3_reverse",
+      "outcome": "passed",
+      "duration_s": 0.004629199996998068
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_3_unsafe_p2_standstill_selects_safe_p4_lateral_holding",
+      "outcome": "passed",
+      "duration_s": 0.002921399995102547
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_4_safe_p2_standstill_preserves_waiting_behavior",
+      "outcome": "passed",
+      "duration_s": 0.00014059999375604093
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_5_no_feasible_escape_reports_blocked_honestly",
+      "outcome": "passed",
+      "duration_s": 0.003343900003528688
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_6_multiple_approaching_obstacles_standoff",
+      "outcome": "passed",
+      "duration_s": 0.004731100001663435
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_7_causal_isolation_from_hidden_schedules",
+      "outcome": "passed",
+      "duration_s": 0.004214900000079069
+    },
+    {
+      "nodeid": "tests/test_phase642_stage22.py::test_gate_clear_hold_unsafe_prefers_safe_reverse_over_margin_violating_forward",
+      "outcome": "passed",
+      "duration_s": 0.003707599993504118
+    },
+    {
+      "nodeid": "tests/test_phase642_stage22.py::test_gate_clear_hold_unsafe_retains_fallback_when_no_safe_reverse_exists",
+      "outcome": "passed",
+      "duration_s": 0.003791700000874698
+    },
+    {
+      "nodeid": "tests/test_phase642_stage22.py::test_early_margin_violation_followed_by_collision_is_classified_colliding",
+      "outcome": "passed",
+      "duration_s": 0.0001036000030580908
+    },
+    {
+      "nodeid": "tests/test_phase642_stage22.py::test_margin_violation_without_collision_preserves_distinction",
+      "outcome": "passed",
+      "duration_s": 0.00010540000221226364
+    },
+    {
+      "nodeid": "tests/test_phase642_stage22.py::test_reverse_recovery_respects_acceleration_and_braking_constraints",
+      "outcome": "passed",
+      "duration_s": 0.003815999996731989
+    },
+    {
+      "nodeid": "tests/test_phase642_stage22.py::test_reverse_recovery_respects_static_and_simobject_geometry",
+      "outcome": "passed",
+      "duration_s": 0.0166289000044344
+    },
+    {
+      "nodeid": "tests/test_phase642_stage24.py::test_gate_clear_hold_unsafe_selects_safe_left_holding_pose",
+      "outcome": "passed",
+      "duration_s": 0.004474200002732687
+    },
+    {
+      "nodeid": "tests/test_phase642_stage24.py::test_gate_clear_hold_unsafe_selects_safe_right_holding_pose",
+      "outcome": "passed",
+      "duration_s": 0.00448520000645658
+    },
+    {
+      "nodeid": "tests/test_phase642_stage24.py::test_both_holding_poses_unsafe_preserves_priority2_behavior",
+      "outcome": "passed",
+      "duration_s": 0.004440400000021327
+    },
+    {
+      "nodeid": "tests/test_phase642_stage24.py::test_safe_final_pose_with_unsafe_intermediate_trajectory_is_rejected",
+      "outcome": "passed",
+      "duration_s": 0.00010900000052060932
+    },
+    {
+      "nodeid": "tests/test_phase642_stage24.py::test_safe_trajectory_with_unsafe_braking_path_is_rejected",
+      "outcome": "passed",
+      "duration_s": 0.00010170000314246863
+    },
+    {
+      "nodeid": "tests/test_phase642_stage24.py::test_static_obstacle_blocking_lateral_maneuver_is_rejected",
+      "outcome": "passed",
+      "duration_s": 6.460000440711156e-05
+    },
+    {
+      "nodeid": "tests/test_phase642_stage24.py::test_dynamic_obstacle_blocking_lateral_maneuver_is_rejected",
+      "outcome": "passed",
+      "duration_s": 0.00034390000655548647
+    },
+    {
+      "nodeid": "tests/test_phase642_stage24.py::test_holding_pose_becoming_unsafe_during_waiting_horizon_is_rejected",
+      "outcome": "passed",
+      "duration_s": 0.0005095000014989637
+    },
+    {
+      "nodeid": "tests/test_phase642_stage24.py::test_safe_reverse_recovery_takes_precedence_over_lateral_holding",
+      "outcome": "passed",
+      "duration_s": 0.0037712999983341433
+    },
+    {
+      "nodeid": "tests/test_phase642_stage24.py::test_normal_dwa_outside_gate_clear_hold_unsafe_remains_unchanged",
+      "outcome": "passed",
+      "duration_s": 0.0025865999996312894
+    }
+  ]
+}

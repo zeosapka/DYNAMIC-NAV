@@ -1,0 +1,19 @@
+{
+  "phase": "6.5.5.6",
+  "variant_id": "NARROW-GATE__L1-DO-01__01",
+  "critical_timestamp_s": 15.55,
+  "collision_geometry_pair": ["ROBOT_CIRCLE", "STATIC_OBSTACLE_AABB"],
+  "measured_clearances_at_15_55_s": {
+    "robot_instantaneous_m": 0.15023488,
+    "prev_step_instantaneous_m_at_15_50_s": 0.15009776392091712,
+    "static_clearance_at_15_55_s_m": 0.15023488,
+    "dynamic_swept_clearance_m": 0.25175228,
+    "dwa_predicted_min_clearance_m": 0.15009776,
+    "final_evaluator_swept_clearance_m": 0.14981141189316083,
+    "discrepancy_m": 0.00028635202775629
+  },
+  "implementation_comparison": {
+    "dwa_evaluate_trajectory_with_braking": "Evaluates continuous swept-circle clearance for dynamic obstacles (_swept_circle_clearance_m) and SimObjects, but evaluates ONLY pointwise _point_clearance() at trajectory endpoints for StaticObstacle AABBs and world boundaries.",
+    "metrics_compute_swept_clearance_m": "Evaluates continuous segment-to-AABB swept clearance along [prev_pos, curr_pos] for StaticObstacle AABBs as well as swept-circle clearance for dynamic obstacles."
+  }
+}

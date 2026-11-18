@@ -1,0 +1,14 @@
+{
+  "phase": "6.5.5.6",
+  "mode": "READ_ONLY_PROPOSAL",
+  "correction_necessary": true,
+  "minimal_correction": {
+    "title": "Continuous Segment-to-AABB Static Swept Clearance in DWA Trajectory & Braking Validation",
+    "target_file": "algorithms/dwa.py",
+    "target_function": "evaluate_trajectory_with_braking",
+    "description": "In evaluate_trajectory_with_braking(), evaluate segment-to-AABB static clearance along each trajectory and braking segment [prev_pose, curr_pose] (matching compute_swept_clearance_m() in analysis/metrics.py), rather than checking static obstacles only pointwise at endpoints.",
+    "safety_threshold_changed": false,
+    "hidden_future_info_used": false,
+    "expected_effect": "Eliminates the candidate-vs-evaluator geometric mismatch so DWA rejects any segment whose interior dips below 0.150000 m against static obstacles."
+  }
+}

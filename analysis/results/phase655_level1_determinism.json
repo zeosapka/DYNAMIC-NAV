@@ -1,0 +1,1086 @@
+{
+  "total_variants": 120,
+  "deterministic_variants": 120,
+  "variants": {
+    "HEAD-ON__L1-IC-01__01": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-IC-01__02": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-IC-02__01": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-IC-02__02": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-IC-03__01": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-IC-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-IC-04__01": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-IC-04",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-IC-05__01": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-IC-05",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-IC-01__01": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-IC-01__02": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-IC-02__01": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-IC-02__02": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-IC-03__01": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-IC-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-IC-04__01": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-IC-04",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-IC-05__01": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-IC-05",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-IC-01__01": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-IC-01__02": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-IC-02__01": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-IC-02__02": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-IC-03__01": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-IC-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-IC-04__01": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-IC-04",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-IC-05__01": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-IC-05",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-IC-01__01": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-IC-01__02": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-IC-02__01": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-IC-02__02": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-IC-03__01": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-IC-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-IC-04__01": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-IC-04",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-IC-05__01": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-IC-05",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-IC-01__01": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-IC-01__02": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-IC-02__01": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-IC-02__02": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-IC-03__01": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-IC-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-IC-04__01": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-IC-04",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-IC-05__01": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-IC-05",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-IC-01__01": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-IC-01__02": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-IC-02__01": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-IC-02__02": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-IC-03__01": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-IC-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-IC-04__01": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-IC-04",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-IC-05__01": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-IC-05",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-IC-01__01": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-IC-01__02": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-IC-02__01": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-IC-02__02": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-IC-03__01": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-IC-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-IC-04__01": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-IC-04",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-IC-05__01": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-IC-05",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-IC-01__01": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-IC-01__02": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-IC-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-IC-02__01": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-IC-02__02": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-IC-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-IC-03__01": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-IC-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-IC-04__01": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-IC-04",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-IC-05__01": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-IC-05",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-DO-01__01": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-DO-01__02": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-DO-01__01": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-DO-01__02": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-DO-01__01": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-DO-01__02": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-DO-01__01": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-DO-01__02": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-DO-01__01": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-DO-01__02": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-DO-01__01": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-DO-01__02": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-DO-01__01": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-DO-01__02": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-DO-01__01": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-DO-01__02": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-DO-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-DO-02__01": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-DO-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-DO-02__02": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-DO-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-DO-02__01": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-DO-02",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-DO-02__02": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-DO-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-DO-02__01": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-DO-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-DO-02__02": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-DO-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-DO-03__01": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-DO-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-DO-03__02": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-DO-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-DO-03__01": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-DO-03",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-DO-03__02": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-DO-03",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-SG-01__01": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-SG-01",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-SG-01__02": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-SG-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-SG-01__01": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-SG-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-SG-01__02": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-SG-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-SG-02__01": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-SG-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-SG-02__02": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-SG-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-SG-02__01": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-SG-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-SG-02__02": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-SG-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-SG-02__01": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-SG-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-SG-02__02": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-SG-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-SG-02__01": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-SG-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-SG-02__02": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-SG-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-SG-02__01": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-SG-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-SG-02__02": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-SG-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-RD-01__01": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-RD-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-RD-02__01": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-RD-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "HEAD-ON__L1-RD-03__01": {
+      "baseline_scenario_id": "HEAD-ON",
+      "perturbation_id": "L1-RD-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-RD-01__01": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-RD-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-RD-02__01": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-RD-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CROSSING__L1-RD-03__01": {
+      "baseline_scenario_id": "CROSSING",
+      "perturbation_id": "L1-RD-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-RD-01__01": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-RD-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-RD-02__01": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-RD-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "CORRIDOR__L1-RD-03__01": {
+      "baseline_scenario_id": "CORRIDOR",
+      "perturbation_id": "L1-RD-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-RD-01__01": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-RD-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-RD-02__01": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-RD-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "STOP-AND-GO__L1-RD-03__01": {
+      "baseline_scenario_id": "STOP-AND-GO",
+      "perturbation_id": "L1-RD-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-RD-01__01": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-RD-01",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-RD-02__01": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-RD-02",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "NARROW-GATE__L1-RD-03__01": {
+      "baseline_scenario_id": "NARROW-GATE",
+      "perturbation_id": "L1-RD-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-RD-01__01": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-RD-01",
+      "physical_deterministic": true,
+      "rep1_termination": "COLLISION_ABORT",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-RD-02__01": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-RD-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "MULTIPLE-DYNAMIC-OBSTACLES__L1-RD-03__01": {
+      "baseline_scenario_id": "MULTIPLE-DYNAMIC-OBSTACLES",
+      "perturbation_id": "L1-RD-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-RD-01__01": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-RD-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-RD-02__01": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-RD-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP__L1-RD-03__01": {
+      "baseline_scenario_id": "SUDDEN-STOP",
+      "perturbation_id": "L1-RD-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-RD-01__01": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-RD-01",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-RD-02__01": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-RD-02",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    },
+    "SUDDEN-STOP-FINITE-DECEL__L1-RD-03__01": {
+      "baseline_scenario_id": "SUDDEN-STOP-FINITE-DECEL",
+      "perturbation_id": "L1-RD-03",
+      "physical_deterministic": true,
+      "rep1_termination": "GOAL_REACHED",
+      "rep1_avg_dwa_ms": null,
+      "rep2_avg_dwa_ms": null,
+      "rep3_avg_dwa_ms": null
+    }
+  }
+}

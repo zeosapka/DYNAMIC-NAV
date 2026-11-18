@@ -1,0 +1,74 @@
+1
+00:00:00,000 --> 00:00:14,000
+DYNAMIC-NAV: Dinamik Engellerden Kaçınan Mobil Robot Simülasyon Sistemi.
+Elektrik-Elektronik Mühendisliği — Eren Çakmaz, Ahmet Gürlek, Arda Başaran.
+
+2
+00:00:14,000 --> 00:00:30,000
+4 katmanlı SI birimli mimari: config.py, simulation/, algorithms/,
+interface/ ve analysis/ modülleriyle deterministik simülasyon.
+
+3
+00:00:30,000 --> 00:00:48,000
+A* Küresel Yol Planlama: 0,2 m ızgarada statik engeller robot yarıçapı ve
+güvenlik payı toplamı (0,50 m) kadar Öklid mesafesiyle şişirilir.
+
+4
+00:00:48,000 --> 00:01:05,000
+8-yönlü oktil sezgisel fonksiyonu ile en kısa küresel yol (mavi çizgi)
+başlangıçtan hedefe (yeşil elmas) düzleştirilerek hesaplanır.
+
+5
+00:01:05,000 --> 00:01:25,000
+HEAD-ON (Karşıdan Gelen) Senaryosu — Amaç: Karşıdan yaklaşan dinamik
+engele karşı DWA yerel kaçınma davranışını değerlendirmek.
+
+6
+00:01:25,000 --> 00:01:45,000
+DWA aday yörüngeleri değerlendirir (turuncu/kırmızı riskli, yeşil seçilen)
+ve güvenli yanal manevra ile hedefe ulaşır.
+
+7
+00:01:45,000 --> 00:02:05,000
+CROSSING (Çapraz Geçiş) Senaryosu — Amaç: Rotayı çapraz kesen dinamik
+engellerin oluşturduğu çarpışma riskine karşı hız ve yönelim uyarlaması.
+
+8
+00:02:05,000 --> 00:02:25,000
+Robot, çapraz engellerin hız vektörlerini gözlemleyip güvenli zamanlama
+ile rotasını koruyarak hedefe ilerler.
+
+9
+00:02:25,000 --> 00:02:45,000
+CORRIDOR (Koridor) Senaryosu — Amaç: Dar duvarlar arasında 0,15 m statik
+güvenlik payını koruyarak dinamik engelle güvenli geçiş.
+
+10
+00:02:45,000 --> 00:03:05,000
+DWA yörünge seçimi duvar temasını engelleyerek koridor çıkışında
+hedefe güvenli ulaşımı sağlar.
+
+11
+00:03:05,000 --> 00:03:28,000
+NARROW-GATE (Dar Geçit) Senaryosu — Amaç: Hareketli engeller arasındaki
+dar geçitte güvenli bekleme ve proaktif geçiş manevrası.
+
+12
+00:03:28,000 --> 00:03:50,000
+Engel geçidi terk ettikten sonra robot yönünü yeniden ayarlar,
+proaktif manevra ile geçitten çıkar ve HEDEFE ULAŞILDI durumuna geçer.
+
+13
+00:03:50,000 --> 00:04:20,000
+Canlı Telemetri Paneli: Anlık hız (m/s), hedefe kalan mesafe, en yakın
+geometrik engel mesafesi, min. güvenlik payı ve yeniden planlama izlenir.
+
+14
+00:04:20,000 --> 00:04:33,000
+Faz 6.5.6 Doğrulanmış Test Sonuçları: 191/191 pytest testi (175,52 s),
+8/8 temel senaryo ve NARROW-GATE Seviye 1'de 14/14 varyant (42 koşum).
+
+15
+00:04:33,000 --> 00:04:45,000
+Doğrulanan kapsamda 0 çarpışma, 0 güvenlik payı ihlali ve %100 determinizm.
+Elektrik-Elektronik Mühendisliği — Eren Çakmaz, Ahmet Gürlek, Arda Başaran.

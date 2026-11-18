@@ -1,0 +1,63 @@
+{
+  "exit_code": 0,
+  "total": 11,
+  "passed": 11,
+  "failed": 0,
+  "tests": [
+    {
+      "nodeid": "tests/test_phase652_causal_observation.py::test_1_no_future_schedule_access_during_dwa",
+      "outcome": "passed",
+      "duration_s": 0.015565699999569915
+    },
+    {
+      "nodeid": "tests/test_phase652_causal_observation.py::test_2_identical_observed_history_identical_control",
+      "outcome": "passed",
+      "duration_s": 0.014069699998799479
+    },
+    {
+      "nodeid": "tests/test_phase652_causal_observation.py::test_3_new_obstacle_appearance_starts_with_zero_velocity",
+      "outcome": "passed",
+      "duration_s": 0.00016059999688877724
+    },
+    {
+      "nodeid": "tests/test_phase652_causal_observation.py::test_4_causal_velocity_estimation_from_two_observations",
+      "outcome": "passed",
+      "duration_s": 0.00015139999959501438
+    },
+    {
+      "nodeid": "tests/test_phase652_causal_observation.py::test_5_observation_latency_propagation",
+      "outcome": "passed",
+      "duration_s": 0.00012559999959194101
+    },
+    {
+      "nodeid": "tests/test_phase652_causal_observation.py::test_6_stale_observation_rejection_and_marking",
+      "outcome": "passed",
+      "duration_s": 9.130000034929253e-05
+    },
+    {
+      "nodeid": "tests/test_phase652_causal_observation.py::test_7_uncertainty_growth_with_age_and_horizon",
+      "outcome": "passed",
+      "duration_s": 7.209999967017211e-05
+    },
+    {
+      "nodeid": "tests/test_phase652_causal_observation.py::test_8_stop_and_go_schedule_isolation",
+      "outcome": "passed",
+      "duration_s": 0.00010130000009667128
+    },
+    {
+      "nodeid": "tests/test_phase652_causal_observation.py::test_9_replan_uses_only_observed_obstacles",
+      "outcome": "passed",
+      "duration_s": 0.002933700001449324
+    },
+    {
+      "nodeid": "tests/test_phase652_causal_observation.py::test_10_source_code_isolation_audit",
+      "outcome": "passed",
+      "duration_s": 0.0009173999969789293
+    },
+    {
+      "nodeid": "tests/test_phase652_causal_observation.py::test_11_end_to_end_hidden_reversal_schedule",
+      "outcome": "passed",
+      "duration_s": 0.02344200000152341
+    }
+  ]
+}

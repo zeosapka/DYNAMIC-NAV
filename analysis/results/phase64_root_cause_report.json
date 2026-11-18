@@ -1,0 +1,3125 @@
+{
+  "CROSSING": {
+    "scenario_name": "CROSSING",
+    "total_steps": 276,
+    "violation_step_count": 1,
+    "min_inst_clearance_m": 0.15030331979292166,
+    "min_swept_clearance_m": 0.14995498606697544,
+    "violation_windows": [
+      {
+        "step_idx": 116,
+        "t_s": 5.85,
+        "pre_robot": {
+          "x_m": 8.841402651168533,
+          "y_m": 4.517231465948767,
+          "theta_rad": 0.2699999999999978,
+          "v_mps": 0.7503858024691357,
+          "omega_radps": 0.19999999999999996
+        },
+        "post_robot": {
+          "x_m": 8.877512161380473,
+          "y_m": 4.52741971425856,
+          "theta_rad": 0.2799999999999976,
+          "v_mps": 0.7503858024691357,
+          "omega_radps": 0.19999999999999996
+        },
+        "cmd": {
+          "v_mps": 0.7503858024691357,
+          "omega_radps": 0.19999999999999996
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_SAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15188092989957303,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15188092989957303,
+          "selected_brake_c_m": 0.41507929401475097,
+          "selected_brake_t_s": 1.4500771604938274
+        },
+        "inst_clearance_m": 0.2069964247300098,
+        "swept_clearance_m": 0.2069964247300098,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CROSS-2",
+          "behavior": "MovementBehavior.CROSSING",
+          "pos_m": [
+            9.735000000000127,
+            4.10250000000019
+          ],
+          "vel_mps": [
+            -0.899999999999978,
+            -1.349999999999967
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            9.191119125587836,
+            4.372014849467777
+          ],
+          "obs_closest_pt_m": [
+            9.376592040905997,
+            4.280105559761084
+          ],
+          "clearance_m": 0.2069964247300098
+        },
+        "pre_dyn": [
+          [
+            "DYN-CROSS-1",
+            7.360000000000111,
+            9.959999999999834,
+            -0.7999999999999805,
+            1.1999999999999709,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ],
+          [
+            "DYN-CROSS-2",
+            9.780000000000125,
+            4.1700000000001864,
+            -0.8999999999999783,
+            -1.3499999999999674,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.2166411934661976
+      },
+      {
+        "step_idx": 117,
+        "t_s": 5.9,
+        "pre_robot": {
+          "x_m": 8.877512161380473,
+          "y_m": 4.52741971425856,
+          "theta_rad": 0.2799999999999976,
+          "v_mps": 0.7503858024691357,
+          "omega_radps": 0.19999999999999996
+        },
+        "post_robot": {
+          "x_m": 8.913517985346882,
+          "y_m": 4.53796854224408,
+          "theta_rad": 0.28999999999999737,
+          "v_mps": 0.7503858024691357,
+          "omega_radps": 0.19999999999999996
+        },
+        "cmd": {
+          "v_mps": 0.7503858024691357,
+          "omega_radps": 0.19999999999999996
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_SAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.1519876137627103,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.1519876137627103,
+          "selected_brake_c_m": 0.3655081336985484,
+          "selected_brake_t_s": 1.4500771604938274
+        },
+        "inst_clearance_m": 0.17514954119153392,
+        "swept_clearance_m": 0.17514954119153392,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CROSS-2",
+          "behavior": "MovementBehavior.CROSSING",
+          "pos_m": [
+            9.69000000000013,
+            4.035000000000194
+          ],
+          "vel_mps": [
+            -0.8999999999999777,
+            -1.3499999999999668
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            9.207274500405642,
+            4.347686882958347
+          ],
+          "obs_closest_pt_m": [
+            9.354278268504402,
+            4.252464753469604
+          ],
+          "clearance_m": 0.17514954119153392
+        },
+        "pre_dyn": [
+          [
+            "DYN-CROSS-1",
+            7.320000000000113,
+            10.01999999999983,
+            -0.7999999999999804,
+            1.1999999999999706,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ],
+          [
+            "DYN-CROSS-2",
+            9.735000000000127,
+            4.10250000000019,
+            -0.899999999999978,
+            -1.349999999999967,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.18373416715341295
+      },
+      {
+        "step_idx": 118,
+        "t_s": 5.95,
+        "pre_robot": {
+          "x_m": 8.913517985346882,
+          "y_m": 4.53796854224408,
+          "theta_rad": 0.28999999999999737,
+          "v_mps": 0.7503858024691357,
+          "omega_radps": 0.19999999999999996
+        },
+        "post_robot": {
+          "x_m": 8.949416522515369,
+          "y_m": 4.548876895031319,
+          "theta_rad": 0.29999999999999716,
+          "v_mps": 0.7503858024691357,
+          "omega_radps": 0.19999999999999996
+        },
+        "cmd": {
+          "v_mps": 0.7503858024691357,
+          "omega_radps": 0.19999999999999996
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.1518813723714032,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.1518813723714032,
+          "selected_brake_c_m": 0.3162079472988555,
+          "selected_brake_t_s": 1.4500771604938274
+        },
+        "inst_clearance_m": 0.15655141510331416,
+        "swept_clearance_m": 0.15655141510331416,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CROSS-2",
+          "behavior": "MovementBehavior.CROSSING",
+          "pos_m": [
+            9.645000000000131,
+            3.9675000000001983
+          ],
+          "vel_mps": [
+            -0.8999999999999775,
+            -1.3499999999999663
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            9.217966340058725,
+            4.3244197822069985
+          ],
+          "obs_closest_pt_m": [
+            9.338085922807723,
+            4.224022414656565
+          ],
+          "clearance_m": 0.15655141510331416
+        },
+        "pre_dyn": [
+          [
+            "DYN-CROSS-1",
+            7.280000000000116,
+            10.079999999999828,
+            -0.7999999999999803,
+            1.1999999999999704,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ],
+          [
+            "DYN-CROSS-2",
+            9.69000000000013,
+            4.035000000000194,
+            -0.8999999999999777,
+            -1.3499999999999668,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.16387567635135758
+      },
+      {
+        "step_idx": 119,
+        "t_s": 6.0,
+        "pre_robot": {
+          "x_m": 8.949416522515369,
+          "y_m": 4.548876895031319,
+          "theta_rad": 0.29999999999999716,
+          "v_mps": 0.7503858024691357,
+          "omega_radps": 0.19999999999999996
+        },
+        "post_robot": {
+          "x_m": 8.989178545364497,
+          "y_m": 4.561394903357462,
+          "theta_rad": 0.30999999999999694,
+          "v_mps": 0.8337191358024689,
+          "omega_radps": 0.19999999999999996
+        },
+        "cmd": {
+          "v_mps": 0.8337191358024689,
+          "omega_radps": 0.19999999999999996
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15041993517344743,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15041993517344743,
+          "selected_brake_c_m": 0.31983635824382417,
+          "selected_brake_t_s": 1.466743827160494
+        },
+        "inst_clearance_m": 0.15030331979292166,
+        "swept_clearance_m": 0.1502493530666721,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CROSS-2",
+          "behavior": "MovementBehavior.CROSSING",
+          "pos_m": [
+            9.600000000000135,
+            3.900000000000201
+          ],
+          "vel_mps": [
+            -0.8999999999999773,
+            -1.349999999999966
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            9.226640192369915,
+            4.304272430202208
+          ],
+          "obs_closest_pt_m": [
+            9.328615260565371,
+            4.193854255034776
+          ],
+          "clearance_m": 0.15030331979292166
+        },
+        "pre_dyn": [
+          [
+            "DYN-CROSS-1",
+            7.2400000000001175,
+            10.139999999999823,
+            -0.7999999999999801,
+            1.1999999999999702,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ],
+          [
+            "DYN-CROSS-2",
+            9.645000000000131,
+            3.9675000000001983,
+            -0.8999999999999775,
+            -1.3499999999999663,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15574357191168053
+      },
+      {
+        "step_idx": 120,
+        "t_s": 6.05,
+        "pre_robot": {
+          "x_m": 8.989178545364497,
+          "y_m": 4.561394903357462,
+          "theta_rad": 0.30999999999999694,
+          "v_mps": 0.8337191358024689,
+          "omega_radps": 0.19999999999999996
+        },
+        "post_robot": {
+          "x_m": 9.04069835686854,
+          "y_m": 4.5781826052802685,
+          "theta_rad": 0.31999999999999673,
+          "v_mps": 1.083719135802469,
+          "omega_radps": 0.19999999999999996
+        },
+        "cmd": {
+          "v_mps": 1.083719135802469,
+          "omega_radps": 0.19999999999999996
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15000200146890585,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15000200146890585,
+          "selected_brake_c_m": 0.4770571382998494,
+          "selected_brake_t_s": 1.516743827160494
+        },
+        "inst_clearance_m": 0.15584144746479955,
+        "swept_clearance_m": 0.14995498606697544,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CROSS-2",
+          "behavior": "MovementBehavior.CROSSING",
+          "pos_m": [
+            9.555000000000138,
+            3.8325000000002056
+          ],
+          "vel_mps": [
+            -0.899999999999977,
+            -1.3499999999999657
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            9.239414783015572,
+            4.290064952264436
+          ],
+          "obs_closest_pt_m": [
+            9.327895512974958,
+            4.161777317732585
+          ],
+          "clearance_m": 0.15584144746479955
+        },
+        "pre_dyn": [
+          [
+            "DYN-CROSS-1",
+            7.200000000000119,
+            10.199999999999822,
+            -0.7999999999999798,
+            1.19999999999997,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ],
+          [
+            "DYN-CROSS-2",
+            9.600000000000135,
+            3.900000000000201,
+            -0.8999999999999773,
+            -1.349999999999966,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15030331979292166
+      },
+      {
+        "step_idx": 121,
+        "t_s": 6.1,
+        "pre_robot": {
+          "x_m": 9.04069835686854,
+          "y_m": 4.5781826052802685,
+          "theta_rad": 0.31999999999999673,
+          "v_mps": 1.083719135802469,
+          "omega_radps": 0.19999999999999996
+        },
+        "post_robot": {
+          "x_m": 9.103893352262368,
+          "y_m": 4.599476017176635,
+          "theta_rad": 0.3299999999999965,
+          "v_mps": 1.333719135802469,
+          "omega_radps": 0.19999999999999996
+        },
+        "cmd": {
+          "v_mps": 1.333719135802469,
+          "omega_radps": 0.19999999999999996
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15584144746479955,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15584144746479955,
+          "selected_brake_c_m": 0.6994595999445605,
+          "selected_brake_t_s": 1.533371913580247
+        },
+        "inst_clearance_m": 0.17804786114695637,
+        "swept_clearance_m": 0.15584144746479955,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CROSS-2",
+          "behavior": "MovementBehavior.CROSSING",
+          "pos_m": [
+            9.51000000000014,
+            3.76500000000021
+          ],
+          "vel_mps": [
+            -0.8999999999999769,
+            -1.3499999999999654
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            9.257050675994094,
+            4.284765302094776
+          ],
+          "obs_closest_pt_m": [
+            9.334963058592454,
+            4.124669388665192
+          ],
+          "clearance_m": 0.17804786114695637
+        },
+        "pre_dyn": [
+          [
+            "DYN-CROSS-1",
+            7.160000000000122,
+            10.259999999999817,
+            -0.7999999999999797,
+            1.1999999999999698,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ],
+          [
+            "DYN-CROSS-2",
+            9.555000000000138,
+            3.8325000000002056,
+            -0.899999999999977,
+            -1.3499999999999657,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15584144746479955
+      },
+      {
+        "step_idx": 122,
+        "t_s": 6.15,
+        "pre_robot": {
+          "x_m": 9.103893352262368,
+          "y_m": 4.599476017176635,
+          "theta_rad": 0.3299999999999965,
+          "v_mps": 1.333719135802469,
+          "omega_radps": 0.19999999999999996
+        },
+        "post_robot": {
+          "x_m": 9.178612067847698,
+          "y_m": 4.625696796990472,
+          "theta_rad": 0.34499999999999664,
+          "v_mps": 1.583719135802469,
+          "omega_radps": 0.29999999999999993
+        },
+        "cmd": {
+          "v_mps": 1.583719135802469,
+          "omega_radps": 0.29999999999999993
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.17804786114695637,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.17804786114695637,
+          "selected_brake_c_m": 1.0184146485049472,
+          "selected_brake_t_s": 1.608371913580247
+        },
+        "inst_clearance_m": 0.22137394530918386,
+        "swept_clearance_m": 0.17804786114695637,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CROSS-2",
+          "behavior": "MovementBehavior.CROSSING",
+          "pos_m": [
+            9.465000000000142,
+            3.697500000000213
+          ],
+          "vel_mps": [
+            -0.8999999999999768,
+            -1.3499999999999652
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            9.281801757809426,
+            4.291254144379292
+          ],
+          "obs_closest_pt_m": [
+            9.347068925758167,
+            4.07972017441299
+          ],
+          "clearance_m": 0.22137394530918386
+        },
+        "pre_dyn": [
+          [
+            "DYN-CROSS-1",
+            7.1200000000001245,
+            10.319999999999814,
+            -0.7999999999999796,
+            1.1999999999999695,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ],
+          [
+            "DYN-CROSS-2",
+            9.51000000000014,
+            3.76500000000021,
+            -0.8999999999999769,
+            -1.3499999999999654,
+            0.4,
+            "MovementBehavior.CROSSING"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.17804786114695637
+      }
+    ]
+  },
+  "CORRIDOR": {
+    "scenario_name": "CORRIDOR",
+    "total_steps": 500,
+    "violation_step_count": 5,
+    "min_inst_clearance_m": 0.1359304142742218,
+    "min_swept_clearance_m": 0.1359304142742218,
+    "violation_windows": [
+      {
+        "step_idx": 398,
+        "t_s": 19.95,
+        "pre_robot": {
+          "x_m": 11.861550926454697,
+          "y_m": 6.6111933514732675,
+          "theta_rad": 1.7433090559588829,
+          "v_mps": 0.19791667842716298,
+          "omega_radps": -1.1798431396484377
+        },
+        "post_robot": {
+          "x_m": 11.859927187742873,
+          "y_m": 6.62227291901239,
+          "theta_rad": 1.689316898976461,
+          "v_mps": 0.2239583392135815,
+          "omega_radps": -1.0798431396484376
+        },
+        "cmd": {
+          "v_mps": 0.2239583392135815,
+          "omega_radps": -1.0798431396484376
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.1524634666688892,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.1524634666688892,
+          "selected_brake_c_m": 0.49357117790420146,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.15248227287451044,
+        "swept_clearance_m": 0.15244055381168442,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CORR-1",
+          "behavior": "MovementBehavior.CORRIDOR",
+          "pos_m": [
+            11.649999999999807,
+            7.5
+          ],
+          "vel_mps": [
+            -1.0,
+            -0.0
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            11.778513382820092,
+            6.962672379011956
+          ],
+          "obs_closest_pt_m": [
+            11.743044348482984,
+            7.110972045714783
+          ],
+          "clearance_m": 0.15248227287451044
+        },
+        "pre_dyn": [
+          [
+            "DYN-CORR-1",
+            11.699999999999807,
+            7.5,
+            -1.0,
+            -0.0,
+            0.4,
+            "MovementBehavior.CORRIDOR"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15336922700729394
+      },
+      {
+        "step_idx": 399,
+        "t_s": 20.0,
+        "pre_robot": {
+          "x_m": 11.859927187742873,
+          "y_m": 6.62227291901239,
+          "theta_rad": 1.689316898976461,
+          "v_mps": 0.2239583392135815,
+          "omega_radps": -1.0798431396484376
+        },
+        "post_robot": {
+          "x_m": 11.858844231235679,
+          "y_m": 6.634072284345845,
+          "theta_rad": 1.6353247419940393,
+          "v_mps": 0.23697916960679077,
+          "omega_radps": -1.0798431396484376
+        },
+        "cmd": {
+          "v_mps": 0.23697916960679077,
+          "omega_radps": -1.0798431396484376
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.1524818817529684,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.1524818817529684,
+          "selected_brake_c_m": 0.5101039056856665,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.15378711253376076,
+        "swept_clearance_m": 0.15248059364728717,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CORR-1",
+          "behavior": "MovementBehavior.CORRIDOR",
+          "pos_m": [
+            11.599999999999806,
+            7.5
+          ],
+          "vel_mps": [
+            -1.0,
+            -0.0
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            11.758604385285041,
+            6.969410879326787
+          ],
+          "obs_closest_pt_m": [
+            11.714559823943391,
+            7.116755891450351
+          ],
+          "clearance_m": 0.15378711253376076
+        },
+        "pre_dyn": [
+          [
+            "DYN-CORR-1",
+            11.649999999999807,
+            7.5,
+            -1.0,
+            -0.0,
+            0.4,
+            "MovementBehavior.CORRIDOR"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15248227287451044
+      },
+      {
+        "step_idx": 400,
+        "t_s": 20.05,
+        "pre_robot": {
+          "x_m": 11.858844231235679,
+          "y_m": 6.634072284345845,
+          "theta_rad": 1.6353247419940393,
+          "v_mps": 0.23697916960679077,
+          "omega_radps": -1.0798431396484376
+        },
+        "post_robot": {
+          "x_m": 11.858235125392564,
+          "y_m": 6.650293491407919,
+          "theta_rad": 1.5813325850116176,
+          "v_mps": 0.3246527797378605,
+          "omega_radps": -1.0798431396484376
+        },
+        "cmd": {
+          "v_mps": 0.3246527797378605,
+          "omega_radps": -1.0798431396484376
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15351715215150796,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15351715215150796,
+          "selected_brake_c_m": 0.5979044038994991,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.1538860787010904,
+        "swept_clearance_m": 0.15346111508592364,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CORR-1",
+          "behavior": "MovementBehavior.CORRIDOR",
+          "pos_m": [
+            11.549999999999805,
+            7.5
+          ],
+          "vel_mps": [
+            -1.0,
+            -0.0
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            11.738881263850084,
+            6.979314244149898
+          ],
+          "obs_closest_pt_m": [
+            11.686404413191212,
+            7.123976282580595
+          ],
+          "clearance_m": 0.1538860787010904
+        },
+        "pre_dyn": [
+          [
+            "DYN-CORR-1",
+            11.599999999999806,
+            7.5,
+            -1.0,
+            -0.0,
+            0.4,
+            "MovementBehavior.CORRIDOR"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15378711253376076
+      },
+      {
+        "step_idx": 401,
+        "t_s": 20.1,
+        "pre_robot": {
+          "x_m": 11.858235125392564,
+          "y_m": 6.650293491407919,
+          "theta_rad": 1.5813325850116176,
+          "v_mps": 0.3246527797378605,
+          "omega_radps": -1.0798431396484376
+        },
+        "post_robot": {
+          "x_m": 11.858570879136149,
+          "y_m": 6.670690033775954,
+          "theta_rad": 1.5273404280291958,
+          "v_mps": 0.4079861130711938,
+          "omega_radps": -1.0798431396484376
+        },
+        "cmd": {
+          "v_mps": 0.4079861130711938,
+          "omega_radps": -1.0798431396484376
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15339552730406192,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15339552730406192,
+          "selected_brake_c_m": 0.6784673726107858,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.1535087688800475,
+        "swept_clearance_m": 0.15326752815727862,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CORR-1",
+          "behavior": "MovementBehavior.CORRIDOR",
+          "pos_m": [
+            11.499999999999805,
+            7.5
+          ],
+          "vel_mps": [
+            -1.0,
+            -0.0
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            11.719668178885343,
+            6.991947002358792
+          ],
+          "obs_closest_pt_m": [
+            11.658745943143584,
+            7.132849178762471
+          ],
+          "clearance_m": 0.1535087688800475
+        },
+        "pre_dyn": [
+          [
+            "DYN-CORR-1",
+            11.549999999999805,
+            7.5,
+            -1.0,
+            -0.0,
+            0.4,
+            "MovementBehavior.CORRIDOR"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.1538860787010904
+      },
+      {
+        "step_idx": 402,
+        "t_s": 20.15,
+        "pre_robot": {
+          "x_m": 11.858570879136149,
+          "y_m": 6.670690033775954,
+          "theta_rad": 1.5273404280291958,
+          "v_mps": 0.4079861130711938,
+          "omega_radps": -1.0798431396484376
+        },
+        "post_robot": {
+          "x_m": 11.860665123216675,
+          "y_m": 6.6993462492428,
+          "theta_rad": 1.4683482710467741,
+          "v_mps": 0.5746527797378604,
+          "omega_radps": -1.1798431396484377
+        },
+        "cmd": {
+          "v_mps": 0.5746527797378604,
+          "omega_radps": -1.1798431396484377
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15009436686260302,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15009436686260302,
+          "selected_brake_c_m": 0.7902280446749131,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.14982902377523954,
+        "swept_clearance_m": 0.14982902377523954,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CORR-1",
+          "behavior": "MovementBehavior.CORRIDOR",
+          "pos_m": [
+            11.449999999999804,
+            7.5
+          ],
+          "vel_mps": [
+            -1.0,
+            -0.0
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            11.70093167460788,
+            7.010770759189499
+          ],
+          "obs_closest_pt_m": [
+            11.63255251269557,
+            7.1440862743466305
+          ],
+          "clearance_m": 0.14982902377523954
+        },
+        "pre_dyn": [
+          [
+            "DYN-CORR-1",
+            11.499999999999805,
+            7.5,
+            -1.0,
+            -0.0,
+            0.4,
+            "MovementBehavior.CORRIDOR"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.1535087688800475
+      },
+      {
+        "step_idx": 403,
+        "t_s": 20.2,
+        "pre_robot": {
+          "x_m": 11.860665123216675,
+          "y_m": 6.6993462492428,
+          "theta_rad": 1.4683482710467741,
+          "v_mps": 0.5746527797378604,
+          "omega_radps": -1.1798431396484377
+        },
+        "post_robot": {
+          "x_m": 11.865680749376365,
+          "y_m": 6.740272695607586,
+          "theta_rad": 1.429356114064352,
+          "v_mps": 0.8246527797378604,
+          "omega_radps": -0.7798431396484375
+        },
+        "cmd": {
+          "v_mps": 0.8246527797378604,
+          "omega_radps": -0.7798431396484375
+        },
+        "dwa": {
+          "fallback_priority": 2,
+          "fallback_reason": "CLEARANCE_INCREASING_RECOVERY",
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.14982902377523954,
+          "selected_eval_safe": false,
+          "selected_eval_min_c_m": 0.14982902377523954,
+          "selected_brake_c_m": null,
+          "selected_brake_t_s": null
+        },
+        "inst_clearance_m": 0.1410915426482735,
+        "swept_clearance_m": 0.1410915426482735,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CORR-1",
+          "behavior": "MovementBehavior.CORRIDOR",
+          "pos_m": [
+            11.399999999999803,
+            7.5
+          ],
+          "vel_mps": [
+            -1.0,
+            -0.0
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            11.682772199041116,
+            7.038675882946893
+          ],
+          "obs_closest_pt_m": [
+            11.609038343240089,
+            7.158967785897935
+          ],
+          "clearance_m": 0.1410915426482735
+        },
+        "pre_dyn": [
+          [
+            "DYN-CORR-1",
+            11.449999999999804,
+            7.5,
+            -1.0,
+            -0.0,
+            0.4,
+            "MovementBehavior.CORRIDOR"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": false,
+        "best_possible_1step_swept_m": 0.14982902377523954
+      },
+      {
+        "step_idx": 404,
+        "t_s": 20.25,
+        "pre_robot": {
+          "x_m": 11.865680749376365,
+          "y_m": 6.740272695607586,
+          "theta_rad": 1.429356114064352,
+          "v_mps": 0.8246527797378604,
+          "omega_radps": -0.7798431396484375
+        },
+        "post_robot": {
+          "x_m": 11.873179617537431,
+          "y_m": 6.785048402526944,
+          "theta_rad": 1.3803639570819302,
+          "v_mps": 0.9079861130711937,
+          "omega_radps": -0.9798431396484375
+        },
+        "cmd": {
+          "v_mps": 0.9079861130711937,
+          "omega_radps": -0.9798431396484375
+        },
+        "dwa": {
+          "fallback_priority": 2,
+          "fallback_reason": "CLEARANCE_INCREASING_RECOVERY",
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.1410915426482735,
+          "selected_eval_safe": false,
+          "selected_eval_min_c_m": 0.1410915426482735,
+          "selected_brake_c_m": null,
+          "selected_brake_t_s": null
+        },
+        "inst_clearance_m": 0.1359304142742218,
+        "swept_clearance_m": 0.1359304142742218,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CORR-1",
+          "behavior": "MovementBehavior.CORRIDOR",
+          "pos_m": [
+            11.349999999999802,
+            7.5
+          ],
+          "vel_mps": [
+            -1.0,
+            -0.0
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            11.6664897204667,
+            7.06750067539599
+          ],
+          "obs_closest_pt_m": [
+            11.586217025223496,
+            7.177197402435376
+          ],
+          "clearance_m": 0.1359304142742218
+        },
+        "pre_dyn": [
+          [
+            "DYN-CORR-1",
+            11.399999999999803,
+            7.5,
+            -1.0,
+            -0.0,
+            0.4,
+            "MovementBehavior.CORRIDOR"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": false,
+        "best_possible_1step_swept_m": 0.1410915426482735
+      },
+      {
+        "step_idx": 405,
+        "t_s": 20.3,
+        "pre_robot": {
+          "x_m": 11.873179617537431,
+          "y_m": 6.785048402526944,
+          "theta_rad": 1.3803639570819302,
+          "v_mps": 0.9079861130711937,
+          "omega_radps": -0.9798431396484375
+        },
+        "post_robot": {
+          "x_m": 11.880813137930776,
+          "y_m": 6.821319819241048,
+          "theta_rad": 1.346371800099508,
+          "v_mps": 0.7413194464045271,
+          "omega_radps": -0.6798431396484375
+        },
+        "cmd": {
+          "v_mps": 0.7413194464045271,
+          "omega_radps": -0.6798431396484375
+        },
+        "dwa": {
+          "fallback_priority": 2,
+          "fallback_reason": "CLEARANCE_INCREASING_RECOVERY",
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.1359304142742218,
+          "selected_eval_safe": false,
+          "selected_eval_min_c_m": 0.1359304142742218,
+          "selected_brake_c_m": null,
+          "selected_brake_t_s": null
+        },
+        "inst_clearance_m": 0.14328085670086332,
+        "swept_clearance_m": 0.1359304142742218,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CORR-1",
+          "behavior": "MovementBehavior.CORRIDOR",
+          "pos_m": [
+            11.299999999999802,
+            7.5
+          ],
+          "vel_mps": [
+            -1.0,
+            -0.0
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            11.653242383726294,
+            7.087236256925527
+          ],
+          "obs_closest_pt_m": [
+            11.56008086194778,
+            7.196095499789167
+          ],
+          "clearance_m": 0.14328085670086332
+        },
+        "pre_dyn": [
+          [
+            "DYN-CORR-1",
+            11.349999999999802,
+            7.5,
+            -1.0,
+            -0.0,
+            0.4,
+            "MovementBehavior.CORRIDOR"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": false,
+        "best_possible_1step_swept_m": 0.1359304142742218
+      },
+      {
+        "step_idx": 406,
+        "t_s": 20.35,
+        "pre_robot": {
+          "x_m": 11.880813137930776,
+          "y_m": 6.821319819241048,
+          "theta_rad": 1.346371800099508,
+          "v_mps": 0.7413194464045271,
+          "omega_radps": -0.6798431396484375
+        },
+        "post_robot": {
+          "x_m": 11.888518955064477,
+          "y_m": 6.853303951162804,
+          "theta_rad": 1.3223796431170864,
+          "v_mps": 0.6579861130711937,
+          "omega_radps": -0.4798431396484375
+        },
+        "cmd": {
+          "v_mps": 0.6579861130711937,
+          "omega_radps": -0.4798431396484375
+        },
+        "dwa": {
+          "fallback_priority": 2,
+          "fallback_reason": "CLEARANCE_INCREASING_RECOVERY",
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.14328085670086332,
+          "selected_eval_safe": false,
+          "selected_eval_min_c_m": 0.14328085670086332,
+          "selected_brake_c_m": null,
+          "selected_brake_t_s": null
+        },
+        "inst_clearance_m": 0.15880263839764808,
+        "swept_clearance_m": 0.14328085670086332,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CORR-1",
+          "behavior": "MovementBehavior.CORRIDOR",
+          "pos_m": [
+            11.249999999999801,
+            7.5
+          ],
+          "vel_mps": [
+            -1.0,
+            -0.0
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            11.642611180559479,
+            7.10236090536806
+          ],
+          "obs_closest_pt_m": [
+            11.531037456576943,
+            7.215363480908279
+          ],
+          "clearance_m": 0.15880263839764808
+        },
+        "pre_dyn": [
+          [
+            "DYN-CORR-1",
+            11.299999999999802,
+            7.5,
+            -1.0,
+            -0.0,
+            0.4,
+            "MovementBehavior.CORRIDOR"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": false,
+        "best_possible_1step_swept_m": 0.14328085670086332
+      },
+      {
+        "step_idx": 407,
+        "t_s": 20.4,
+        "pre_robot": {
+          "x_m": 11.888518955064477,
+          "y_m": 6.853303951162804,
+          "theta_rad": 1.3223796431170864,
+          "v_mps": 0.6579861130711937,
+          "omega_radps": -0.4798431396484375
+        },
+        "post_robot": {
+          "x_m": 11.90086503140124,
+          "y_m": 6.896992294607162,
+          "theta_rad": 1.2683874861346647,
+          "v_mps": 0.9079861130711937,
+          "omega_radps": -1.0798431396484376
+        },
+        "cmd": {
+          "v_mps": 0.9079861130711937,
+          "omega_radps": -1.0798431396484376
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15880263839764808,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15880263839764808,
+          "selected_brake_c_m": 1.1398378931164959,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.17457021637324954,
+        "swept_clearance_m": 0.15880263839764808,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CORR-1",
+          "behavior": "MovementBehavior.CORRIDOR",
+          "pos_m": [
+            11.1999999999998,
+            7.5
+          ],
+          "vel_mps": [
+            -1.0,
+            -0.0
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            11.635549583589459,
+            7.125263434159305
+          ],
+          "obs_closest_pt_m": [
+            11.503217654641835,
+            7.2391186976546935
+          ],
+          "clearance_m": 0.17457021637324954
+        },
+        "pre_dyn": [
+          [
+            "DYN-CORR-1",
+            11.249999999999801,
+            7.5,
+            -1.0,
+            -0.0,
+            0.4,
+            "MovementBehavior.CORRIDOR"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15880263839764808
+      },
+      {
+        "step_idx": 408,
+        "t_s": 20.45,
+        "pre_robot": {
+          "x_m": 11.90086503140124,
+          "y_m": 6.896992294607162,
+          "theta_rad": 1.2683874861346647,
+          "v_mps": 0.9079861130711937,
+          "omega_radps": -1.0798431396484376
+        },
+        "post_robot": {
+          "x_m": 11.91973120596095,
+          "y_m": 6.951731650217608,
+          "theta_rad": 1.209395329152243,
+          "v_mps": 1.1579861130711937,
+          "omega_radps": -1.1798431396484377
+        },
+        "cmd": {
+          "v_mps": 1.1579861130711937,
+          "omega_radps": -1.1798431396484377
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.17457021637324954,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.17457021637324954,
+          "selected_brake_c_m": 1.091098821292365,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.19503138191465053,
+        "swept_clearance_m": 0.17457021637324954,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-CORR-1",
+          "behavior": "MovementBehavior.CORRIDOR",
+          "pos_m": [
+            11.1499999999998,
+            7.5
+          ],
+          "vel_mps": [
+            -1.0,
+            -0.0
+          ],
+          "radius_m": 0.4,
+          "robot_closest_pt_m": [
+            11.634655041039759,
+            7.154787258842008
+          ],
+          "obs_closest_pt_m": [
+            11.475801331338305,
+            7.2679364472864005
+          ],
+          "clearance_m": 0.19503138191465053
+        },
+        "pre_dyn": [
+          [
+            "DYN-CORR-1",
+            11.1999999999998,
+            7.5,
+            -1.0,
+            -0.0,
+            0.4,
+            "MovementBehavior.CORRIDOR"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.17457021637324954
+      }
+    ]
+  },
+  "SUDDEN-STOP": {
+    "scenario_name": "SUDDEN-STOP",
+    "total_steps": 469,
+    "violation_step_count": 4,
+    "min_inst_clearance_m": 0.13898914552126024,
+    "min_swept_clearance_m": 0.13898914552126024,
+    "violation_windows": [
+      {
+        "step_idx": 115,
+        "t_s": 5.8,
+        "pre_robot": {
+          "x_m": 9.27916666666667,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.9999999999999988,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 9.333333333333337,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_SAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15583333333326688,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15583333333326688,
+          "selected_brake_c_m": 0.2608333333332833,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.3666666666666128,
+        "swept_clearance_m": 0.3666666666666128,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            10.49999999999995,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            9.683333333333337,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            10.049999999999951,
+            7.5
+          ],
+          "clearance_m": 0.3666666666666128
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            10.49999999999995,
+            7.5,
+            0.0,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.3833410707261214
+      },
+      {
+        "step_idx": 116,
+        "t_s": 5.85,
+        "pre_robot": {
+          "x_m": 9.333333333333337,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 9.387500000000005,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_SAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.14999999999994773,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.14999999999994773,
+          "selected_brake_c_m": 0.26666666666661487,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.31249999999994565,
+        "swept_clearance_m": 0.31249999999994565,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            10.49999999999995,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            9.737500000000004,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            10.049999999999951,
+            7.5
+          ],
+          "clearance_m": 0.31249999999994565
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            10.49999999999995,
+            7.5,
+            0.0,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.32500864165400306
+      },
+      {
+        "step_idx": 117,
+        "t_s": 5.9,
+        "pre_robot": {
+          "x_m": 9.387500000000005,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 9.441666666666672,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_SAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.1558333333332651,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.1558333333332651,
+          "selected_brake_c_m": 0.27249999999995,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.2583333333332785,
+        "swept_clearance_m": 0.2583333333332785,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            10.49999999999995,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            9.791666666666671,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            10.049999999999951,
+            7.5
+          ],
+          "clearance_m": 0.2583333333332785
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            10.49999999999995,
+            7.5,
+            0.0,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.2708419905972506
+      },
+      {
+        "step_idx": 118,
+        "t_s": 5.95,
+        "pre_robot": {
+          "x_m": 9.441666666666672,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 9.495833333333339,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_SAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.14999999999994595,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.14999999999994595,
+          "selected_brake_c_m": 0.2783333333332816,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.20416666666661137,
+        "swept_clearance_m": 0.20416666666661137,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            10.49999999999995,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            9.845833333333339,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            10.049999999999951,
+            7.5
+          ],
+          "clearance_m": 0.20416666666661137
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            10.49999999999995,
+            7.5,
+            0.0,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.2166753412038352
+      },
+      {
+        "step_idx": 119,
+        "t_s": 6.0,
+        "pre_robot": {
+          "x_m": 9.495833333333339,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 9.550000000000006,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_SAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15583333333326332,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15583333333326332,
+          "selected_brake_c_m": 0.2841666666666167,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.14999999999994423,
+        "swept_clearance_m": 0.14999999999994423,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            10.49999999999995,
+            7.5
+          ],
+          "vel_mps": [
+            1.2,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            9.900000000000006,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            10.049999999999951,
+            7.5
+          ],
+          "clearance_m": 0.14999999999994423
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            10.49999999999995,
+            7.5,
+            0.0,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.1625086937545775
+      },
+      {
+        "step_idx": 120,
+        "t_s": 6.05,
+        "pre_robot": {
+          "x_m": 9.550000000000006,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.0833333333333321,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 9.60833333333334,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.1666666666666654,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 1.1666666666666654,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.14999999999994418,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.14999999999994418,
+          "selected_brake_c_m": 0.18999999999993267,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.15166666666659517,
+        "swept_clearance_m": 0.14999999999994423,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            10.559999999999935,
+            7.5
+          ],
+          "vel_mps": [
+            1.2,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            9.95833333333334,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            10.109999999999935,
+            7.5
+          ],
+          "clearance_m": 0.15166666666659517
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            10.49999999999995,
+            7.5,
+            1.2,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": false,
+        "best_possible_1step_swept_m": 0.14999999999994423
+      },
+      {
+        "step_idx": 121,
+        "t_s": 6.1,
+        "pre_robot": {
+          "x_m": 9.60833333333334,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.1666666666666654,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 9.666666666666673,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.1666666666666654,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 1.1666666666666654,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15166666666659512,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15166666666659512,
+          "selected_brake_c_m": 0.19166666666660137,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.15333333333326032,
+        "swept_clearance_m": 0.15166666666659517,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            10.619999999999933,
+            7.5
+          ],
+          "vel_mps": [
+            1.2,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            10.016666666666673,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            10.169999999999934,
+            7.5
+          ],
+          "clearance_m": 0.15333333333326032
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            10.559999999999935,
+            7.5,
+            1.2,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15166666666659517
+      },
+      {
+        "step_idx": 122,
+        "t_s": 6.15,
+        "pre_robot": {
+          "x_m": 9.666666666666673,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.1666666666666654,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 9.725000000000007,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 1.1666666666666654,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 1.1666666666666654,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15333333333326027,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15333333333326027,
+          "selected_brake_c_m": 0.19333333333326475,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.15499999999992548,
+        "swept_clearance_m": 0.15333333333326032,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            10.679999999999932,
+            7.5
+          ],
+          "vel_mps": [
+            1.2,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            10.075000000000006,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            10.229999999999933,
+            7.5
+          ],
+          "clearance_m": 0.15499999999992548
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            10.619999999999933,
+            7.5,
+            1.2,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15333333333326032
+      },
+      {
+        "step_idx": 235,
+        "t_s": 11.8,
+        "pre_robot": {
+          "x_m": 12.466170764044296,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.32936036173750866,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 12.486805448797838,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.41269369507084197,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 0.41269369507084197,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_SAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15129049694146945,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15129049694146945,
+          "selected_brake_c_m": 0.8785968018706576,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.2131945512020959,
+        "swept_clearance_m": 0.2131945512020959,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            13.499999999999934,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            12.836805448797838,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            13.049999999999935,
+            7.5
+          ],
+          "clearance_m": 0.2131945512020959
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            13.499999999999934,
+            7.5,
+            0.0,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.22986201450324245
+      },
+      {
+        "step_idx": 236,
+        "t_s": 11.85,
+        "pre_robot": {
+          "x_m": 12.486805448797838,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.41269369507084197,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 12.499106800218048,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.24602702840417529,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 0.24602702840417529,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_SAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.16398914552126231,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.16398914552126231,
+          "selected_brake_c_m": 1.1179621171170868,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.20089319978188663,
+        "swept_clearance_m": 0.20089319978188663,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            13.499999999999934,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            12.849106800218047,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            13.049999999999935,
+            7.5
+          ],
+          "clearance_m": 0.20089319978188663
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            13.499999999999934,
+            7.5,
+            0.0,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.20506150649748794
+      },
+      {
+        "step_idx": 237,
+        "t_s": 11.9,
+        "pre_robot": {
+          "x_m": 12.499106800218048,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.24602702840417529,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 12.523908151638256,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.4960270284041753,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 0.4960270284041753,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_SAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15129049694146945,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15129049694146945,
+          "selected_brake_c_m": 0.8656607656969129,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.17609184836167807,
+        "swept_clearance_m": 0.17609184836167807,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            13.499999999999934,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            12.873908151638256,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            13.049999999999935,
+            7.5
+          ],
+          "clearance_m": 0.17609184836167807
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            13.499999999999934,
+            7.5,
+            0.0,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.20089319978188663
+      },
+      {
+        "step_idx": 238,
+        "t_s": 11.95,
+        "pre_robot": {
+          "x_m": 12.523908151638256,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.4960270284041753,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 12.536209503058465,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.24602702840417529,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 0.24602702840417529,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15148914552126125,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15148914552126125,
+          "selected_brake_c_m": 1.2008594142766682,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.1637904969414688,
+        "swept_clearance_m": 0.1637904969414688,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            13.499999999999934,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            12.886209503058465,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            13.049999999999935,
+            7.5
+          ],
+          "clearance_m": 0.1637904969414688
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            13.499999999999934,
+            7.5,
+            0.0,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.16379298852716745
+      },
+      {
+        "step_idx": 239,
+        "t_s": 12.0,
+        "pre_robot": {
+          "x_m": 12.536209503058465,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.24602702840417529,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 12.561010854478674,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.4960270284041753,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 0.4960270284041753,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.16379049694146874,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.16379049694146874,
+          "selected_brake_c_m": 0.948558062856496,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.13898914552126024,
+        "swept_clearance_m": 0.13898914552126024,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            13.499999999999934,
+            7.5
+          ],
+          "vel_mps": [
+            1.2,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            12.911010854478674,
+            7.5
+          ],
+          "obs_closest_pt_m": [
+            13.049999999999935,
+            7.5
+          ],
+          "clearance_m": 0.13898914552126024
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            13.499999999999934,
+            7.5,
+            0.0,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.1637904969414688
+      },
+      {
+        "step_idx": 240,
+        "t_s": 12.05,
+        "pre_robot": {
+          "x_m": 12.561010854478674,
+          "y_m": 7.5,
+          "theta_rad": 0.0,
+          "v_mps": 0.4960270284041753,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 12.573309745710606,
+          "y_m": 7.49975398937307,
+          "theta_rad": -0.040000000000000036,
+          "v_mps": 0.24602702840417529,
+          "omega_radps": -0.8
+        },
+        "cmd": {
+          "v_mps": 0.24602702840417529,
+          "omega_radps": -0.8
+        },
+        "dwa": {
+          "fallback_priority": 2,
+          "fallback_reason": "CLEARANCE_INCREASING_RECOVERY",
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.13898914552126024,
+          "selected_eval_safe": false,
+          "selected_eval_min_c_m": 0.13898914552126024,
+          "selected_brake_c_m": null,
+          "selected_brake_t_s": null
+        },
+        "inst_clearance_m": 0.1866902849581364,
+        "swept_clearance_m": 0.13898914552126024,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            13.559999999999935,
+            7.5
+          ],
+          "vel_mps": [
+            1.2,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            12.92330973483173,
+            7.4998412545673645
+          ],
+          "obs_closest_pt_m": [
+            13.110000013987063,
+            7.49988780189305
+          ],
+          "clearance_m": 0.1866902849581364
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            13.499999999999934,
+            7.5,
+            1.2,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": false,
+        "best_possible_1step_swept_m": 0.13898914552126024
+      },
+      {
+        "step_idx": 241,
+        "t_s": 12.1,
+        "pre_robot": {
+          "x_m": 12.573309745710606,
+          "y_m": 7.49975398937307,
+          "theta_rad": -0.040000000000000036,
+          "v_mps": 0.24602702840417529,
+          "omega_radps": -0.8
+        },
+        "post_robot": {
+          "x_m": 12.598091258695016,
+          "y_m": 7.498762199842847,
+          "theta_rad": -0.040000000000000036,
+          "v_mps": 0.4960270284041753,
+          "omega_radps": 0.0
+        },
+        "cmd": {
+          "v_mps": 0.4960270284041753,
+          "omega_radps": 0.0
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.18669028495813633,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.18669028495813633,
+          "selected_brake_c_m": 1.0320917888382677,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.22190949095535567,
+        "swept_clearance_m": 0.1866902849581364,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            13.619999999999935,
+            7.5
+          ],
+          "vel_mps": [
+            1.2,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            12.948091001942677,
+            7.499186141550834
+          ],
+          "obs_closest_pt_m": [
+            13.170000330110087,
+            7.499454932089732
+          ],
+          "clearance_m": 0.22190949095535567
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            13.559999999999935,
+            7.5,
+            1.2,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.1866902849581364
+      },
+      {
+        "step_idx": 242,
+        "t_s": 12.15,
+        "pre_robot": {
+          "x_m": 12.598091258695016,
+          "y_m": 7.498762199842847,
+          "theta_rad": -0.040000000000000036,
+          "v_mps": 0.4960270284041753,
+          "omega_radps": 0.0
+        },
+        "post_robot": {
+          "x_m": 12.6353663856759,
+          "y_m": 7.497363726985448,
+          "theta_rad": -0.03500000000000014,
+          "v_mps": 0.7460270284041752,
+          "omega_radps": 0.09999999999999998
+        },
+        "cmd": {
+          "v_mps": 0.7460270284041752,
+          "omega_radps": 0.09999999999999998
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_SAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.22190949095535561,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.22190949095535561,
+          "selected_brake_c_m": 0.7674770409821672,
+          "selected_brake_t_s": 1.2500000000000002
+        },
+        "inst_clearance_m": 0.24463694081298232,
+        "swept_clearance_m": 0.22190949095535567,
+        "closest_entity": {
+          "kind": "DynamicObstacle",
+          "id": "DYN-SUDDEN-1",
+          "behavior": "MovementBehavior.STOP_AND_GO",
+          "pos_m": [
+            13.679999999999936,
+            7.5
+          ],
+          "vel_mps": [
+            1.2,
+            0.0
+          ],
+          "radius_m": 0.45,
+          "robot_closest_pt_m": [
+            12.985365271153633,
+            7.4982469961089535
+          ],
+          "obs_closest_pt_m": [
+            13.230001432957136,
+            7.498864368269778
+          ],
+          "clearance_m": 0.24463694081298232
+        },
+        "pre_dyn": [
+          [
+            "DYN-SUDDEN-1",
+            13.619999999999935,
+            7.5,
+            1.2,
+            0.0,
+            0.45,
+            "MovementBehavior.STOP_AND_GO"
+          ]
+        ],
+        "pre_sim": [],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.22190949095535567
+      }
+    ]
+  },
+  "SUDDEN-STOP-FINITE-DECEL": {
+    "scenario_name": "SUDDEN-STOP-FINITE-DECEL",
+    "total_steps": 379,
+    "violation_step_count": 2,
+    "min_inst_clearance_m": 0.14997583942576026,
+    "min_swept_clearance_m": 0.14997583942576026,
+    "violation_windows": [
+      {
+        "step_idx": 193,
+        "t_s": 9.7,
+        "pre_robot": {
+          "x_m": 8.388183552878434,
+          "y_m": 7.344078019939649,
+          "theta_rad": -1.2050000000000016,
+          "v_mps": 0.15000000000003544,
+          "omega_radps": -0.6000000000000001
+        },
+        "post_robot": {
+          "x_m": 8.39159652214322,
+          "y_m": 7.334678464588588,
+          "theta_rad": -1.2400000000000015,
+          "v_mps": 0.20000000000001772,
+          "omega_radps": -0.7000000000000001
+        },
+        "cmd": {
+          "v_mps": 0.20000000000001772,
+          "omega_radps": -0.7000000000000001
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15021198095700367,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15021198095700367,
+          "selected_brake_c_m": 0.245781822687607,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.15285481439959597,
+        "swept_clearance_m": 0.15285481439959597,
+        "closest_entity": {
+          "kind": "SimObject",
+          "id": "OBJ-FINITE-DECEL-1",
+          "behavior": "DECELERATING",
+          "geometry": "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)",
+          "pos_m": [
+            9.33,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "robot_closest_pt_m": [
+            8.736288297098282,
+            7.395403914593744
+          ],
+          "obs_closest_pt_m": [
+            8.886824860772062,
+            7.421924421421943
+          ],
+          "clearance_m": 0.15285481439959597
+        },
+        "pre_dyn": [],
+        "pre_sim": [
+          [
+            "OBJ-FINITE-DECEL-1",
+            9.33,
+            7.5,
+            0.0,
+            0.0,
+            "DECELERATING",
+            "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)"
+          ]
+        ],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15463599551589807
+      },
+      {
+        "step_idx": 194,
+        "t_s": 9.75,
+        "pre_robot": {
+          "x_m": 8.39159652214322,
+          "y_m": 7.334678464588588,
+          "theta_rad": -1.2400000000000015,
+          "v_mps": 0.20000000000001772,
+          "omega_radps": -0.7000000000000001
+        },
+        "post_robot": {
+          "x_m": 8.393943639027741,
+          "y_m": 7.3275551898971,
+          "theta_rad": -1.2650000000000015,
+          "v_mps": 0.1500000000000059,
+          "omega_radps": -0.5
+        },
+        "cmd": {
+          "v_mps": 0.1500000000000059,
+          "omega_radps": -0.5
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15013755032398685,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15013755032398685,
+          "selected_brake_c_m": 0.20265231675895518,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.15180813373707475,
+        "swept_clearance_m": 0.15180813373707475,
+        "closest_entity": {
+          "kind": "SimObject",
+          "id": "OBJ-FINITE-DECEL-1",
+          "behavior": "DECELERATING",
+          "geometry": "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)",
+          "pos_m": [
+            9.33,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "robot_closest_pt_m": [
+            8.738151378726245,
+            7.3909667971283195
+          ],
+          "obs_closest_pt_m": [
+            8.887447191816209,
+            7.4184707907027185
+          ],
+          "clearance_m": 0.15180813373707475
+        },
+        "pre_dyn": [],
+        "pre_sim": [
+          [
+            "OBJ-FINITE-DECEL-1",
+            9.33,
+            7.5,
+            0.0,
+            0.0,
+            "DECELERATING",
+            "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)"
+          ]
+        ],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15285481439959597
+      },
+      {
+        "step_idx": 195,
+        "t_s": 9.8,
+        "pre_robot": {
+          "x_m": 8.393943639027741,
+          "y_m": 7.3275551898971,
+          "theta_rad": -1.2650000000000015,
+          "v_mps": 0.1500000000000059,
+          "omega_radps": -0.5
+        },
+        "post_robot": {
+          "x_m": 8.39681079112406,
+          "y_m": 7.317975031294208,
+          "theta_rad": -1.2950000000000015,
+          "v_mps": 0.20000000000000295,
+          "omega_radps": -0.6
+        },
+        "cmd": {
+          "v_mps": 0.20000000000000295,
+          "omega_radps": -0.6
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.1501046508532144,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.1501046508532144,
+          "selected_brake_c_m": 0.24709115618763727,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.1507760981402751,
+        "swept_clearance_m": 0.1507760981402751,
+        "closest_entity": {
+          "kind": "SimObject",
+          "id": "OBJ-FINITE-DECEL-1",
+          "behavior": "DECELERATING",
+          "geometry": "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)",
+          "pos_m": [
+            9.33,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "robot_closest_pt_m": [
+            8.740336699847937,
+            7.384982120735814
+          ],
+          "obs_closest_pt_m": [
+            8.888323831640731,
+            7.413848027860792
+          ],
+          "clearance_m": 0.1507760981402751
+        },
+        "pre_dyn": [],
+        "pre_sim": [
+          [
+            "OBJ-FINITE-DECEL-1",
+            9.33,
+            7.5,
+            0.0,
+            0.0,
+            "DECELERATING",
+            "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)"
+          ]
+        ],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15180813373707475
+      },
+      {
+        "step_idx": 196,
+        "t_s": 9.85,
+        "pre_robot": {
+          "x_m": 8.39681079112406,
+          "y_m": 7.317975031294208,
+          "theta_rad": -1.2950000000000015,
+          "v_mps": 0.20000000000000295,
+          "omega_radps": -0.6
+        },
+        "post_robot": {
+          "x_m": 8.39876277627367,
+          "y_m": 7.310733501485134,
+          "theta_rad": -1.3200000000000014,
+          "v_mps": 0.150000000000001,
+          "omega_radps": -0.4999999999999999
+        },
+        "cmd": {
+          "v_mps": 0.150000000000001,
+          "omega_radps": -0.4999999999999999
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15002224145893833,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15002224145893833,
+          "selected_brake_c_m": 0.21359318294348012,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.15027605163636487,
+        "swept_clearance_m": 0.15027605163636487,
+        "closest_entity": {
+          "kind": "SimObject",
+          "id": "OBJ-FINITE-DECEL-1",
+          "behavior": "DECELERATING",
+          "geometry": "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)",
+          "pos_m": [
+            9.33,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "robot_closest_pt_m": [
+            8.74175050888354,
+            7.3804430078608165
+          ],
+          "obs_closest_pt_m": [
+            8.889015772358741,
+            7.4103734918026944
+          ],
+          "clearance_m": 0.15027605163636487
+        },
+        "pre_dyn": [],
+        "pre_sim": [
+          [
+            "OBJ-FINITE-DECEL-1",
+            9.33,
+            7.5,
+            0.0,
+            0.0,
+            "DECELERATING",
+            "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)"
+          ]
+        ],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.1507760981402751
+      },
+      {
+        "step_idx": 197,
+        "t_s": 9.9,
+        "pre_robot": {
+          "x_m": 8.39876277627367,
+          "y_m": 7.310733501485134,
+          "theta_rad": -1.3200000000000014,
+          "v_mps": 0.150000000000001,
+          "omega_radps": -0.4999999999999999
+        },
+        "post_robot": {
+          "x_m": 8.40109894978199,
+          "y_m": 7.301010215346229,
+          "theta_rad": -1.3500000000000014,
+          "v_mps": 0.2000000000000005,
+          "omega_radps": -0.5999999999999998
+        },
+        "cmd": {
+          "v_mps": 0.2000000000000005,
+          "omega_radps": -0.5999999999999998
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.1500808159736507,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.1500808159736507,
+          "selected_brake_c_m": 0.2616234798743689,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.14997583942576026,
+        "swept_clearance_m": 0.14997583942576026,
+        "closest_entity": {
+          "kind": "SimObject",
+          "id": "OBJ-FINITE-DECEL-1",
+          "behavior": "DECELERATING",
+          "geometry": "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)",
+          "pos_m": [
+            9.33,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "robot_closest_pt_m": [
+            8.743334356287516,
+            7.374324105803611
+          ],
+          "obs_closest_pt_m": [
+            8.889983048778609,
+            7.405739283697652
+          ],
+          "clearance_m": 0.14997583942576026
+        },
+        "pre_dyn": [],
+        "pre_sim": [
+          [
+            "OBJ-FINITE-DECEL-1",
+            9.33,
+            7.5,
+            0.0,
+            0.0,
+            "DECELERATING",
+            "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)"
+          ]
+        ],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15027605163636487
+      },
+      {
+        "step_idx": 198,
+        "t_s": 9.95,
+        "pre_robot": {
+          "x_m": 8.40109894978199,
+          "y_m": 7.301010215346229,
+          "theta_rad": -1.3500000000000014,
+          "v_mps": 0.2000000000000005,
+          "omega_radps": -0.5999999999999998
+        },
+        "post_robot": {
+          "x_m": 8.405255357087894,
+          "y_m": 7.278897452553954,
+          "theta_rad": -1.4200000000000015,
+          "v_mps": 0.4500000000000005,
+          "omega_radps": -1.4
+        },
+        "cmd": {
+          "v_mps": 0.4500000000000005,
+          "omega_radps": -1.4
+        },
+        "dwa": {
+          "fallback_priority": 2,
+          "fallback_reason": "CLEARANCE_INCREASING_RECOVERY",
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.14997583942576026,
+          "selected_eval_safe": false,
+          "selected_eval_min_c_m": 0.14997583942576026,
+          "selected_brake_c_m": null,
+          "selected_brake_t_s": null
+        },
+        "inst_clearance_m": 0.15080965028851584,
+        "swept_clearance_m": 0.14997583942576026,
+        "closest_entity": {
+          "kind": "SimObject",
+          "id": "OBJ-FINITE-DECEL-1",
+          "behavior": "DECELERATING",
+          "geometry": "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)",
+          "pos_m": [
+            9.33,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "robot_closest_pt_m": [
+            8.7456606368629,
+            7.360286920553815
+          ],
+          "obs_closest_pt_m": [
+            8.892336068860708,
+            7.395356398285893
+          ],
+          "clearance_m": 0.15080965028851584
+        },
+        "pre_dyn": [],
+        "pre_sim": [
+          [
+            "OBJ-FINITE-DECEL-1",
+            9.33,
+            7.5,
+            0.0,
+            0.0,
+            "DECELERATING",
+            "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)"
+          ]
+        ],
+        "reachable_ge_015_in_1step_window": false,
+        "best_possible_1step_swept_m": 0.14997583942576026
+      },
+      {
+        "step_idx": 199,
+        "t_s": 10.0,
+        "pre_robot": {
+          "x_m": 8.405255357087894,
+          "y_m": 7.278897452553954,
+          "theta_rad": -1.4200000000000015,
+          "v_mps": 0.4500000000000005,
+          "omega_radps": -1.4
+        },
+        "post_robot": {
+          "x_m": 8.40820456155308,
+          "y_m": 7.24820548882618,
+          "theta_rad": -1.5300000000000016,
+          "v_mps": 0.6166666666666671,
+          "omega_radps": -2.2
+        },
+        "cmd": {
+          "v_mps": 0.6166666666666671,
+          "omega_radps": -2.2
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15080965028851584,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15080965028851584,
+          "selected_brake_c_m": 0.7128107976612708,
+          "selected_brake_t_s": 1.3000000000000003
+        },
+        "inst_clearance_m": 0.15556648444721738,
+        "swept_clearance_m": 0.15080965028851584,
+        "closest_entity": {
+          "kind": "SimObject",
+          "id": "OBJ-FINITE-DECEL-1",
+          "behavior": "DECELERATING",
+          "geometry": "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)",
+          "pos_m": [
+            9.33,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "robot_closest_pt_m": [
+            8.745835075711451,
+            7.3404314933430905
+          ],
+          "obs_closest_pt_m": [
+            8.89590362465352,
+            7.381423708478258
+          ],
+          "clearance_m": 0.15556648444721738
+        },
+        "pre_dyn": [],
+        "pre_sim": [
+          [
+            "OBJ-FINITE-DECEL-1",
+            9.33,
+            7.5,
+            0.0,
+            0.0,
+            "DECELERATING",
+            "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)"
+          ]
+        ],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15080965028851584
+      },
+      {
+        "step_idx": 200,
+        "t_s": 10.05,
+        "pre_robot": {
+          "x_m": 8.40820456155308,
+          "y_m": 7.24820548882618,
+          "theta_rad": -1.5300000000000016,
+          "v_mps": 0.6166666666666671,
+          "omega_radps": -2.2
+        },
+        "post_robot": {
+          "x_m": 8.406939248920024,
+          "y_m": 7.204890632694381,
+          "theta_rad": -1.6700000000000015,
+          "v_mps": 0.8666666666666671,
+          "omega_radps": -2.8
+        },
+        "cmd": {
+          "v_mps": 0.8666666666666671,
+          "omega_radps": -2.8
+        },
+        "dwa": {
+          "fallback_priority": null,
+          "fallback_reason": null,
+          "waiting_state": "GATE_CLEAR_HOLD_UNSAFE",
+          "deadlock_state": "NONE",
+          "predicted_min_clearance_m": 0.15556648444721738,
+          "selected_eval_safe": true,
+          "selected_eval_min_c_m": 0.15556648444721738,
+          "selected_brake_c_m": 0.709983731068139,
+          "selected_brake_t_s": 1.4733333333333336
+        },
+        "inst_clearance_m": 0.16908755479360732,
+        "swept_clearance_m": 0.15556648444721738,
+        "closest_entity": {
+          "kind": "SimObject",
+          "id": "OBJ-FINITE-DECEL-1",
+          "behavior": "DECELERATING",
+          "geometry": "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)",
+          "pos_m": [
+            9.33,
+            7.5
+          ],
+          "vel_mps": [
+            0.0,
+            0.0
+          ],
+          "robot_closest_pt_m": [
+            8.740316002423786,
+            7.311473653027321
+          ],
+          "obs_closest_pt_m": [
+            8.901372745495163,
+            7.362964688143363
+          ],
+          "clearance_m": 0.16908755479360732
+        },
+        "pre_dyn": [],
+        "pre_sim": [
+          [
+            "OBJ-FINITE-DECEL-1",
+            9.33,
+            7.5,
+            0.0,
+            0.0,
+            "DECELERATING",
+            "CircleGeometry(center_x_m=9.33, center_y_m=7.5, radius_m=0.45)"
+          ]
+        ],
+        "reachable_ge_015_in_1step_window": true,
+        "best_possible_1step_swept_m": 0.15556648444721738
+      }
+    ]
+  }
+}

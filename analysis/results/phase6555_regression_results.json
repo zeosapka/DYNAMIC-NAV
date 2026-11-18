@@ -1,0 +1,77 @@
+{
+  "exit_code": 0,
+  "total": 14,
+  "passed": 14,
+  "tests": [
+    {
+      "nodeid": "tests/test_phase6555_open_space_overtaking.py::test_1_narrow_gate_l1_rd_01_01_resolved",
+      "outcome": "passed",
+      "duration_s": 21.594025200000033
+    },
+    {
+      "nodeid": "tests/test_phase6555_open_space_overtaking.py::test_2_narrow_gate_l1_sg_01_01_resolved",
+      "outcome": "passed",
+      "duration_s": 21.85844779999752
+    },
+    {
+      "nodeid": "tests/test_phase6555_open_space_overtaking.py::test_3_open_space_proactive_overtaking_triggers",
+      "outcome": "passed",
+      "duration_s": 0.0007580000092275441
+    },
+    {
+      "nodeid": "tests/test_phase6555_open_space_overtaking.py::test_4_insufficient_lateral_clearance_blocks_overtaking",
+      "outcome": "passed",
+      "duration_s": 0.0006302999972831458
+    },
+    {
+      "nodeid": "tests/test_phase6555_open_space_overtaking.py::test_5_safe_following_when_overtaking_unavailable",
+      "outcome": "passed",
+      "duration_s": 0.04745399999956135
+    },
+    {
+      "nodeid": "tests/test_phase6555_open_space_overtaking.py::test_6_dynamic_obstacle_reversal_without_hidden_schedule",
+      "outcome": "passed",
+      "duration_s": 0.055492200001026504
+    },
+    {
+      "nodeid": "tests/test_phase6555_open_space_overtaking.py::test_7_braking_safety_rejects_unsafe_open_space_candidate",
+      "outcome": "passed",
+      "duration_s": 0.021207800004049204
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_1_narrow_gate_l1_ic_01_02_exact_failure_resolved",
+      "outcome": "passed",
+      "duration_s": 21.578511599989724
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_2_unsafe_p2_standstill_selects_safe_p3_reverse",
+      "outcome": "passed",
+      "duration_s": 0.004872900011832826
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_3_unsafe_p2_standstill_selects_safe_p4_lateral_holding",
+      "outcome": "passed",
+      "duration_s": 0.0031023000046843663
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_4_safe_p2_standstill_preserves_waiting_behavior",
+      "outcome": "passed",
+      "duration_s": 0.00015249999705702066
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_5_no_feasible_escape_reports_blocked_honestly",
+      "outcome": "passed",
+      "duration_s": 0.003140100001473911
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_6_multiple_approaching_obstacles_standoff",
+      "outcome": "passed",
+      "duration_s": 0.004811800012248568
+    },
+    {
+      "nodeid": "tests/test_phase6553_narrow_gate_standoff.py::test_7_causal_isolation_from_hidden_schedules",
+      "outcome": "passed",
+      "duration_s": 0.004432499990798533
+    }
+  ]
+}

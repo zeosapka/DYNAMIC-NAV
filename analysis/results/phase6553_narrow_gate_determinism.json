@@ -1,0 +1,76 @@
+{
+  "total_variants": 14,
+  "deterministic_variants": 14,
+  "variants": {
+    "NARROW-GATE__L1-IC-01__01": {
+      "deterministic": true,
+      "termination_reason": "GOAL_REACHED",
+      "min_swept_clearance_m": 0.15402866131516946
+    },
+    "NARROW-GATE__L1-IC-01__02": {
+      "deterministic": true,
+      "termination_reason": "GOAL_REACHED",
+      "min_swept_clearance_m": 0.15377693100266832
+    },
+    "NARROW-GATE__L1-IC-02__01": {
+      "deterministic": true,
+      "termination_reason": "GOAL_REACHED",
+      "min_swept_clearance_m": 0.15404849926950104
+    },
+    "NARROW-GATE__L1-IC-02__02": {
+      "deterministic": true,
+      "termination_reason": "GOAL_REACHED",
+      "min_swept_clearance_m": 0.15404849926950293
+    },
+    "NARROW-GATE__L1-IC-03__01": {
+      "deterministic": true,
+      "termination_reason": "GOAL_REACHED",
+      "min_swept_clearance_m": 0.1543630266140673
+    },
+    "NARROW-GATE__L1-IC-04__01": {
+      "deterministic": true,
+      "termination_reason": "GOAL_REACHED",
+      "min_swept_clearance_m": 0.15364006544917064
+    },
+    "NARROW-GATE__L1-IC-05__01": {
+      "deterministic": true,
+      "termination_reason": "GOAL_REACHED",
+      "min_swept_clearance_m": 0.15436302661406942
+    },
+    "NARROW-GATE__L1-DO-01__01": {
+      "deterministic": true,
+      "termination_reason": "GOAL_REACHED",
+      "min_swept_clearance_m": 0.15255384437122455
+    },
+    "NARROW-GATE__L1-DO-01__02": {
+      "deterministic": true,
+      "termination_reason": "GOAL_REACHED",
+      "min_swept_clearance_m": 0.15490274627072909
+    },
+    "NARROW-GATE__L1-SG-01__01": {
+      "deterministic": true,
+      "termination_reason": "COLLISION_ABORT",
+      "min_swept_clearance_m": -0.009610327992257806
+    },
+    "NARROW-GATE__L1-SG-01__02": {
+      "deterministic": true,
+      "termination_reason": "GOAL_REACHED",
+      "min_swept_clearance_m": 0.1543630266140673
+    },
+    "NARROW-GATE__L1-RD-01__01": {
+      "deterministic": true,
+      "termination_reason": "COLLISION_ABORT",
+      "min_swept_clearance_m": -0.021721373238143826
+    },
+    "NARROW-GATE__L1-RD-02__01": {
+      "deterministic": true,
+      "termination_reason": "GOAL_REACHED",
+      "min_swept_clearance_m": 0.15436302661406942
+    },
+    "NARROW-GATE__L1-RD-03__01": {
+      "deterministic": true,
+      "termination_reason": "GOAL_REACHED",
+      "min_swept_clearance_m": 0.1543630266140673
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "phase": "6.5.3",
+  "audit_type": "READ_ONLY",
+  "failing_tests": [
+    {
+      "nodeid": "tests/test_dwa.py::test_dwa_corridor_scenario_deterministic_audit",
+      "file": "tests/test_dwa.py",
+      "lines": "233-280",
+      "observed_failure": "AssertionError: assert world.has_physical_collision is False (at step ~354, t=17.70 s)",
+      "classification": "OBSOLETE_EXPECTATION_AND_CENTERLINE_DESIGN_GAP",
+      "root_cause": "Previously passed only because DynamicObstacle.predict_positions() leaked waypoint_b_m=(14.4, 7.5) and reverse_at_bounds=True, allowing DWA to anticipate the instantaneous +1.0 -> -1.0 m/s bounce ahead of time. Under causal observation, DWA cannot foresee the hidden bounce while following on y=7.5, and once observed at t=17.30 s, centerline braking/reverse is physically insufficient.",
+      "validity_assessment": "The safety requirement (zero physical collisions and goal reached in CORRIDOR) IS physically achievable without hidden future info because the 3.0 m corridor admits a 1.10 m lateral passing lane (y=6.5 m or y=8.5 m). However, the current centerline-following DWA+A* architecture lacks proactive lateral lane-offset/passing behavior inside wide corridors."
+    },
+    {
+      "nodeid": "tests/test_phase62_safe_waiting_reverse.py::test_phase62_integration_scenarios_zero_collisions_and_determinism[CORRIDOR-False]",
+      "file": "tests/test_phase62_safe_waiting_reverse.py",
+      "lines": "235-263",
+      "observed_failure": "AssertionError: assert r1.physical_collision_episode_count == 0 (observed 1, COLLISION_ABORT at t=17.70 s, min_inst=-0.036470 m)",
+      "classification": "OBSOLETE_EXPECTATION_AND_CENTERLINE_DESIGN_GAP",
+      "root_cause": "Same causal mechanism as test_dwa_corridor_scenario_deterministic_audit: Phase 6.2 benchmark relied on non-causal waypoint_b_m bounce prediction. Removing future-schedule leakage exposed the physical impossibility of tailgating on y=7.5 without proactive lateral passing.",
+      "validity_assessment": "Zero-collision goal completion in CORRIDOR remains a valid long-term requirement, but achieving it causally requires lateral corridor passing / proactive A* or DWA lane-offset planning rather than centerline tailgating."
+    }
+  ],
+  "other_7_scenarios_status": {
+    "HEAD-ON": "PASS (GOAL_REACHED, 0 collisions, 0 margin violations)",
+    "CROSSING": "PASS (GOAL_REACHED, 0 collisions, 0 margin violations)",
+    "NARROW-GATE": "PASS (GOAL_REACHED, 0 collisions, 0 margin violations)",
+    "MULTIPLE-DYNAMIC-OBSTACLES": "PASS (GOAL_REACHED, 0 collisions, 0 margin violations)",
+    "STOP-AND-GO": "PASS (GOAL_REACHED, 0 collisions, 0 margin violations)",
+    "SUDDEN-STOP": "PASS (GOAL_REACHED, 0 collisions, 0 margin violations)",
+    "SUDDEN-STOP-FINITE-DECEL": "PASS (GOAL_REACHED, 0 collisions, 0 margin violations)"
+  }
+}

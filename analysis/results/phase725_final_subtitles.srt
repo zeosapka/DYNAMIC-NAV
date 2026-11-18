@@ -1,0 +1,60 @@
+1
+00:00:00,200 --> 00:00:14,554
+DYNAMIC-NAV: Dinamik Engellerden Kaçınan Mobil Robot Simülasyon Sistemi.
+Elektrik-Elektronik Mühendisliği — Eren Çakmaz, Ahmet Gürlek, Arda Başaran.
+
+2
+00:00:15,200 --> 00:00:34,553
+A* küresel yol (0,2 m ızgara, 0,50 m Öklid şişirme) ve
+DWA yerel planlama (7×17 örnekleme, 0,15 m süpürülmüş güvenlik payı).
+
+3
+00:00:35,200 --> 00:00:53,128
+HEAD-ON: Robot yaklaşan engeli algılar, DWA yeşil güvenli yörüngeyle
+yanal kaçınma manevrası yaparak 15,67 s içinde hedefe ulaşır.
+
+4
+00:00:53,900 --> 00:01:08,684
+CROSSING: Çapraz engellerin hız vektörlerine göre riskli yörüngeler elenir;
+robot hız ve yönelimini uyarlayarak 14,13 s içinde hedefe ulaşır.
+
+5
+00:01:11,000 --> 00:01:24,776
+CORRIDOR: Dar duvarlar arasında 0,15 m statik güvenlik payı korunarak
+dinamik engele karşı güvenli geçiş 19,90 s içinde tamamlanır.
+
+6
+00:01:33,900 --> 00:01:48,492
+NARROW-GATE: Geçit önünde güvenli bekleme uygulanır; engel çıkınca
+robot yönünü ayarlayıp 23,03 s içinde hedefe ulaşır.
+
+7
+00:01:59,900 --> 00:02:11,756
+STOP-AND-GO: Durup yeniden hareket eden engele karşı
+güvenli takip mesafesi korunarak 11,53 s içinde hedefe ulaşılır.
+
+8
+00:02:13,400 --> 00:02:27,080
+MULTIPLE-DYNAMIC-OBSTACLES: 4 dinamik engele karşı sürekli süpürme
+açıklığı doğrulamasıyla 18,03 s içinde çarpışmasız hedefe ulaşılır.
+
+9
+00:02:33,400 --> 00:02:44,608
+SUDDEN-STOP: Ani duran ön engele karşı frenleme mesafesi (d_stop)
+korunarak 13,27 s içinde güvenli yanal kaçınma sağlanır.
+
+10
+00:02:48,600 --> 00:02:57,792
+SUDDEN-STOP-FINITE-DECEL: Sonlu yavaşlama ivmeli engele karşı
+güvenlik payı korunarak 17,43 s içinde hedefe ulaşılır.
+
+11
+00:03:08,000 --> 00:03:22,784
+Canlı Telemetri: Hız, hedefe kalan mesafe, geometrik engel mesafesi,
+minimum güvenlik payı ve canlı mesafe-hız grafikleri.
+
+12
+00:03:26,000 --> 00:03:45,968
+Faz 6.5.6: 191/191 pytest, 8/8 temel senaryo ve NARROW-GATE Seviye 1
+14/14 varyant (42 koşum) 0 çarpışma, %100 determinizm. — Ekip: E. Çakmaz, A. Gürlek, A. Başaran.
+

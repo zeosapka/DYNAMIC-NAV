@@ -1,0 +1,74 @@
+1
+00:00:00,000 --> 00:00:12,000
+DYNAMIC-NAV: Dinamik Engellerden Kaçınan Mobil Robot Simülasyon Sistemi.
+Elektrik-Elektronik Mühendisliği — Eren Çakmaz, Ahmet Gürlek, Arda Başaran.
+
+2
+00:00:12,000 --> 00:00:25,000
+Ana Menü (HOME) ekranından canlı simülasyona, hazır senaryolara ve
+algoritma kılavuzuna tek tıkla erişilmektedir.
+
+3
+00:00:25,000 --> 00:00:42,000
+KILAVUZ (GUIDE) ekranı: A* küresel yol planlayıcı 0,2 m ızgara üzerinde
+0,50 m Öklid engel şişirmesi ve oktil sezgisel kullanır.
+
+4
+00:00:42,000 --> 00:01:00,000
+Dynamic Window Approach (DWA) yerel planlayıcı, hız ve ivme sınırları içinde
+yörünge tahmini yaparak 0,15 m süpürülmüş güvenlik mesafesini korur.
+
+5
+00:01:00,000 --> 00:01:20,000
+HEAD-ON (Karşıdan Gelen) senaryosu: Robot A* küresel rotasını izlerken
+karşıdan yaklaşan dinamik engeli algılar.
+
+6
+00:01:20,000 --> 00:01:40,000
+DWA, aday yörüngeleri 1,2 s ufuk boyunca değerlendirerek çarpışmasız
+yanal kaçınma manevrası üretir ve hedefe ulaşır.
+
+7
+00:01:40,000 --> 00:02:00,000
+CROSSING (Çapraz Geçiş) senaryosu: Robotun rotasını kesen dinamik engeller
+karşısında hız ve yönelim gerçek zamanlı olarak uyarlanır.
+
+8
+00:02:00,000 --> 00:02:20,000
+Sağdaki güvenlik ve telemetri paneli anlık doğrusal/açısal hızı,
+en yakın engel mesafesini ve güvenlik seviyesini canlı gösterir.
+
+9
+00:02:20,000 --> 00:02:40,000
+CORRIDOR (Koridor) senaryosu: Dar duvarlar arasında 0,15 m statik güvenlik
+payı korunarak karşıdan gelen engelle güvenli geçiş sağlanır.
+
+10
+00:02:40,000 --> 00:03:00,000
+Robot, duvarlara yaklaşmadan hızını ayarlayıp koridor çıkışında
+rotasına geri dönerek hedefe ulaşır.
+
+11
+00:03:00,000 --> 00:03:22,000
+NARROW-GATE (Dar Geçit) senaryosu: Dar geçit önünde yaklaşan engel
+algılandığında SAFE_STANDSTILL_BRAKING ile güvenli bekleme uygulanır.
+
+12
+00:03:22,000 --> 00:03:45,000
+Engel geçidi terk ettikten sonra robot yönünü yeniden ayarlayıp
+geçitten güvenli biçimde çıkar ve hedefe ilerler.
+
+13
+00:03:45,000 --> 00:04:05,000
+Telemetri ve güvenlik paneli: Süpürülmüş güvenlik mesafesi, frenleme
+durumu (d_stop) ve GÜVENLİ / DİKKAT / KRİTİK seviyeleri anlık izlenir.
+
+14
+00:04:05,000 --> 00:04:20,000
+Faz 6.5.6 Doğrulanmış Sonuçlar: 191/191 pytest testi (175,52 s),
+8/8 temel senaryo ve NARROW-GATE Seviye 1'de 14/14 varyant (42 koşum) başarılı.
+
+15
+00:04:20,000 --> 00:04:35,000
+Test edilen kapsamda 0 çarpışma, 0 güvenlik payı ihlali ve %100 determinizm.
+(Sonuçlar doğrulanan Faz 6.5.6 test kapsamına aittir.)

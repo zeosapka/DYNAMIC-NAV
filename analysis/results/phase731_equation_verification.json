@@ -1,0 +1,14 @@
+{
+  "phase": "7.3.1",
+  "equations_verified": [
+    {"id": "(1)", "topic": "Sürekli zamanlı tek-tekerlekli/diferansiyel hareket modeli", "source": "simulation/entities.py::Robot.step"},
+    {"id": "(2)-(3)", "topic": "Ayrık orta nokta yönelim integrasyonu (dt_s = 0.05 s)", "source": "simulation/entities.py::Robot.step, config.py::ExperimentConfig"},
+    {"id": "(4)", "topic": "Kesin Öklid hücre-merkezi engel şişirme (r_R + d_safe = 0.50 m)", "source": "algorithms/astar.py::inflate_occupancy_grid"},
+    {"id": "(5)-(6)", "topic": "A* toplam maliyet f(n)=g(n)+h_oct(n) ve 8-yönlü oktil sezgisel", "source": "algorithms/astar.py::octile_heuristic_m"},
+    {"id": "(7)", "topic": "DWA dinamik hız penceresi V_d (a_lin=5.0 m/s^2, a_ang=16.0 rad/s^2)", "source": "algorithms/dwa.py::compute_dynamic_window, config.py::DWAConfig"},
+    {"id": "(8)", "topic": "DWA çok terimli yörünge puanlama J(v, omega) (w_h=1.3, w_c=0.8, w_v=1.8, w_p=1.0)", "source": "algorithms/dwa.py::score_trajectory, config.py::DWAConfig"},
+    {"id": "(9)", "topic": "Aktif frenleme duruş mesafesi d_stop(v) (t_react=0.10 s, a_brake=5.0 m/s^2)", "source": "algorithms/dwa.py::compute_stopping_distance_m, config.py::DWAConfig"}
+  ],
+  "all_equations_match_implementation": true,
+  "unverified_or_decorative_equations_added": false
+}

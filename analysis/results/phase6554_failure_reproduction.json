@@ -1,0 +1,26 @@
+{
+  "NARROW-GATE__L1-RD-01__01": {
+    "collision_time_s": 20.85,
+    "collision_pair": [
+      "ROBOT",
+      "DYN-GATE-1"
+    ],
+    "gate_entry_time_s": 13.05,
+    "gate_exit_time_s": 15.4,
+    "min_instantaneous_clearance_m": -0.021721373238143826,
+    "min_swept_clearance_m": -0.021721373238143826,
+    "total_steps": 417
+  },
+  "NARROW-GATE__L1-SG-01__01": {
+    "collision_time_s": 21.3,
+    "collision_pair": [
+      "ROBOT",
+      "DYN-GATE-1"
+    ],
+    "gate_entry_time_s": 13.05,
+    "gate_exit_time_s": 15.5,
+    "min_instantaneous_clearance_m": -0.009610327992257806,
+    "min_swept_clearance_m": -0.009610327992257806,
+    "total_steps": 426
+  }
+}

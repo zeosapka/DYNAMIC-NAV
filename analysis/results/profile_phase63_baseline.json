@@ -1,0 +1,92 @@
+{
+  "HEAD-ON": {
+    "calls": 312,
+    "avg_ms": 6.331151602564103,
+    "median_ms": 6.55995,
+    "p95_ms": 7.283195,
+    "p99_ms": 7.880568,
+    "max_ms": 9.9992,
+    "over_50ms_count": 0,
+    "over_50ms_pct": 0.0
+  },
+  "CROSSING": {
+    "calls": 276,
+    "avg_ms": 21.897320289855074,
+    "median_ms": 8.9922,
+    "p95_ms": 66.469525,
+    "p99_ms": 79.052825,
+    "max_ms": 103.2328,
+    "over_50ms_count": 39,
+    "over_50ms_pct": 14.130434782608695
+  },
+  "CORRIDOR": {
+    "calls": 500,
+    "avg_ms": 4.3911562,
+    "median_ms": 6.2201,
+    "p95_ms": 7.167334999999999,
+    "p99_ms": 7.357874,
+    "max_ms": 7.7081,
+    "over_50ms_count": 0,
+    "over_50ms_pct": 0.0
+  },
+  "STOP-AND-GO": {
+    "calls": 223,
+    "avg_ms": 6.7561811659192825,
+    "median_ms": 6.7737,
+    "p95_ms": 7.633979999999999,
+    "p99_ms": 12.592584000000002,
+    "max_ms": 15.5057,
+    "over_50ms_count": 0,
+    "over_50ms_pct": 0.0
+  },
+  "NARROW-GATE": {
+    "calls": 311,
+    "avg_ms": 17.17093504823151,
+    "median_ms": 16.3225,
+    "p95_ms": 30.9052,
+    "p99_ms": 40.512649999999965,
+    "max_ms": 46.7393,
+    "over_50ms_count": 0,
+    "over_50ms_pct": 0.0
+  },
+  "MULTIPLE-DYNAMIC-OBSTACLES": {
+    "calls": 351,
+    "avg_ms": 32.22225356125356,
+    "median_ms": 28.5295,
+    "p95_ms": 60.5625,
+    "p99_ms": 72.3044,
+    "max_ms": 99.3716,
+    "over_50ms_count": 36,
+    "over_50ms_pct": 10.256410256410257
+  },
+  "SUDDEN-STOP": {
+    "calls": 469,
+    "avg_ms": 15.8016842217484,
+    "median_ms": 14.3152,
+    "p95_ms": 27.76702,
+    "p99_ms": 36.224887999999986,
+    "max_ms": 44.5806,
+    "over_50ms_count": 0,
+    "over_50ms_pct": 0.0
+  },
+  "SUDDEN-STOP-FINITE-DECEL": {
+    "calls": 379,
+    "avg_ms": 42.31488548812665,
+    "median_ms": 34.2502,
+    "p95_ms": 89.16056999999994,
+    "p99_ms": 124.87234799999987,
+    "max_ms": 154.1002,
+    "over_50ms_count": 101,
+    "over_50ms_pct": 26.649076517150394
+  },
+  "OVERALL": {
+    "calls": 2821,
+    "avg_ms": 18.369262495568947,
+    "median_ms": 12.3985,
+    "p95_ms": 53.7171,
+    "p99_ms": 82.52140000000003,
+    "max_ms": 154.1002,
+    "over_50ms_count": 176,
+    "over_50ms_pct": 6.238922367954626
+  }
+}

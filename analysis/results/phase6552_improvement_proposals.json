@@ -1,0 +1,51 @@
+{
+  "phase": "6.5.5.2",
+  "mode": "READ_ONLY_DIAGNOSTIC_DESIGN",
+  "proposals": [
+    {
+      "priority": 1,
+      "target_family": "NARROW-GATE (8 collisions)",
+      "origin": "local_planning_and_fallback_ordering",
+      "causally_feasible": true,
+      "root_cause": "When waiting_state == GATE_CLEAR_HOLD_UNSAFE and DYN-GATE-1 approaches at -0.80 m/s, Priority 2 (SAFETY_MARGIN_VIOLATION) selects v=0.0 standstill (e.g. pred_c=0.1198 m at t=6.75 s) and blocks Priority 3 reverse recovery / Priority 4 lateral holding pose, pinning the robot at the gate entrance until collision at t=7.10 s.",
+      "smallest_architectural_improvement": "In DWAPlanner.compute_command(), when waiting_state == GATE_CLEAR_HOLD_UNSAFE and an oncoming obstacle is closing on the robot, do not let a near-zero-speed Priority 2 standstill override lateral holding pose (Priority 4) or reverse recovery (Priority 3); additionally trigger proactive gate-approach standoff before entering x >= 7.5 m when an obstacle is detected inside the gate.",
+      "acceptance_criteria": "NARROW-GATE Level 1 goal rate improves from 42.9% to >= 90% with 0.15 m safety margin preserved and zero regression on the 8 baseline scenarios."
+    },
+    {
+      "priority": 2,
+      "target_family": "SUDDEN-STOP (6 collisions)",
+      "origin": "local_and_global_planning_channel_passing",
+      "causally_feasible": "partially (passing around stopped obstacle in 7m channel is feasible; predicting hidden reversal from 0.17m behind is not)",
+      "root_cause": "Robot creeps up to pred_c=0.1503 m (swept=0.1743 m) directly behind stopped DYN-SUDDEN-1 in a 7.0 m-wide channel (y in [4, 11]). When the hidden STOP_AND_GO timer expires and DYN-SUDDEN-1 reverses at -1.2 m/s, causal observation sees it 0.05 s later at 0.056 m clearance — physically too close to escape.",
+      "smallest_architectural_improvement": "Allow proactive A* lateral passing around a stationary obstacle in wide channels (y in [4, 11], 7.0 m wide) before parking at 0.15 m behind it, rather than waiting for deadlock_timeout_s=2.5 s while creeping to the 0.15 m boundary.",
+      "acceptance_criteria": "SUDDEN-STOP Level 1 goal rate improves from 66.7% to >= 90% without using hidden STOP_AND_GO schedules."
+    },
+    {
+      "priority": 3,
+      "target_family": "CORRIDOR heading perturbations (2 collisions)",
+      "origin": "corridor_passing_entry_alignment",
+      "causally_feasible": true,
+      "root_cause": "Initial heading perturbation (+/-0.26 rad) causes late/partial lateral offset (y=7.20 m at v=1.55 m/s, swept_c=0.154 m behind DYN-CORR-1) instead of full lane separation (y=6.5 or 8.5 m), leading to collision at t=17.30 s when DYN-CORR-1 bounces.",
+      "smallest_architectural_improvement": "Require full lateral separation clearance in CorridorPassingManager and prevent high-speed (1.55 m/s) diagonal tailgating at <0.25 m clearance inside corridors.",
+      "acceptance_criteria": "CORRIDOR__L1-IC-02__01 and 02 achieve GOAL_REACHED with >= 0.15 m clearance."
+    },
+    {
+      "priority": 4,
+      "target_family": "MULTIPLE-DYNAMIC-OBSTACLES (1 collision, 7 margin-only dips)",
+      "origin": "local_planning_rear_approach_and_speed_limit",
+      "causally_feasible": true,
+      "root_cause": "Under max_linear_speed_mps=2.2, robot stops at x=5.36 m for crossing DYN-MULTI-2 while DYN-MULTI-1 (+1.1 m/s) approaches from behind and collides at t=11.50 s.",
+      "smallest_architectural_improvement": "Include lateral-evasion preference in Priority 2/4 when an active obstacle behind the robot is closing along the same axis.",
+      "acceptance_criteria": "MULTIPLE-DYNAMIC-OBSTACLES__L1-RD-01__01 avoids rear-end collision."
+    },
+    {
+      "priority": 5,
+      "target_family": "CORRIDOR__L1-SG-01__01 (-0.20 m width reduction)",
+      "origin": "scenario_geometric_infeasibility",
+      "causally_feasible": false,
+      "root_cause": "Corridor width 2.80 m leaves 1.00 m side gaps around r=0.40 m obstacle — zero slack above 2*r_rob + 2*margin = 1.00 m, infeasible under 0.20 m discrete grid inflation.",
+      "smallest_architectural_improvement": "Do NOT relax 0.15 m safety margin; classify as geometrically borderline/infeasible under 0.20 m grid resolution.",
+      "acceptance_criteria": "Documented as known physical/grid-resolution boundary."
+    }
+  ]
+}

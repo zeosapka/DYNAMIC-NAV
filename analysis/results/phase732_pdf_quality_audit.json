@@ -1,0 +1,39 @@
+{
+  "phase": "7.3.2/7.3.3",
+  "pdfs": [
+    {
+      "path": "analysis/results/phase71_akademik_rapor.pdf",
+      "a4_points": [595, 842],
+      "pages": 4,
+      "target_pages": "4-6",
+      "fonts_embedded": ["TimesNewRomanPSMT", "TimesNewRomanPS-BoldMT", "TimesNewRomanPS-ItalicMT", "CambriaMath", "Consolas"],
+      "subu_header_present": true,
+      "turkish_chars_ok": true,
+      "forbidden_placeholders": [],
+      "tables": 3,
+      "figures": 3,
+      "equations": 9
+    },
+    {
+      "path": "analysis/results/phase73_ekip_katki_tablosu.pdf",
+      "a4_points": [595, 842],
+      "pages": 1,
+      "target_pages": "1",
+      "fonts_embedded": ["TimesNewRomanPSMT", "TimesNewRomanPS-BoldMT", "Consolas"],
+      "subu_header_present": true,
+      "turkish_chars_ok": true,
+      "forbidden_placeholders": []
+    },
+    {
+      "path": "analysis/results/phase73_yapay_zeka_kullanim_beyani.pdf",
+      "a4_points": [595, 842],
+      "pages": 1,
+      "target_pages": "<=1",
+      "fonts_embedded": ["TimesNewRomanPSMT", "TimesNewRomanPS-BoldMT", "Consolas"],
+      "subu_header_present": true,
+      "turkish_chars_ok": true,
+      "forbidden_placeholders": []
+    }
+  ],
+  "all_checks_passed": true
+}

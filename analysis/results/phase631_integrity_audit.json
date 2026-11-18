@@ -1,0 +1,478 @@
+{
+  "schema_version": "6.3.1",
+  "opt1_cache_isolation": {
+    "cycle1_v_mps": 0.75,
+    "cycle2_mutated_v_mps": 0.25,
+    "mutation_reflected_immediately": true,
+    "cache_keys_count": 16,
+    "cached_vs_uncached_exact_match": true
+  },
+  "opt2_numerical_and_geometry": {
+    "point_clearance_samples": 5000,
+    "max_point_clearance_diff_m": 0.0,
+    "trajectory_samples": 500,
+    "geometry_types_tested": [
+      "CapsuleGeometry",
+      "CircleGeometry",
+      "OrientedRectGeometry",
+      "PolygonGeometry"
+    ],
+    "max_traj_clearance_diff_m": 0.0,
+    "max_brake_clearance_diff_m": 0.0,
+    "collision_classification_mismatches": 0,
+    "safety_margin_classification_mismatches": 0
+  },
+  "baseline_vs_phase63_equivalence": {
+    "max_inst_clearance_diff_m": 0.0,
+    "max_swept_clearance_diff_m": 0.0,
+    "max_path_length_diff_m": 0.0,
+    "classification_mismatches": 0,
+    "per_scenario": {
+      "HEAD-ON": {
+        "inst_diff_m": 0.0,
+        "swept_diff_m": 0.0,
+        "path_len_diff_m": 0.0,
+        "classification_exact_match": true
+      },
+      "CROSSING": {
+        "inst_diff_m": 0.0,
+        "swept_diff_m": 0.0,
+        "path_len_diff_m": 0.0,
+        "classification_exact_match": true
+      },
+      "CORRIDOR": {
+        "inst_diff_m": 0.0,
+        "swept_diff_m": 0.0,
+        "path_len_diff_m": 0.0,
+        "classification_exact_match": true
+      },
+      "STOP-AND-GO": {
+        "inst_diff_m": 0.0,
+        "swept_diff_m": 0.0,
+        "path_len_diff_m": 0.0,
+        "classification_exact_match": true
+      },
+      "NARROW-GATE": {
+        "inst_diff_m": 0.0,
+        "swept_diff_m": 0.0,
+        "path_len_diff_m": 0.0,
+        "classification_exact_match": true
+      },
+      "MULTIPLE-DYNAMIC-OBSTACLES": {
+        "inst_diff_m": 0.0,
+        "swept_diff_m": 0.0,
+        "path_len_diff_m": 0.0,
+        "classification_exact_match": true
+      },
+      "SUDDEN-STOP": {
+        "inst_diff_m": 0.0,
+        "swept_diff_m": 0.0,
+        "path_len_diff_m": 0.0,
+        "classification_exact_match": true
+      },
+      "SUDDEN-STOP-FINITE-DECEL": {
+        "inst_diff_m": 0.0,
+        "swept_diff_m": 0.0,
+        "path_len_diff_m": 0.0,
+        "classification_exact_match": true
+      }
+    }
+  },
+  "performance_reproducibility": {
+    "system_info": {
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+      "machine": "AMD64",
+      "cpu_count": 20,
+      "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "per_run": [
+      {
+        "run_index": 1,
+        "stats": {
+          "HEAD-ON": {
+            "calls": 312,
+            "avg_ms": 4.05505032051282,
+            "median_ms": 4.00375,
+            "p95_ms": 5.018565,
+            "p99_ms": 6.956564999999997,
+            "max_ms": 11.5578,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "CROSSING": {
+            "calls": 276,
+            "avg_ms": 13.21085,
+            "median_ms": 10.6826,
+            "p95_ms": 33.607325,
+            "p99_ms": 40.13515,
+            "max_ms": 41.0541,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "CORRIDOR": {
+            "calls": 500,
+            "avg_ms": 10.5954338,
+            "median_ms": 11.136800000000001,
+            "p95_ms": 25.164054999999983,
+            "p99_ms": 33.32836299999999,
+            "max_ms": 41.7367,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "STOP-AND-GO": {
+            "calls": 223,
+            "avg_ms": 13.487689237668162,
+            "median_ms": 12.9711,
+            "p95_ms": 20.62007999999999,
+            "p99_ms": 24.823662,
+            "max_ms": 25.6557,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "NARROW-GATE": {
+            "calls": 311,
+            "avg_ms": 12.622614147909967,
+            "median_ms": 12.1408,
+            "p95_ms": 20.488100000000003,
+            "p99_ms": 25.05257,
+            "max_ms": 28.4826,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "MULTIPLE-DYNAMIC-OBSTACLES": {
+            "calls": 351,
+            "avg_ms": 21.56870284900285,
+            "median_ms": 20.5426,
+            "p95_ms": 34.90935,
+            "p99_ms": 46.54345,
+            "max_ms": 51.4236,
+            "over_50ms_count": 2,
+            "over_50ms_pct": 0.5698005698005698
+          },
+          "SUDDEN-STOP": {
+            "calls": 469,
+            "avg_ms": 15.843576545842218,
+            "median_ms": 14.5856,
+            "p95_ms": 27.59017999999999,
+            "p99_ms": 34.992784,
+            "max_ms": 55.7619,
+            "over_50ms_count": 1,
+            "over_50ms_pct": 0.21321961620469082
+          },
+          "SUDDEN-STOP-FINITE-DECEL": {
+            "calls": 379,
+            "avg_ms": 28.864934300791557,
+            "median_ms": 27.304,
+            "p95_ms": 47.01888999999999,
+            "p99_ms": 53.39803599999997,
+            "max_ms": 75.0773,
+            "over_50ms_count": 6,
+            "over_50ms_pct": 1.5831134564643798
+          },
+          "OVERALL": {
+            "calls": 2821,
+            "avg_ms": 15.272434278624601,
+            "median_ms": 13.6571,
+            "p95_ms": 34.194,
+            "p99_ms": 45.721780000000045,
+            "max_ms": 75.0773,
+            "over_50ms_count": 9,
+            "over_50ms_pct": 0.31903580290677064
+          }
+        }
+      },
+      {
+        "run_index": 2,
+        "stats": {
+          "HEAD-ON": {
+            "calls": 312,
+            "avg_ms": 13.252332371794871,
+            "median_ms": 12.256350000000001,
+            "p95_ms": 22.395944999999998,
+            "p99_ms": 30.681028999999995,
+            "max_ms": 45.9021,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "CROSSING": {
+            "calls": 276,
+            "avg_ms": 19.152360144927535,
+            "median_ms": 17.4088,
+            "p95_ms": 34.841925,
+            "p99_ms": 42.735125,
+            "max_ms": 55.828,
+            "over_50ms_count": 1,
+            "over_50ms_pct": 0.36231884057971014
+          },
+          "CORRIDOR": {
+            "calls": 500,
+            "avg_ms": 9.793523,
+            "median_ms": 11.457650000000001,
+            "p95_ms": 21.282694999999997,
+            "p99_ms": 28.479325,
+            "max_ms": 36.2859,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "STOP-AND-GO": {
+            "calls": 223,
+            "avg_ms": 18.017511210762333,
+            "median_ms": 14.3972,
+            "p95_ms": 42.80491999999993,
+            "p99_ms": 51.070258,
+            "max_ms": 60.3276,
+            "over_50ms_count": 3,
+            "over_50ms_pct": 1.345291479820628
+          },
+          "NARROW-GATE": {
+            "calls": 311,
+            "avg_ms": 13.391005787781351,
+            "median_ms": 12.3246,
+            "p95_ms": 27.93885,
+            "p99_ms": 41.59624999999997,
+            "max_ms": 57.8433,
+            "over_50ms_count": 1,
+            "over_50ms_pct": 0.3215434083601286
+          },
+          "MULTIPLE-DYNAMIC-OBSTACLES": {
+            "calls": 351,
+            "avg_ms": 23.740103133903133,
+            "median_ms": 20.5359,
+            "p95_ms": 48.2324,
+            "p99_ms": 71.6548,
+            "max_ms": 79.6737,
+            "over_50ms_count": 16,
+            "over_50ms_pct": 4.5584045584045585
+          },
+          "SUDDEN-STOP": {
+            "calls": 469,
+            "avg_ms": 17.2772684434968,
+            "median_ms": 14.2866,
+            "p95_ms": 35.099599999999995,
+            "p99_ms": 44.42303599999999,
+            "max_ms": 62.6761,
+            "over_50ms_count": 4,
+            "over_50ms_pct": 0.8528784648187633
+          },
+          "SUDDEN-STOP-FINITE-DECEL": {
+            "calls": 379,
+            "avg_ms": 25.011134300791557,
+            "median_ms": 24.422,
+            "p95_ms": 53.445299999999975,
+            "p99_ms": 71.56436999999957,
+            "max_ms": 103.4437,
+            "over_50ms_count": 21,
+            "over_50ms_pct": 5.54089709762533
+          },
+          "OVERALL": {
+            "calls": 2821,
+            "avg_ms": 17.162383339241405,
+            "median_ms": 14.2929,
+            "p95_ms": 37.2031,
+            "p99_ms": 57.047720000000176,
+            "max_ms": 103.4437,
+            "over_50ms_count": 46,
+            "over_50ms_pct": 1.63062743707905
+          }
+        }
+      },
+      {
+        "run_index": 3,
+        "stats": {
+          "HEAD-ON": {
+            "calls": 312,
+            "avg_ms": 4.105929166666667,
+            "median_ms": 4.1311,
+            "p95_ms": 5.1085449999999994,
+            "p99_ms": 5.436414999999999,
+            "max_ms": 5.6117,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "CROSSING": {
+            "calls": 276,
+            "avg_ms": 5.37701884057971,
+            "median_ms": 5.6455,
+            "p95_ms": 6.30725,
+            "p99_ms": 6.541925,
+            "max_ms": 6.7116,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "CORRIDOR": {
+            "calls": 500,
+            "avg_ms": 5.620754,
+            "median_ms": 4.703799999999999,
+            "p95_ms": 17.227414999999965,
+            "p99_ms": 21.473402,
+            "max_ms": 37.2782,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "STOP-AND-GO": {
+            "calls": 223,
+            "avg_ms": 17.328789686098656,
+            "median_ms": 12.2354,
+            "p95_ms": 51.409189999999995,
+            "p99_ms": 75.126952,
+            "max_ms": 86.5456,
+            "over_50ms_count": 13,
+            "over_50ms_pct": 5.829596412556054
+          },
+          "NARROW-GATE": {
+            "calls": 311,
+            "avg_ms": 13.24007813504823,
+            "median_ms": 11.93,
+            "p95_ms": 27.9619,
+            "p99_ms": 46.40223999999987,
+            "max_ms": 67.2706,
+            "over_50ms_count": 3,
+            "over_50ms_pct": 0.9646302250803859
+          },
+          "MULTIPLE-DYNAMIC-OBSTACLES": {
+            "calls": 351,
+            "avg_ms": 6.78395641025641,
+            "median_ms": 6.9655,
+            "p95_ms": 8.5882,
+            "p99_ms": 9.23805,
+            "max_ms": 13.3811,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "SUDDEN-STOP": {
+            "calls": 469,
+            "avg_ms": 4.260351599147121,
+            "median_ms": 4.2325,
+            "p95_ms": 5.709079999999999,
+            "p99_ms": 6.36166,
+            "max_ms": 6.618,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "SUDDEN-STOP-FINITE-DECEL": {
+            "calls": 379,
+            "avg_ms": 7.4926762532981535,
+            "median_ms": 7.7527,
+            "p95_ms": 9.15803,
+            "p99_ms": 9.402527999999998,
+            "max_ms": 10.164,
+            "over_50ms_count": 0,
+            "over_50ms_pct": 0.0
+          },
+          "OVERALL": {
+            "calls": 2821,
+            "avg_ms": 7.364929599432825,
+            "median_ms": 5.6398,
+            "p95_ms": 18.238,
+            "p99_ms": 36.54666000000027,
+            "max_ms": 86.5456,
+            "over_50ms_count": 16,
+            "over_50ms_pct": 0.5671747607231479
+          }
+        }
+      }
+    ],
+    "aggregated_3_runs": {
+      "HEAD-ON": {
+        "calls": 936,
+        "avg_ms": 7.13777061965812,
+        "median_ms": 4.5594,
+        "p95_ms": 18.15745,
+        "p99_ms": 24.93355999999998,
+        "max_ms": 45.9021,
+        "over_50ms_count": 0,
+        "over_50ms_pct": 0.0
+      },
+      "CROSSING": {
+        "calls": 828,
+        "avg_ms": 12.580076328502415,
+        "median_ms": 9.57475,
+        "p95_ms": 31.059749999999994,
+        "p99_ms": 40.90043400000001,
+        "max_ms": 55.828,
+        "over_50ms_count": 1,
+        "over_50ms_pct": 0.12077294685990338
+      },
+      "CORRIDOR": {
+        "calls": 1500,
+        "avg_ms": 8.6699036,
+        "median_ms": 8.460899999999999,
+        "p95_ms": 21.59147999999999,
+        "p99_ms": 29.455285,
+        "max_ms": 41.7367,
+        "over_50ms_count": 0,
+        "over_50ms_pct": 0.0
+      },
+      "STOP-AND-GO": {
+        "calls": 669,
+        "avg_ms": 16.277996711509715,
+        "median_ms": 13.2024,
+        "p95_ms": 37.96604000000001,
+        "p99_ms": 69.049908,
+        "max_ms": 86.5456,
+        "over_50ms_count": 16,
+        "over_50ms_pct": 2.391629297458894
+      },
+      "NARROW-GATE": {
+        "calls": 933,
+        "avg_ms": 13.08456602357985,
+        "median_ms": 12.1383,
+        "p95_ms": 25.57398,
+        "p99_ms": 40.722307999999984,
+        "max_ms": 67.2706,
+        "over_50ms_count": 4,
+        "over_50ms_pct": 0.4287245444801715
+      },
+      "MULTIPLE-DYNAMIC-OBSTACLES": {
+        "calls": 1053,
+        "avg_ms": 17.364254131054132,
+        "median_ms": 16.0048,
+        "p95_ms": 35.24462,
+        "p99_ms": 57.972508000000026,
+        "max_ms": 79.6737,
+        "over_50ms_count": 18,
+        "over_50ms_pct": 1.7094017094017093
+      },
+      "SUDDEN-STOP": {
+        "calls": 1407,
+        "avg_ms": 12.460398862828713,
+        "median_ms": 11.0049,
+        "p95_ms": 29.039970000000007,
+        "p99_ms": 38.68177000000003,
+        "max_ms": 62.6761,
+        "over_50ms_count": 5,
+        "over_50ms_pct": 0.35536602700781805
+      },
+      "SUDDEN-STOP-FINITE-DECEL": {
+        "calls": 1137,
+        "avg_ms": 20.456248284960424,
+        "median_ms": 19.7022,
+        "p95_ms": 43.70374,
+        "p99_ms": 61.903048000000034,
+        "max_ms": 103.4437,
+        "over_50ms_count": 27,
+        "over_50ms_pct": 2.37467018469657
+      },
+      "OVERALL": {
+        "calls": 8463,
+        "avg_ms": 13.266582405766277,
+        "median_ms": 11.015,
+        "p95_ms": 33.16205,
+        "p99_ms": 48.602911999999826,
+        "max_ms": 103.4437,
+        "over_50ms_count": 71,
+        "over_50ms_pct": 0.8389460002363228
+      }
+    }
+  },
+  "renderer_fix_verified": {
+    "file": "interface/renderer.py",
+    "lines": [
+      921,
+      941
+    ],
+    "change": "self._transform.length_to_pixels -> self._transform.meters_to_pixels",
+    "scope": "Rendering only (CircleGeometry and CapsuleGeometry pixel radius in _draw_sim_objects); zero simulation/geometry/collision impact."
+  }
+}

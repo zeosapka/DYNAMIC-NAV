@@ -1,0 +1,188 @@
+{
+  "status": "PASS",
+  "missing_or_empty": [],
+  "phases": {
+    "6.5.4": {
+      "benchmark_phase654_raw.json": {
+        "exists": true,
+        "size_bytes": 8151
+      },
+      "benchmark_phase654_determinism.json": {
+        "exists": true,
+        "size_bytes": 26205
+      },
+      "phase654_corridor_assessment.json": {
+        "exists": true,
+        "size_bytes": 4353
+      },
+      "phase654_corridor_passing_report.md": {
+        "exists": true,
+        "size_bytes": 4528
+      }
+    },
+    "6.5.5": {
+      "phase655_level1_raw.json": {
+        "exists": true,
+        "size_bytes": 776135
+      },
+      "phase655_level1_raw.csv": {
+        "exists": true,
+        "size_bytes": 154458
+      },
+      "phase655_level1_determinism.json": {
+        "exists": true,
+        "size_bytes": 37243
+      },
+      "phase655_level1_summary.json": {
+        "exists": true,
+        "size_bytes": 5565
+      },
+      "phase655_level1_failure_analysis.json": {
+        "exists": true,
+        "size_bytes": 35568
+      },
+      "phase655_level1_report.md": {
+        "exists": true,
+        "size_bytes": 6129
+      }
+    },
+    "6.5.5.1": {
+      "phase6551_timer_fix_report.md": {
+        "exists": true,
+        "size_bytes": 3942
+      },
+      "phase6551_timer_regression.json": {
+        "exists": true,
+        "size_bytes": 1548
+      },
+      "phase6551_failure_root_causes.json": {
+        "exists": true,
+        "size_bytes": 43974
+      },
+      "phase6551_verification.json": {
+        "exists": true,
+        "size_bytes": 9524
+      }
+    },
+    "6.5.5.2": {
+      "phase6552_failure_diagnostics.json": {
+        "exists": true,
+        "size_bytes": 30774
+      },
+      "phase6552_improvement_proposals.json": {
+        "exists": true,
+        "size_bytes": 4343
+      },
+      "phase6552_diagnostic_report.md": {
+        "exists": true,
+        "size_bytes": 5088
+      }
+    },
+    "6.5.5.3": {
+      "phase6553_narrow_gate_raw.json": {
+        "exists": true,
+        "size_bytes": 90190
+      },
+      "phase6553_narrow_gate_determinism.json": {
+        "exists": true,
+        "size_bytes": 2484
+      },
+      "phase6553_regression_results.json": {
+        "exists": true,
+        "size_bytes": 4736
+      },
+      "phase6553_report.md": {
+        "exists": true,
+        "size_bytes": 3840
+      }
+    },
+    "6.5.5.4": {
+      "phase6554_failure_reproduction.json": {
+        "exists": true,
+        "size_bytes": 688
+      },
+      "phase6554_trajectory_analysis.json": {
+        "exists": true,
+        "size_bytes": 127079
+      },
+      "phase6554_causal_feasibility.json": {
+        "exists": true,
+        "size_bytes": 1460
+      },
+      "phase6554_improvement_proposals.json": {
+        "exists": true,
+        "size_bytes": 2908
+      },
+      "phase6554_diagnostic_report.md": {
+        "exists": true,
+        "size_bytes": 3297
+      }
+    },
+    "6.5.5.5": {
+      "phase6555_open_space_raw.json": {
+        "exists": true,
+        "size_bytes": 95337
+      },
+      "phase6555_determinism.json": {
+        "exists": true,
+        "size_bytes": 2473
+      },
+      "phase6555_regression_results.json": {
+        "exists": true,
+        "size_bytes": 2904
+      },
+      "phase6555_report.md": {
+        "exists": true,
+        "size_bytes": 3362
+      }
+    },
+    "6.5.5.6": {
+      "phase6556_reproduction.json": {
+        "exists": true,
+        "size_bytes": 14184
+      },
+      "phase6556_geometry_audit.json": {
+        "exists": true,
+        "size_bytes": 1088
+      },
+      "phase6556_numerical_analysis.json": {
+        "exists": true,
+        "size_bytes": 679
+      },
+      "phase6556_regression_comparison.json": {
+        "exists": true,
+        "size_bytes": 591
+      },
+      "phase6556_improvement_proposals.json": {
+        "exists": true,
+        "size_bytes": 871
+      },
+      "phase6556_report.md": {
+        "exists": true,
+        "size_bytes": 2491
+      }
+    },
+    "6.5.5.7": {
+      "phase6557_static_swept_raw.json": {
+        "exists": true,
+        "size_bytes": 93402
+      },
+      "phase6557_determinism.json": {
+        "exists": true,
+        "size_bytes": 2473
+      },
+      "phase6557_geometry_consistency.json": {
+        "exists": true,
+        "size_bytes": 1040
+      },
+      "phase6557_regression_results.json": {
+        "exists": true,
+        "size_bytes": 4331
+      },
+      "phase6557_report.md": {
+        "exists": true,
+        "size_bytes": 3123
+      }
+    }
+  }
+}

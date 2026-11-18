@@ -1,0 +1,1824 @@
+{
+  "NARROW-GATE__L1-IC-01__02": [
+    {
+      "t": 6.55,
+      "rob": [
+        7.591,
+        7.278,
+        0.42
+      ],
+      "cmd": [
+        0.42,
+        -1.2
+      ],
+      "pred_c": 0.1499,
+      "swept_c": 0.4401,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-GATE-1",
+          8.8,
+          7.5,
+          -0.8,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 6.6,
+      "rob": [
+        7.603,
+        7.275,
+        0.25
+      ],
+      "cmd": [
+        0.25,
+        -2.0
+      ],
+      "pred_c": 0.1432,
+      "swept_c": 0.3892,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-GATE-1",
+          8.76,
+          7.5,
+          -0.8,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 6.65,
+      "rob": [
+        7.627,
+        7.268,
+        0.5
+      ],
+      "cmd": [
+        0.5,
+        -1.4
+      ],
+      "pred_c": 0.1495,
+      "swept_c": 0.3281,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-GATE-1",
+          8.72,
+          7.5,
+          -0.8,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 6.7,
+      "rob": [
+        7.639,
+        7.264,
+        0.25
+      ],
+      "cmd": [
+        0.25,
+        -2.2
+      ],
+      "pred_c": 0.1343,
+      "swept_c": 0.2787,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-GATE-1",
+          8.68,
+          7.5,
+          -0.8,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 6.75,
+      "rob": [
+        7.639,
+        7.264,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -1.4
+      ],
+      "pred_c": 0.1198,
+      "swept_c": 0.2398,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-GATE-1",
+          8.64,
+          7.5,
+          -0.8,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 6.8,
+      "rob": [
+        7.646,
+        7.26,
+        0.17
+      ],
+      "cmd": [
+        0.17,
+        -2.2
+      ],
+      "pred_c": 0.1497,
+      "swept_c": 0.1953,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-GATE-1",
+          8.6,
+          7.5,
+          -0.8,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 6.85,
+      "rob": [
+        7.646,
+        7.26,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -1.4
+      ],
+      "pred_c": 0.1161,
+      "swept_c": 0.1566,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-GATE-1",
+          8.56,
+          7.5,
+          -0.8,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 6.9,
+      "rob": [
+        7.646,
+        7.26,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -0.6
+      ],
+      "pred_c": 0.0778,
+      "swept_c": 0.1181,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-GATE-1",
+          8.52,
+          7.5,
+          -0.8,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 6.95,
+      "rob": [
+        7.646,
+        7.26,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -1.4
+      ],
+      "pred_c": -0.0382,
+      "swept_c": 0.0798,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-GATE-1",
+          8.48,
+          7.5,
+          -0.8,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 7.0,
+      "rob": [
+        7.646,
+        7.26,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -2.2
+      ],
+      "pred_c": -0.0758,
+      "swept_c": 0.0416,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-GATE-1",
+          8.44,
+          7.5,
+          -0.8,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 7.05,
+      "rob": [
+        7.646,
+        7.26,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -2.8
+      ],
+      "pred_c": -0.0362,
+      "swept_c": 0.0036,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-GATE-1",
+          8.4,
+          7.5,
+          -0.8,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 7.1,
+      "rob": [
+        7.646,
+        7.26,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -2.8
+      ],
+      "pred_c": -0.0352,
+      "swept_c": -0.0342,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-GATE-1",
+          8.36,
+          7.5,
+          -0.8,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "SUDDEN-STOP__L1-IC-02__01": [
+    {
+      "t": 17.6,
+      "rob": [
+        15.537,
+        7.648,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -0.1
+      ],
+      "pred_c": 0.1503,
+      "swept_c": 0.1743,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-SUDDEN-1",
+          16.5,
+          7.5,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.65,
+      "rob": [
+        15.537,
+        7.648,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -0.1
+      ],
+      "pred_c": 0.1503,
+      "swept_c": 0.1743,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-SUDDEN-1",
+          16.5,
+          7.5,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.7,
+      "rob": [
+        15.537,
+        7.648,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -0.1
+      ],
+      "pred_c": 0.1503,
+      "swept_c": 0.1743,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-SUDDEN-1",
+          16.5,
+          7.5,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.75,
+      "rob": [
+        15.537,
+        7.648,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -0.1
+      ],
+      "pred_c": 0.1503,
+      "swept_c": 0.1743,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-SUDDEN-1",
+          16.5,
+          7.5,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.8,
+      "rob": [
+        15.537,
+        7.648,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -0.1
+      ],
+      "pred_c": 0.1503,
+      "swept_c": 0.1743,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-SUDDEN-1",
+          16.5,
+          7.5,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.85,
+      "rob": [
+        15.537,
+        7.648,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -0.1
+      ],
+      "pred_c": 0.1503,
+      "swept_c": 0.1743,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-SUDDEN-1",
+          16.5,
+          7.5,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.9,
+      "rob": [
+        15.537,
+        7.648,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -0.1
+      ],
+      "pred_c": 0.1503,
+      "swept_c": 0.1743,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-SUDDEN-1",
+          16.5,
+          7.5,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.95,
+      "rob": [
+        15.537,
+        7.648,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -0.1
+      ],
+      "pred_c": 0.1503,
+      "swept_c": 0.1743,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-SUDDEN-1",
+          16.5,
+          7.5,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 18.0,
+      "rob": [
+        15.537,
+        7.648,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -0.1
+      ],
+      "pred_c": 0.1503,
+      "swept_c": 0.1743,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-SUDDEN-1",
+          16.5,
+          7.5,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 18.05,
+      "rob": [
+        15.537,
+        7.648,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -0.1
+      ],
+      "pred_c": 0.1503,
+      "swept_c": 0.115,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-SUDDEN-1",
+          16.5,
+          7.5,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 18.1,
+      "rob": [
+        15.537,
+        7.648,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -0.9
+      ],
+      "pred_c": -0.0051,
+      "swept_c": 0.0559,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-SUDDEN-1",
+          16.44,
+          7.5,
+          -1.2,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 18.15,
+      "rob": [
+        15.537,
+        7.648,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -1.7
+      ],
+      "pred_c": -0.0041,
+      "swept_c": -0.0031,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-SUDDEN-1",
+          16.38,
+          7.5,
+          -1.2,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "MULTIPLE-DYNAMIC-OBSTACLES__L1-RD-01__01": [
+    {
+      "t": 10.95,
+      "rob": [
+        5.733,
+        7.033,
+        2.2
+      ],
+      "cmd": [
+        2.2,
+        -2.8
+      ],
+      "pred_c": 0.8417,
+      "swept_c": 1.0018,
+      "ws": "GATE_CLEAR_HOLD_SAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-MULTI-1",
+          4.01,
+          7.5,
+          -1.1,
+          0.0
+        ],
+        [
+          "DYN-MULTI-2",
+          7.5,
+          7.83,
+          0.0,
+          -1.3
+        ],
+        [
+          "DYN-MULTI-3",
+          11.5,
+          6.08,
+          0.0,
+          1.2
+        ],
+        [
+          "DYN-MULTI-4",
+          14.5,
+          10.9,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "t": 11.0,
+      "rob": [
+        5.64,
+        7.061,
+        1.95
+      ],
+      "cmd": [
+        1.95,
+        -2.8
+      ],
+      "pred_c": 0.1256,
+      "swept_c": 0.8514,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-MULTI-1",
+          4.04,
+          7.5,
+          0.7,
+          0.0
+        ],
+        [
+          "DYN-MULTI-2",
+          7.5,
+          7.76,
+          0.0,
+          -1.3
+        ],
+        [
+          "DYN-MULTI-3",
+          11.5,
+          6.14,
+          0.0,
+          1.2
+        ],
+        [
+          "DYN-MULTI-4",
+          14.5,
+          10.95,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "t": 11.05,
+      "rob": [
+        5.563,
+        7.096,
+        1.7
+      ],
+      "cmd": [
+        1.7,
+        -2.8
+      ],
+      "pred_c": 0.1063,
+      "swept_c": 0.7145,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-MULTI-1",
+          4.1,
+          7.5,
+          1.1,
+          0.0
+        ],
+        [
+          "DYN-MULTI-2",
+          7.5,
+          7.7,
+          0.0,
+          -1.3
+        ],
+        [
+          "DYN-MULTI-3",
+          11.5,
+          6.2,
+          0.0,
+          1.2
+        ],
+        [
+          "DYN-MULTI-4",
+          14.5,
+          11.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "t": 11.1,
+      "rob": [
+        5.502,
+        7.136,
+        1.45
+      ],
+      "cmd": [
+        1.45,
+        -2.8
+      ],
+      "pred_c": 0.0685,
+      "swept_c": 0.5922,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-MULTI-1",
+          4.15,
+          7.5,
+          1.1,
+          0.0
+        ],
+        [
+          "DYN-MULTI-2",
+          7.5,
+          7.63,
+          0.0,
+          -1.3
+        ],
+        [
+          "DYN-MULTI-3",
+          11.5,
+          6.26,
+          0.0,
+          1.2
+        ],
+        [
+          "DYN-MULTI-4",
+          14.5,
+          10.95,
+          0.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "t": 11.15,
+      "rob": [
+        5.447,
+        7.183,
+        1.45
+      ],
+      "cmd": [
+        1.45,
+        -2.55
+      ],
+      "pred_c": 0.1493,
+      "swept_c": 0.4735,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-MULTI-1",
+          4.21,
+          7.5,
+          1.1,
+          0.0
+        ],
+        [
+          "DYN-MULTI-2",
+          7.5,
+          7.57,
+          0.0,
+          -1.3
+        ],
+        [
+          "DYN-MULTI-3",
+          11.5,
+          6.32,
+          0.0,
+          1.2
+        ],
+        [
+          "DYN-MULTI-4",
+          14.5,
+          10.9,
+          0.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "t": 11.2,
+      "rob": [
+        5.406,
+        7.227,
+        1.2
+      ],
+      "cmd": [
+        1.2,
+        -2.8
+      ],
+      "pred_c": 0.0966,
+      "swept_c": 0.3702,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-MULTI-1",
+          4.26,
+          7.5,
+          1.1,
+          0.0
+        ],
+        [
+          "DYN-MULTI-2",
+          7.5,
+          7.5,
+          0.0,
+          -1.3
+        ],
+        [
+          "DYN-MULTI-3",
+          11.5,
+          6.38,
+          0.0,
+          1.2
+        ],
+        [
+          "DYN-MULTI-4",
+          14.5,
+          10.85,
+          0.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "t": 11.25,
+      "rob": [
+        5.38,
+        7.267,
+        0.95
+      ],
+      "cmd": [
+        0.95,
+        -2.8
+      ],
+      "pred_c": 0.0485,
+      "swept_c": 0.2817,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-MULTI-1",
+          4.32,
+          7.5,
+          1.1,
+          0.0
+        ],
+        [
+          "DYN-MULTI-2",
+          7.5,
+          7.44,
+          0.0,
+          -1.3
+        ],
+        [
+          "DYN-MULTI-3",
+          11.5,
+          6.44,
+          0.0,
+          1.2
+        ],
+        [
+          "DYN-MULTI-4",
+          14.5,
+          10.8,
+          0.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "t": 11.3,
+      "rob": [
+        5.365,
+        7.298,
+        0.7
+      ],
+      "cmd": [
+        0.7,
+        -2.8
+      ],
+      "pred_c": 0.1332,
+      "swept_c": 0.2063,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-MULTI-1",
+          4.37,
+          7.5,
+          1.1,
+          0.0
+        ],
+        [
+          "DYN-MULTI-2",
+          7.5,
+          7.37,
+          0.0,
+          -1.3
+        ],
+        [
+          "DYN-MULTI-3",
+          11.5,
+          6.5,
+          0.0,
+          1.2
+        ],
+        [
+          "DYN-MULTI-4",
+          14.5,
+          10.75,
+          0.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "t": 11.35,
+      "rob": [
+        5.358,
+        7.319,
+        0.45
+      ],
+      "cmd": [
+        0.45,
+        -2.8
+      ],
+      "pred_c": 0.0772,
+      "swept_c": 0.1413,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-MULTI-1",
+          4.43,
+          7.5,
+          1.1,
+          0.0
+        ],
+        [
+          "DYN-MULTI-2",
+          7.5,
+          7.31,
+          0.0,
+          -1.3
+        ],
+        [
+          "DYN-MULTI-3",
+          11.5,
+          6.56,
+          0.0,
+          1.2
+        ],
+        [
+          "DYN-MULTI-4",
+          14.5,
+          10.7,
+          0.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "t": 11.4,
+      "rob": [
+        5.356,
+        7.329,
+        0.2
+      ],
+      "cmd": [
+        0.2,
+        -2.8
+      ],
+      "pred_c": -0.0847,
+      "swept_c": 0.0837,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-MULTI-1",
+          4.48,
+          7.5,
+          1.1,
+          0.0
+        ],
+        [
+          "DYN-MULTI-2",
+          7.5,
+          7.24,
+          0.0,
+          -1.3
+        ],
+        [
+          "DYN-MULTI-3",
+          11.5,
+          6.62,
+          0.0,
+          1.2
+        ],
+        [
+          "DYN-MULTI-4",
+          14.5,
+          10.65,
+          0.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "t": 11.45,
+      "rob": [
+        5.356,
+        7.329,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -2.8
+      ],
+      "pred_c": -0.0256,
+      "swept_c": 0.03,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-MULTI-1",
+          4.54,
+          7.5,
+          1.1,
+          0.0
+        ],
+        [
+          "DYN-MULTI-2",
+          7.5,
+          7.18,
+          0.0,
+          -1.3
+        ],
+        [
+          "DYN-MULTI-3",
+          11.5,
+          6.68,
+          0.0,
+          1.2
+        ],
+        [
+          "DYN-MULTI-4",
+          14.5,
+          10.6,
+          0.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "t": 11.5,
+      "rob": [
+        5.356,
+        7.329,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -2.8
+      ],
+      "pred_c": -0.0246,
+      "swept_c": -0.0236,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-MULTI-1",
+          4.59,
+          7.5,
+          1.1,
+          0.0
+        ],
+        [
+          "DYN-MULTI-2",
+          7.5,
+          7.11,
+          0.0,
+          -1.3
+        ],
+        [
+          "DYN-MULTI-3",
+          11.5,
+          6.74,
+          0.0,
+          1.2
+        ],
+        [
+          "DYN-MULTI-4",
+          14.5,
+          10.55,
+          0.0,
+          -1.0
+        ]
+      ]
+    }
+  ],
+  "CORRIDOR__L1-IC-02__01": [
+    {
+      "t": 16.75,
+      "rob": [
+        13.062,
+        7.69,
+        1.22
+      ],
+      "cmd": [
+        1.22,
+        0.1
+      ],
+      "pred_c": 0.1519,
+      "swept_c": 0.1577,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          13.9,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 16.8,
+      "rob": [
+        13.106,
+        7.647,
+        1.22
+      ],
+      "cmd": [
+        1.22,
+        0.1
+      ],
+      "pred_c": 0.1523,
+      "swept_c": 0.1561,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          13.95,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 16.85,
+      "rob": [
+        13.15,
+        7.605,
+        1.22
+      ],
+      "cmd": [
+        1.22,
+        0.1
+      ],
+      "pred_c": 0.1543,
+      "swept_c": 0.1559,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.0,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 16.9,
+      "rob": [
+        13.197,
+        7.56,
+        1.3
+      ],
+      "cmd": [
+        1.3,
+        0.2
+      ],
+      "pred_c": 0.1517,
+      "swept_c": 0.1551,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.05,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 16.95,
+      "rob": [
+        13.245,
+        7.515,
+        1.3
+      ],
+      "cmd": [
+        1.3,
+        0.3
+      ],
+      "pred_c": 0.1535,
+      "swept_c": 0.155,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.1,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.0,
+      "rob": [
+        13.296,
+        7.469,
+        1.39
+      ],
+      "cmd": [
+        1.39,
+        0.3
+      ],
+      "pred_c": 0.1511,
+      "swept_c": 0.1545,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.15,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.05,
+      "rob": [
+        13.348,
+        7.423,
+        1.39
+      ],
+      "cmd": [
+        1.39,
+        0.4
+      ],
+      "pred_c": 0.1527,
+      "swept_c": 0.1544,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.2,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.1,
+      "rob": [
+        13.405,
+        7.376,
+        1.47
+      ],
+      "cmd": [
+        1.47,
+        0.4
+      ],
+      "pred_c": 0.1502,
+      "swept_c": 0.1539,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.25,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.15,
+      "rob": [
+        13.462,
+        7.33,
+        1.47
+      ],
+      "cmd": [
+        1.47,
+        0.4
+      ],
+      "pred_c": 0.1517,
+      "swept_c": 0.1537,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.3,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.2,
+      "rob": [
+        13.52,
+        7.286,
+        1.47
+      ],
+      "cmd": [
+        1.47,
+        0.4
+      ],
+      "pred_c": 0.1532,
+      "swept_c": 0.1542,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.35,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.25,
+      "rob": [
+        13.582,
+        7.239,
+        1.55
+      ],
+      "cmd": [
+        1.55,
+        0.4
+      ],
+      "pred_c": 0.1532,
+      "swept_c": 0.0606,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.4,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.3,
+      "rob": [
+        13.635,
+        7.201,
+        1.3
+      ],
+      "cmd": [
+        1.3,
+        -0.4
+      ],
+      "pred_c": -0.0216,
+      "swept_c": -0.0206,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.35,
+          7.5,
+          -1.0,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "CORRIDOR__L1-SG-01__01": [
+    {
+      "t": 17.15,
+      "rob": [
+        12.922,
+        7.5,
+        1.0
+      ],
+      "cmd": [
+        1.0,
+        0.0
+      ],
+      "pred_c": 0.6517,
+      "swept_c": 0.6777,
+      "ws": "GATE_CLEAR_HOLD_SAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.3,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.2,
+      "rob": [
+        12.972,
+        7.5,
+        1.0
+      ],
+      "cmd": [
+        1.0,
+        0.0
+      ],
+      "pred_c": 0.6517,
+      "swept_c": 0.6777,
+      "ws": "GATE_CLEAR_HOLD_SAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.35,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.25,
+      "rob": [
+        13.022,
+        7.5,
+        1.0
+      ],
+      "cmd": [
+        1.0,
+        0.0
+      ],
+      "pred_c": 0.6517,
+      "swept_c": 0.5777,
+      "ws": "GATE_CLEAR_HOLD_SAFE",
+      "prio": null,
+      "reason": null,
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.4,
+          7.5,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.3,
+      "rob": [
+        13.081,
+        7.499,
+        1.17
+      ],
+      "cmd": [
+        1.17,
+        -0.8
+      ],
+      "pred_c": 0.1415,
+      "swept_c": 0.4693,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.35,
+          7.5,
+          -1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.35,
+      "rob": [
+        13.126,
+        7.495,
+        0.92
+      ],
+      "cmd": [
+        0.92,
+        -1.6
+      ],
+      "pred_c": 0.0871,
+      "swept_c": 0.3737,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.3,
+          7.5,
+          -1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.4,
+      "rob": [
+        13.159,
+        7.489,
+        0.67
+      ],
+      "cmd": [
+        0.67,
+        -2.4
+      ],
+      "pred_c": 0.0475,
+      "swept_c": 0.2909,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.25,
+          7.5,
+          -1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.45,
+      "rob": [
+        13.179,
+        7.483,
+        0.42
+      ],
+      "cmd": [
+        0.42,
+        -1.98
+      ],
+      "pred_c": 0.1499,
+      "swept_c": 0.221,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.2,
+          7.5,
+          -1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.5,
+      "rob": [
+        13.187,
+        7.48,
+        0.17
+      ],
+      "cmd": [
+        0.17,
+        -2.78
+      ],
+      "pred_c": 0.1045,
+      "swept_c": 0.1635,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.15,
+          7.5,
+          -1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.55,
+      "rob": [
+        13.187,
+        7.48,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -1.98
+      ],
+      "pred_c": 0.0615,
+      "swept_c": 0.1135,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 2,
+      "reason": "SAFETY_MARGIN_VIOLATION",
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.1,
+          7.5,
+          -1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.6,
+      "rob": [
+        13.187,
+        7.48,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -2.78
+      ],
+      "pred_c": -0.0904,
+      "swept_c": 0.0635,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.05,
+          7.5,
+          -1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.65,
+      "rob": [
+        13.187,
+        7.48,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -2.8
+      ],
+      "pred_c": -0.0385,
+      "swept_c": 0.0135,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-CORR-1",
+          14.0,
+          7.5,
+          -1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "t": 17.7,
+      "rob": [
+        13.187,
+        7.48,
+        0.0
+      ],
+      "cmd": [
+        0.0,
+        -2.8
+      ],
+      "pred_c": -0.0375,
+      "swept_c": -0.0365,
+      "ws": "GATE_CLEAR_HOLD_UNSAFE",
+      "prio": 5,
+      "reason": "PHYSICAL_COLLISION_RISK",
+      "obs": [
+        [
+          "DYN-CORR-1",
+          13.95,
+          7.5,
+          -1.0,
+          0.0
+        ]
+      ]
+    }
+  ]
+}

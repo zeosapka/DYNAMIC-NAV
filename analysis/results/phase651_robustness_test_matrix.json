@@ -1,0 +1,114 @@
+{
+  "schema_version": "6.5.1",
+  "design_principles": {
+    "safety_margin_m": 0.15,
+    "dt_s": 0.05,
+    "repeats_per_variant_deterministic": 3,
+    "repeats_per_variant_stochastic_future": 10,
+    "baseline_scenarios": [
+      "HEAD-ON",
+      "CROSSING",
+      "CORRIDOR",
+      "STOP-AND-GO",
+      "NARROW-GATE",
+      "MULTIPLE-DYNAMIC-OBSTACLES",
+      "SUDDEN-STOP",
+      "SUDDEN-STOP-FINITE-DECEL"
+    ]
+  },
+  "levels": {
+    "LEVEL_1_CONTROLLED": {
+      "description": "Small parameter perturbations around each of the 8 existing baseline scenarios.",
+      "categories": {
+        "A_initial_conditions": [
+          {"id": "L1-IC-01", "param": "robot_start_xy_offset_m", "range": "[-0.30, +0.30] in x and y", "variants_per_scenario": 4},
+          {"id": "L1-IC-02", "param": "robot_start_heading_rad", "range": "[-0.26, +0.26] (~+/-15 deg)", "variants_per_scenario": 2},
+          {"id": "L1-IC-03", "param": "goal_xy_offset_m", "range": "[-0.50, +0.50] in x and y (free space)", "variants_per_scenario": 2},
+          {"id": "L1-IC-04", "param": "dyn_obs_start_offset_m", "range": "[-0.40, +0.40] along path", "variants_per_scenario": 2},
+          {"id": "L1-IC-05", "param": "robot_init_v_mps", "range": "[0.0, 1.0]", "variants_per_scenario": 2}
+        ],
+        "B_dynamic_obstacles": [
+          {"id": "L1-DO-01", "param": "obs_speed_scale", "range": "[0.85, 1.15]", "variants_per_scenario": 2},
+          {"id": "L1-DO-02", "param": "stop_duration_offset_s", "range": "[-0.30, +0.30]", "applicable": ["STOP-AND-GO", "SUDDEN-STOP", "SUDDEN-STOP-FINITE-DECEL"]},
+          {"id": "L1-DO-03", "param": "move_duration_offset_s", "range": "[-0.30, +0.30]", "applicable": ["STOP-AND-GO", "SUDDEN-STOP"]}
+        ],
+        "C_static_geometry": [
+          {"id": "L1-SG-01", "param": "gate_or_corridor_width_delta_m", "range": "[-0.20, +0.20]", "applicable": ["CORRIDOR", "NARROW-GATE"]},
+          {"id": "L1-SG-02", "param": "static_obstacle_shift_m", "range": "[-0.25, +0.25]", "variants_per_scenario": 2}
+        ],
+        "D_robot_dynamics": [
+          {"id": "L1-RD-01", "param": "max_linear_speed_mps", "values": [2.2, 3.0], "note": "Sensitivity around 3.0 m/s"},
+          {"id": "L1-RD-02", "param": "max_brake_decel_mps2", "values": [4.0, 5.0], "note": "Reduced braking authority"},
+          {"id": "L1-RD-03", "param": "min_reverse_speed_mps", "values": [-0.4, -0.6], "note": "Reduced reverse authority"}
+        ]
+      },
+      "estimated_variants": 120
+    },
+    "LEVEL_2_STRONG": {
+      "description": "Larger but physically plausible perturbations to obstacle speeds, timing, headings, and geometry.",
+      "categories": {
+        "A_initial_conditions": [
+          {"id": "L2-IC-01", "param": "robot_start_xy_offset_m", "range": "[-0.80, +0.80] in x and y"},
+          {"id": "L2-IC-02", "param": "robot_start_heading_rad", "range": "[-0.79, +0.79] (~+/-45 deg)"},
+          {"id": "L2-IC-03", "param": "robot_init_v_mps", "range": "[1.5, 2.5]"}
+        ],
+        "B_dynamic_obstacles": [
+          {"id": "L2-DO-01", "param": "obs_speed_scale", "range": "[0.60, 1.50] (up to 1.8 m/s)"},
+          {"id": "L2-DO-02", "param": "crossing_angle_offset_rad", "range": "[-0.45, +0.45]"},
+          {"id": "L2-DO-03", "param": "same_direction_lead_obs", "speed_mps": [0.6, 1.0, 1.4]},
+          {"id": "L2-DO-04", "param": "reversal_phase_shift_s", "range": "[-1.0, +1.0]"}
+        ],
+        "C_static_geometry": [
+          {"id": "L2-SG-01", "param": "narrow_corridor_width_m", "values": [1.30, 1.45, 1.60]},
+          {"id": "L2-SG-02", "param": "asymmetric_corridor_wall_offset_m", "range": "[-0.40, +0.40]"},
+          {"id": "L2-SG-03", "param": "rotated_oriented_rect_obstacles", "angles_rad": [0.35, 0.78, -0.52]}
+        ],
+        "D_robot_dynamics": [
+          {"id": "L2-RD-01", "param": "max_linear_accel_mps2", "values": [2.5, 3.5]},
+          {"id": "L2-RD-02", "param": "max_brake_decel_mps2", "values": [2.5, 3.5]},
+          {"id": "L2-RD-03", "param": "max_angular_speed_radps", "values": [1.8, 2.2]},
+          {"id": "L2-RD-04", "param": "max_angular_accel_radps2", "values": [8.0, 10.0]}
+        ]
+      },
+      "estimated_variants": 96
+    },
+    "LEVEL_3_UNSEEN_COMBINATIONS": {
+      "description": "Unseen combinations of multi-shape SimObjects, simultaneous obstacles, blocked detours, and asymmetric corridors.",
+      "scenarios": [
+        {
+          "id": "L3-UC-01",
+          "name": "CONVERGING-INTERSECTION-MIXED-GEOM",
+          "description": "3 simultaneous obstacles (Circle + OrientedRect + Capsule) converging at an intersection with static corner walls."
+        },
+        {
+          "id": "L3-UC-02",
+          "name": "ASYMMETRIC-GATE-WITH-REVERSING-LEAD",
+          "description": "Asymmetric narrow gate + lead vehicle that decelerates to stop then reverses inside the approach."
+        },
+        {
+          "id": "L3-UC-03",
+          "name": "PARTIAL-DETOUR-POLYGON-CHICANE",
+          "description": "Polygon static chicane + dynamic obstacle blocking primary lane, forcing A* global replanning through secondary corridor."
+        },
+        {
+          "id": "L3-UC-04",
+          "name": "OVERTAKE-SAME-DIR-PLUS-ONCOMING",
+          "description": "Slow same-direction lead vehicle + oncoming vehicle in opposite lane."
+        },
+        {
+          "id": "L3-UC-05",
+          "name": "LATE-START-HIGH-SPEED-CROSSING",
+          "description": "Robot already at v=2.2 m/s with angled crossing OrientedRect + secondary pedestrian Circle."
+        },
+        {
+          "id": "L3-UC-06",
+          "name": "DOUBLE-CORRIDOR-BOTTLENECK",
+          "description": "Two sequential narrow gates with opposing patrol obstacles out of phase."
+        }
+      ],
+      "estimated_variants": 30
+    }
+  },
+  "total_planned_variants": 246,
+  "total_planned_runs_with_3x_repeat": 738
+}

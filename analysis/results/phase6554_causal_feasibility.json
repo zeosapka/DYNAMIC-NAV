@@ -1,0 +1,28 @@
+{
+  "phase": "6.5.5.4",
+  "mode": "READ_ONLY",
+  "variants": {
+    "NARROW-GATE__L1-RD-01__01": {
+      "param": "max_linear_speed_mps = 2.2",
+      "gate_entry_s": 13.05,
+      "gate_exit_s": 15.40,
+      "obstacle_reversal_gt_s": 20.65,
+      "collision_s": 20.85,
+      "min_swept_clearance_m": -0.021721,
+      "post_reversal_avoidable_causally": false,
+      "pre_reversal_avoidable_causally": true,
+      "causal_feasibility_rationale": "After t=20.65 s reversal at ~0.27 m swept clearance, stopping/reversing cannot prevent contact. However, during t=15.40-20.60 s (5.20 s in 15 m-wide open space), DYN-GATE-1 moves at +0.80 m/s while robot max speed is 2.20 m/s. Proactive lateral passing (or velocity-dependent standoff >= d_stop) is 100% causally feasible."
+    },
+    "NARROW-GATE__L1-SG-01__01": {
+      "param": "gate_or_corridor_width_delta_m = -0.20",
+      "gate_entry_s": 13.05,
+      "gate_exit_s": 15.50,
+      "obstacle_reversal_gt_s": 20.65,
+      "collision_s": 21.30,
+      "min_swept_clearance_m": -0.009610,
+      "post_reversal_avoidable_causally": false,
+      "pre_reversal_avoidable_causally": true,
+      "causal_feasibility_rationale": "Same mechanism as L1-RD-01__01: robot clears the narrowed gate safely at t=15.50 s, then tailgates DYN-GATE-1 at ~0.83 m/s in 15 m-wide open space for >5.1 s before DYN-GATE-1 hits waypoint_b_m=(15.5, 7.5). Open-space lateral overtaking or dynamic standoff is causally feasible."
+    }
+  }
+}
