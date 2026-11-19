@@ -80,6 +80,15 @@ Aşağıdaki sonuçlar `analysis/results/phase656_final_audit_report.md` kapsam�
 - **`NARROW-GATE` Seviye 1 Pertürbasyonları (`14` varyant × `3` tekrar = `42` koşum)**: **`14 / 14` `GOAL_REACHED`**, **`0` fiziksel çarpışma**, **`0` güvenlik marjı ihlali**, **`%100` tekrarlanabilir determinizm**, minimum süpürme açıklığı **`0.150019 m`** (`NARROW-GATE__L1-DO-01__01 >= 0.150000 m`).
 - **Hesaplama Gecikmesi Uyarısı**: 8 temel senaryoda ortalama DWA süresi `11.85 ms` (`P95 = 36.98 ms`, `maksimum = 246.88 ms`) ölçülmüştür. `42` adet `NARROW-GATE` koşumunda (`19.014` DWA çağrısı) medyan süre `5.58 ms` olmakla birlikte, kapı önü bekleme ve geri dönüş değerlendirmeleri sırasında **`P99` gecikmesi `232.48 ms`** düzeyine ulaşmış ve kaydedilen çağrıların **`%17.25`'i (`3.280 / 19.014`) `50 ms` bütçesini aşmıştır**.
 
+### Güncel Hedefli Doğrulama (Koridor Geçişi ve `ABORT_HOLD` Sertleştirmesi)
+
+- **Mimari Güncelleme**: `CorridorPassingManager` içine `IDLE` / `PASSING_ARMED` / `PASSING_ACTIVE` / `ABORT_HOLD` durum makinesi, kilitli geçiş ekseni üzerinde destek fonksiyonu tabanlı çoklu engel takibi (`ActivePassingObstacle`), yön-terslenmesi durumunda hedefli cooldown aşımı ve `DWAPlanner` içinde izole `ABORT_HOLD` frenleme koruması eklenmiştir.
+- **Hedefli Test Sonuçları (`27` toplam test: `26 passed`, `1 failed`)** *(yukarıdaki `191` tam test takımı koşumundan ayrı hedefli regresyon paketidir)*:
+  - `tests/test_corridor_passing_state_machine.py`: **5 passed**
+  - `tests/test_phase654_corridor_passing.py`: **9 passed**
+  - `tests/test_phase6553_narrow_gate_standoff.py`: **7 passed**
+  - `tests/test_phase80_reproduction.py`: **5 passed, 1 failed** — Başarısız senaryo: `CORRIDOR__L1-DO-01__02` (`COLLISION_ABORT`, `min_swept_m = -0.040569`).
+
 ## 9. Kurulum
 
 **Python 3.12.10** ortamında `requirements.txt` (`pygame>=2.5.0`, `numpy>=1.26.0`, `matplotlib>=3.8.0`, `pytest>=8.0.0`) ile doğrulanmıştır:
@@ -138,6 +147,7 @@ DYNAMIC-NAV/
 
 ## 13. Sistemin Sınırlılıkları
 
+- **`CORRIDOR__L1-DO-01__02` Çarpışma Sınırlılığı**: `ABORT_HOLD` frenleme davranışı devriye sınırında yön değiştiren engele (`vx = -1.15 m/s`) karşı robotu durdurmaktadır (`v = 0.05 -> 0.00 m/s`), ancak robotun durduğu yanal konum (`y = 7.05 m`) yaklaşan engelin `y = 7.50 m` eksenine güvenli uzaklıkta değildir; bu nedenle duran robota çarpışma (`COLLISION_ABORT`, `min_swept_m = -0.040569`) devam etmektedir.
 - **Kapı Önü Bekleme Gecikmesi**: `NARROW-GATE` bekleme ve yanal tutunma adımlarında en kötü durum DWA süresi `50 ms` bütçesini aşabilmektedir (`P99 = 232.48 ms`, `%17.25 > 50 ms`).
 - **Kapsam Dışı Pertürbasyonlar**: Faz 6.5.5'te tespit edilen `NARROW-GATE` dışındaki bazı Seviye 1 pertürbasyonları (`SUDDEN-STOP` zamanlama kaymaları, `CORRIDOR` başlangıç yönelim sapmaları) ile Seviye 2/3 güçlü pertürbasyonlar Faz 6.5.5.7 sonrası yeniden doğrulanmamıştır.
 - **Sensör Gürültüsü**: `ObservationPipeline` gecikme ve belirsizlik parametrelerini desteklemekle birlikte Faz 6.5.6 denetimi varsayılan sıfır-gürültü (`ObservationConfig`) ayarlarıyla yürütülmüştür.

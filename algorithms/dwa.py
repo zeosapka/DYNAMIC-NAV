@@ -13,7 +13,11 @@ import math
 from typing import TYPE_CHECKING
 
 from algorithms.astar import segment_to_square_distance_m
-from algorithms.corridor_passing import CorridorPassingManager, build_static_occupancy_grid
+from algorithms.corridor_passing import (
+    CorridorPassingManager,
+    PassingState,
+    build_static_occupancy_grid,
+)
 from algorithms.observation import (
     ObservationFrame,
     ObservedObstacle,
@@ -1864,6 +1868,7 @@ class DWAPlanner:
             )
 
         proactive_triggered = False
+        abort_hold_active = False
         if self._proactive_replan_enabled_for_eval and self._dwa_cfg.proactive_replan_enabled:
             eff_obs_frame = observation_frame
             if eff_obs_frame is None:
@@ -1956,6 +1961,10 @@ class DWAPlanner:
                         self._path_world_m,
                         self._dwa_cfg.lookahead_distance_m,
                     )
+            abort_hold_active = (
+                assessment.reason == "ABORT_HOLD"
+                or self._corridor_manager.passing_state == PassingState.ABORT_HOLD
+            )
 
         pred_steps = max(1, round(self._dwa_cfg.predict_time_s / self._dwa_cfg.predict_dt_s))
         has_first_substep = 1e-9 < dt_s < self._dwa_cfg.predict_dt_s - 1e-9
@@ -2032,6 +2041,9 @@ class DWAPlanner:
         evaluated_candidates: list[
             tuple[float, float, float, list[tuple[float, float]], float | None, float | None]
         ] = []
+        safe_evaluated_candidates: list[
+            tuple[float, float, float, list[tuple[float, float]], float | None, float | None]
+        ] = []
 
         candidate_xy_list: list[list[tuple[float, float]]] = []
         rejected_xy_list: list[list[tuple[float, float]]] = []
@@ -2080,6 +2092,12 @@ class DWAPlanner:
             )
             if not is_safe:
                 rejected_xy_list.append(traj_xy)
+                continue
+
+            safe_evaluated_candidates.append(
+                (v, omega, min_clear, traj_xy, brake_clear, brake_time)
+            )
+            if abort_hold_active:
                 continue
 
             sc = score_trajectory(
@@ -2196,9 +2214,56 @@ class DWAPlanner:
             reverse_used = False
             cf_exists = len(collision_free) > 0
 
+            # Isolated ABORT_HOLD braking branch: never score old path; select only from
+            # evaluate_trajectory_with_braking(is_safe=True) non-accelerating candidates.
+            if (
+                abort_hold_active
+                and waiting_assessment.state
+                not in (
+                    WaitingZoneState.GATE_CLEAR_HOLD_UNSAFE,
+                    WaitingZoneState.HOLD_UNSAFE_EVADE,
+                )
+                and safe_evaluated_candidates
+            ):
+                target_brake_v = max(window.v_min_mps, min(0.0, window.v_max_mps))
+                v_lo = min(0.0, eff_robot.v_mps) - 1e-6
+                v_hi = max(0.0, eff_robot.v_mps) + 1e-6
+                safe_brake_pool = [
+                    c for c in safe_evaluated_candidates if v_lo <= c[0] <= v_hi
+                ]
+                if safe_brake_pool:
+                    near_target = [
+                        c
+                        for c in safe_brake_pool
+                        if abs(c[0] - target_brake_v) <= self._dwa_cfg.abort_hold_brake_v_tol_mps
+                    ]
+                    if near_target:
+                        p_abort = max(
+                            near_target,
+                            key=lambda c: (round(c[2], 6), -abs(c[1])),
+                        )
+                    else:
+                        p_abort = max(
+                            safe_brake_pool,
+                            key=lambda c: (
+                                -round(abs(c[0] - target_brake_v), 4),
+                                -round(abs(c[0]), 4),
+                                round(c[2], 6),
+                                -abs(c[1]),
+                            ),
+                        )
+                    chosen_cmd = (p_abort[0], p_abort[1])
+                    chosen_clear = p_abort[2]
+                    chosen_traj = p_abort[3]
+                    chosen_brake_c = p_abort[4]
+                    chosen_brake_t = p_abort[5]
+                    chosen_priority = 1
+                    chosen_reason = "ABORT_HOLD_BRAKING"
+
             # Priority 1: Safe standstill or controlled braking when holding pose is safe
             if (
-                waiting_assessment.state
+                chosen_cmd is None
+                and waiting_assessment.state
                 in (
                     WaitingZoneState.GATE_OCCUPIED_HOLD_SAFE,
                     WaitingZoneState.GATE_CLEAR_HOLD_SAFE,
@@ -2221,7 +2286,7 @@ class DWAPlanner:
                     chosen_reason = "SAFE_STANDSTILL_BRAKING"
 
             # Priority 2: Safe clearance-increasing / highest-clearance maneuver
-            if chosen_cmd is None and recovery_candidates:
+            if chosen_cmd is None and not abort_hold_active and recovery_candidates:
                 if start_clear < self._dwa_cfg.safety_margin_m:
                     p2 = max(
                         recovery_candidates,
@@ -2411,6 +2476,7 @@ class DWAPlanner:
 
             if (
                 chosen_cmd is None
+                and not abort_hold_active
                 and collision_free
                 and waiting_assessment.state != WaitingZoneState.HOLD_UNSAFE_EVADE
                 and start_clear >= self._dwa_cfg.safety_margin_m
@@ -2487,22 +2553,39 @@ class DWAPlanner:
             # If still no Priority 1-4 recovery command, fall back to highest-clearance
             # collision-free standstill/braking or Priority 5 emergency braking.
             if chosen_cmd is None and collision_free:
-                non_accel_cf = (
-                    [c for c in collision_free if c[0] <= eff_robot.v_mps + 1e-6]
-                    if eff_robot.v_mps > 0.10
-                    else []
-                )
-                cf_pool = non_accel_cf if non_accel_cf else collision_free
-                p_cf = max(
-                    cf_pool,
-                    key=lambda c: (
-                        1 if (c[4] is None or c[4] > 0.0) else 0,
-                        round(c[2], 4),
-                        -max(0.0, c[0]),
-                        -abs(c[0]),
-                        -abs(c[1]),
-                    ),
-                )
+                if abort_hold_active:
+                    target_brake_v = max(window.v_min_mps, min(0.0, window.v_max_mps))
+                    v_lo = min(0.0, eff_robot.v_mps) - 1e-6
+                    v_hi = max(0.0, eff_robot.v_mps) + 1e-6
+                    non_accel_cf = [c for c in collision_free if v_lo <= c[0] <= v_hi]
+                    cf_pool = non_accel_cf if non_accel_cf else collision_free
+                    p_cf = max(
+                        cf_pool,
+                        key=lambda c: (
+                            1 if (c[4] is None or c[4] > 0.0) else 0,
+                            -round(abs(c[0] - target_brake_v), 4),
+                            -round(abs(c[0]), 4),
+                            round(c[2], 4),
+                            -abs(c[1]),
+                        ),
+                    )
+                else:
+                    non_accel_cf = (
+                        [c for c in collision_free if c[0] <= eff_robot.v_mps + 1e-6]
+                        if eff_robot.v_mps > 0.10
+                        else []
+                    )
+                    cf_pool = non_accel_cf if non_accel_cf else collision_free
+                    p_cf = max(
+                        cf_pool,
+                        key=lambda c: (
+                            1 if (c[4] is None or c[4] > 0.0) else 0,
+                            round(c[2], 4),
+                            -max(0.0, c[0]),
+                            -abs(c[0]),
+                            -abs(c[1]),
+                        ),
+                    )
                 chosen_cmd = (p_cf[0], p_cf[1])
                 chosen_clear = p_cf[2]
                 chosen_traj = p_cf[3]

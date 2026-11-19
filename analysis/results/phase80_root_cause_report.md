@@ -57,3 +57,32 @@ In `algorithms/dwa.py` (`_find_reverse_candidates`, lines `2219–2223`), when `
    - When `start_clear < safety_margin_m` and standstill (`v = 0`) is unsafe/colliding within the horizon (`standstill_min_clear <= 0.0` or `standstill_end_clear < start_clear`), allow `_find_reverse_candidates(require_margin_safe=False)` to select collision-free reverse candidates that strictly outperform standstill (`r_min_c > standstill_min_clear` and `r_end_c > standstill_end_clear`).
 3. **Fix 3 (Priority 3 — Causal Sudden-Stop & Bounded-Reversal Braking Check, `config.py`, `algorithms/dwa.py`)**:
    - Add a configurable causal worst-case check in `DWAConfig` (`config.py`): along the robot's braking trajectory (`t <= t_brake`) for moving dynamic obstacles, verify clearance against both constant-velocity `p_obs(t)` and a **causal sudden-stop** `p_obs(0)` (and bounded causal reversal/uncertainty envelope within `t_brake`), preventing the robot from tailgating or cutting behind moving obstacles inside its own stopping distance.
+
+---
+
+## 5. Current Hardening Status (`CorridorPassingManager` State Machine & `ABORT_HOLD`)
+
+### 5.1 Implemented Mechanisms (`algorithms/corridor_passing.py`, `algorithms/dwa.py`, `config.py`)
+1. **`CorridorPassingManager` State Machine (`PassingState`)**:
+   - Separates path acceptance (`IDLE -> PASSING_ARMED`), lateral maneuver engagement (`PASSING_ARMED -> PASSING_ACTIVE`), and blocked-lane holding (`PASSING_ARMED / PASSING_ACTIVE -> ABORT_HOLD`, recovering to `PASSING_ARMED` when a safe lateral path becomes available).
+   - Locks the passing axis (`_locked_tangent`, `_locked_origin_m`) at maneuver start so robot rotation does not shift the completion axis.
+2. **Multi-Obstacle Tracking (`ActivePassingObstacle`)**:
+   - Tracks all threatening dynamic obstacles by ID with last geometry/position/velocity, bounded uncertainty growth on `observation_lost` (`passing_max_lost_uncertainty_m`), and support-function geometric completion (`_geometry_projection_bounds`) across `CircleGeometry`, `OrientedRectGeometry`, `CapsuleGeometry`, and `PolygonGeometry`.
+   - Transitions `-> IDLE` only when all tracked obstacles satisfy `geom_passed == True`.
+3. **Causal Reversal Cooldown Bypass**:
+   - When an active tracked obstacle reverses along the locked axis (`prev_along_v > 0.15 m/s` to `curr_along_v < -0.15 m/s`) while in `PASSING_ARMED` or `PASSING_ACTIVE` and `lateral_passable` is `True`, cooldown is bypassed for replanning/abort evaluation while preserving `PASSING_ACTIVE` and the active obstacle lock.
+4. **Isolated `ABORT_HOLD` Hook in `DWAPlanner`**:
+   - Skips `score_trajectory` over the stale `self._path_world_m` while `abort_hold_active` is `True`.
+   - Selects non-accelerating `is_safe=True` braking candidates (`ABORT_HOLD_BRAKING`) toward `target_brake_v = max(window.v_min_mps, min(0.0, window.v_max_mps))`, skips `Priority 2` forward recovery, falls through to `Priority 3/4` if braking is unavailable, and enforces non-accelerating deceleration toward `target_brake_v` in the post-`Priority 4` `collision_free` fallback.
+
+### 5.2 Recorded Targeted Test Results (`27` tests: `26 passed, 1 failed`)
+- `tests/test_corridor_passing_state_machine.py`: **5 passed**
+- `tests/test_phase654_corridor_passing.py`: **9 passed**
+- `tests/test_phase6553_narrow_gate_standoff.py`: **7 passed**
+- `tests/test_phase80_reproduction.py`: **5 passed, 1 failed**
+  - Failing variant: `CORRIDOR__L1-DO-01__02` → `COLLISION_ABORT`, `min_swept_m = -0.040569`
+
+### 5.3 `CORRIDOR__L1-DO-01__02` Known Limitation & Value Comparison
+- **Behavior**: After `d0` reverses at `t = 15.00 s` (`vx: +1.15 -> -1.15 m/s`), the reversal cooldown bypass triggers `ABORT_HOLD`, and `DWAPlanner`'s `ABORT_HOLD` braking protection stops the robot (`v = 0.05 -> 0.00 m/s` at `(12.54, 7.05)`).
+- **Limitation**: The stopping pose `(12.54, 7.05)` lies only `0.45 m` laterally from `d0`'s `y = 7.50 m` trajectory; because the stopping position itself is unsafe against the oncoming obstacle, `d0` strikes the stationary robot at `t = 16.10 s`.
+- **Comparison Note (Not an Improvement)**: On `cf348a3`, `DO-01` recorded `min_swept_m = -0.036039 m` (and `-0.003664 m` prior to the post-`Priority 4` `ABORT_HOLD` non-accelerating guard); the current result is `min_swept_m = -0.040569 m`. Stopping the robot at an unsafe lateral offset did **not** improve `DO-01` collision clearance, and `CORRIDOR__L1-DO-01__02` remains an open collision limitation under the frozen scope.

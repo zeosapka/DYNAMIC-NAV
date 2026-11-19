@@ -8,6 +8,7 @@ hidden scenario schedules, waypoints, or future reversal timers.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from enum import Enum
 import math
 from typing import Callable
 
@@ -24,7 +25,36 @@ from algorithms.astar import (
 from algorithms.observation import ObservationFrame, ObservedObstacle
 from config import DWAConfig, ObservationConfig, RobotConfig, WorldConfig
 from simulation.entities import RobotState, StaticObstacle
-from simulation.geometry import CircleGeometry
+from simulation.geometry import (
+    CapsuleGeometry,
+    CircleGeometry,
+    OrientedRectGeometry,
+    PolygonGeometry,
+)
+
+
+class PassingState(str, Enum):
+    """State machine for lateral corridor passing maneuvers."""
+
+    IDLE = "IDLE"
+    PASSING_ARMED = "PASSING_ARMED"
+    PASSING_ACTIVE = "PASSING_ACTIVE"
+    ABORT_HOLD = "ABORT_HOLD"
+
+
+@dataclass
+class ActivePassingObstacle:
+    """Tracked dynamic obstacle participating in an active passing maneuver."""
+
+    obstacle_id: str
+    last_geometry: CircleGeometry | OrientedRectGeometry | CapsuleGeometry | PolygonGeometry
+    last_center_m: tuple[float, float]
+    last_vx_mps: float
+    last_vy_mps: float
+    position_uncertainty_m: float
+    last_seen_sim_time_s: float
+    observation_lost: bool = False
+    geom_passed: bool = False
 
 
 @dataclass(frozen=True)
@@ -41,6 +71,7 @@ class CorridorAssessment:
     lateral_clearance_right_m: float
     trigger_replan: bool
     reason: str
+    passing_state: str = PassingState.IDLE.value
 
 
 @dataclass(frozen=True)
@@ -189,6 +220,43 @@ def _causal_ttc_s(
     return t if t >= 0.0 else None
 
 
+def _obstacle_geometry(
+    obs: ObservedObstacle,
+) -> CircleGeometry | OrientedRectGeometry | CapsuleGeometry | PolygonGeometry:
+    """Return the causal observed geometry for an obstacle, falling back to its bounding circle."""
+    if obs.geometry is not None:
+        return obs.geometry
+    return CircleGeometry(obs.x_m, obs.y_m, obs.radius_m)
+
+
+def _geometry_projection_bounds(
+    geom: CircleGeometry | OrientedRectGeometry | CapsuleGeometry | PolygonGeometry,
+    axis: tuple[float, float],
+) -> tuple[float, float]:
+    """Return (min_proj, max_proj) of a 2D geometry along unit axis `axis` via support functions."""
+    ux, uy = axis
+    if isinstance(geom, CircleGeometry):
+        c_proj = geom.center_x_m * ux + geom.center_y_m * uy
+        return (c_proj - geom.radius_m, c_proj + geom.radius_m)
+    if isinstance(geom, OrientedRectGeometry):
+        cos_h = math.cos(geom.heading_rad)
+        sin_h = math.sin(geom.heading_rad)
+        half_proj = (
+            0.5 * geom.length_m * abs(cos_h * ux + sin_h * uy)
+            + 0.5 * geom.width_m * abs(-sin_h * ux + cos_h * uy)
+        )
+        c_proj = geom.center_x_m * ux + geom.center_y_m * uy
+        return (c_proj - half_proj, c_proj + half_proj)
+    if isinstance(geom, CapsuleGeometry):
+        cos_h = math.cos(geom.heading_rad)
+        sin_h = math.sin(geom.heading_rad)
+        half_proj = 0.5 * geom.length_m * abs(cos_h * ux + sin_h * uy) + geom.radius_m
+        c_proj = geom.center_x_m * ux + geom.center_y_m * uy
+        return (c_proj - half_proj, c_proj + half_proj)
+    projs = [vx * ux + vy * uy for vx, vy in geom.vertices_m]
+    return (min(projs), max(projs))
+
+
 class CorridorPassingManager:
     """Stateful causal corridor assessment & proactive lateral replanning manager."""
 
@@ -211,6 +279,10 @@ class CorridorPassingManager:
         self._last_chosen_side: str | None = None
         self._last_assessment: CorridorAssessment | None = None
         self._last_candidates: list[CandidatePathEvaluation] = []
+        self._passing_state: PassingState = PassingState.IDLE
+        self._locked_tangent: tuple[float, float] | None = None
+        self._locked_origin_m: tuple[float, float] | None = None
+        self._active_obstacles: dict[str, ActivePassingObstacle] = {}
 
     def reset(self) -> None:
         self._obstruction_streak = 0
@@ -221,6 +293,18 @@ class CorridorPassingManager:
         self._last_chosen_side = None
         self._last_assessment = None
         self._last_candidates = []
+        self._passing_state = PassingState.IDLE
+        self._locked_tangent = None
+        self._locked_origin_m = None
+        self._active_obstacles.clear()
+
+    @property
+    def passing_state(self) -> PassingState:
+        return self._passing_state
+
+    @property
+    def active_obstacles(self) -> dict[str, ActivePassingObstacle]:
+        return dict(self._active_obstacles)
 
     @property
     def replan_count(self) -> int:
@@ -237,6 +321,88 @@ class CorridorPassingManager:
     @property
     def last_candidates(self) -> list[CandidatePathEvaluation]:
         return list(self._last_candidates)
+
+    def _update_active_obstacles(
+        self,
+        robot_state: RobotState,
+        dt_s: float,
+        observation_frame: ObservationFrame,
+        tangent: tuple[float, float],
+        threatening_obs: list[ObservedObstacle],
+    ) -> set[str]:
+        """Update tracked active obstacles, handle observation loss, and evaluate completion.
+
+        Returns the set of active obstacle IDs whose causal observed velocity reversed
+        from moving away (`> 0.15 m/s`) to approaching (`< -0.15 m/s`) along `axis`.
+        """
+        obs_by_id = {
+            obs.obstacle_id: obs
+            for obs in observation_frame.obstacles
+            if obs.is_valid
+        }
+        for obs in threatening_obs:
+            if obs.obstacle_id not in self._active_obstacles:
+                self._active_obstacles[obs.obstacle_id] = ActivePassingObstacle(
+                    obstacle_id=obs.obstacle_id,
+                    last_geometry=_obstacle_geometry(obs),
+                    last_center_m=(obs.x_m, obs.y_m),
+                    last_vx_mps=obs.vx_mps,
+                    last_vy_mps=obs.vy_mps,
+                    position_uncertainty_m=obs.position_uncertainty_m,
+                    last_seen_sim_time_s=observation_frame.sim_time_s,
+                    observation_lost=False,
+                    geom_passed=False,
+                )
+
+        axis = self._locked_tangent if self._locked_tangent is not None else tangent
+        ltx, lty = axis
+        robot_rear_proj = (robot_state.x_m * ltx + robot_state.y_m * lty) - self._robot_cfg.radius_m
+        uncertainty_step = self._obs_cfg.uncertainty_growth_rate_mps * max(0.0, dt_s)
+
+        reversed_ids: set[str] = set()
+        for obs_id, rec in self._active_obstacles.items():
+            obs = obs_by_id.get(obs_id)
+            if obs is not None:
+                prev_along_v = rec.last_vx_mps * ltx + rec.last_vy_mps * lty
+                curr_along_v = obs.vx_mps * ltx + obs.vy_mps * lty
+                if prev_along_v > 0.15 and curr_along_v < -0.15:
+                    reversed_ids.add(obs_id)
+                rec.last_geometry = _obstacle_geometry(obs)
+                rec.last_center_m = (obs.x_m, obs.y_m)
+                rec.last_vx_mps = obs.vx_mps
+                rec.last_vy_mps = obs.vy_mps
+                rec.position_uncertainty_m = obs.position_uncertainty_m
+                rec.last_seen_sim_time_s = observation_frame.sim_time_s
+                rec.observation_lost = False
+            else:
+                rec.observation_lost = True
+                rec.position_uncertainty_m = min(
+                    self._dwa_cfg.passing_max_lost_uncertainty_m,
+                    rec.position_uncertainty_m + uncertainty_step,
+                )
+
+            _, obs_max_proj = _geometry_projection_bounds(rec.last_geometry, axis)
+            required_proj = (
+                obs_max_proj
+                + rec.position_uncertainty_m
+                + self._dwa_cfg.safety_margin_m
+                + self._dwa_cfg.passing_completion_margin_m
+            )
+            rec.geom_passed = robot_rear_proj > required_proj
+        return reversed_ids
+
+    def _complete_passing_if_all_passed(self) -> bool:
+        """Transition to IDLE and clear active obstacle set iff all tracked obstacles are passed."""
+        if not self._active_obstacles:
+            return False
+        if all(rec.geom_passed for rec in self._active_obstacles.values()):
+            self._passing_state = PassingState.IDLE
+            self._locked_tangent = None
+            self._locked_origin_m = None
+            self._last_chosen_side = None
+            self._active_obstacles.clear()
+            return True
+        return False
 
     def assess_corridor(
         self,
@@ -265,6 +431,7 @@ class CorridorPassingManager:
                 lateral_clearance_right_m=0.0,
                 trigger_replan=False,
                 reason="DISABLED_OR_NO_PATH",
+                passing_state=self._passing_state.value,
             )
             self._last_assessment = out
             return out
@@ -287,6 +454,7 @@ class CorridorPassingManager:
                 lateral_clearance_right_m=0.0,
                 trigger_replan=False,
                 reason="NEAR_GOAL",
+                passing_state=self._passing_state.value,
             )
             self._last_assessment = out
             return out
@@ -304,6 +472,7 @@ class CorridorPassingManager:
         min_pred_clear = math.inf
         min_ttc: float | None = None
         obstructing_obs: ObservedObstacle | None = None
+        threatening_obs: list[ObservedObstacle] = []
 
         for obs in observation_frame.obstacles:
             if not obs.is_valid:
@@ -355,6 +524,7 @@ class CorridorPassingManager:
                 (cur_c < self._dwa_cfg.proactive_path_clearance_threshold_m or pred_c < self._dwa_cfg.safety_margin_m + 0.15)
                 and slower_or_blocking
             ):
+                threatening_obs.append(obs)
                 if obstructing_obs is None or cur_c <= min_path_clear + 1e-9:
                     obstructing_obs = obs
 
@@ -365,21 +535,85 @@ class CorridorPassingManager:
             if ttc is not None and (min_ttc is None or ttc < min_ttc):
                 min_ttc = ttc
 
+        reversed_ids: set[str] = set()
+        if self._passing_state != PassingState.IDLE:
+            reversed_ids = self._update_active_obstacles(
+                robot_state,
+                dt_s,
+                observation_frame,
+                tangent,
+                threatening_obs,
+            )
+            self._complete_passing_if_all_passed()
+
+        if self._passing_state == PassingState.PASSING_ARMED:
+            if self._locked_tangent is not None and self._locked_origin_m is not None:
+                lnx, lny = -self._locked_tangent[1], self._locked_tangent[0]
+                lat_offset = abs(
+                    (robot_state.x_m - self._locked_origin_m[0]) * lnx
+                    + (robot_state.y_m - self._locked_origin_m[1]) * lny
+                )
+                if lat_offset >= self._dwa_cfg.passing_lateral_engage_offset_m:
+                    self._passing_state = PassingState.PASSING_ACTIVE
+
         if obstructing_obs is None:
             self._obstruction_streak = 0
             self._open_space_streak = 0
-            out = CorridorAssessment(
-                path_obstructed=False,
-                obstructing_obstacle_id=None,
-                min_path_clearance_m=min_path_clear,
-                predicted_path_clearance_m=min_pred_clear,
-                estimated_ttc_s=min_ttc,
-                braking_distance_m=braking_dist,
-                lateral_clearance_left_m=0.0,
-                lateral_clearance_right_m=0.0,
-                trigger_replan=False,
-                reason="PATH_CLEAR",
-            )
+            if self._passing_state == PassingState.ABORT_HOLD:
+                can_retry = self._cooldown_s <= 0.0 and any(
+                    not rec.geom_passed for rec in self._active_obstacles.values()
+                )
+                out = CorridorAssessment(
+                    path_obstructed=True,
+                    obstructing_obstacle_id=next(
+                        (oid for oid, rec in self._active_obstacles.items() if not rec.geom_passed),
+                        None,
+                    ),
+                    min_path_clearance_m=min_path_clear,
+                    predicted_path_clearance_m=min_pred_clear,
+                    estimated_ttc_s=min_ttc,
+                    braking_distance_m=braking_dist,
+                    lateral_clearance_left_m=0.0,
+                    lateral_clearance_right_m=0.0,
+                    trigger_replan=can_retry,
+                    reason="ABORT_HOLD_RECOVERY_REPLAN" if can_retry else "ABORT_HOLD",
+                    passing_state=self._passing_state.value,
+                )
+            elif self._passing_state in (PassingState.PASSING_ARMED, PassingState.PASSING_ACTIVE):
+                out = CorridorAssessment(
+                    path_obstructed=False,
+                    obstructing_obstacle_id=next(
+                        (oid for oid, rec in self._active_obstacles.items() if not rec.geom_passed),
+                        None,
+                    ),
+                    min_path_clearance_m=min_path_clear,
+                    predicted_path_clearance_m=min_pred_clear,
+                    estimated_ttc_s=min_ttc,
+                    braking_distance_m=braking_dist,
+                    lateral_clearance_left_m=0.0,
+                    lateral_clearance_right_m=0.0,
+                    trigger_replan=False,
+                    reason=(
+                        "PASSING_ACTIVE_HOLDING_LANE"
+                        if self._passing_state == PassingState.PASSING_ACTIVE
+                        else "PASSING_ARMED_ENGAGING"
+                    ),
+                    passing_state=self._passing_state.value,
+                )
+            else:
+                out = CorridorAssessment(
+                    path_obstructed=False,
+                    obstructing_obstacle_id=None,
+                    min_path_clearance_m=min_path_clear,
+                    predicted_path_clearance_m=min_pred_clear,
+                    estimated_ttc_s=min_ttc,
+                    braking_distance_m=braking_dist,
+                    lateral_clearance_left_m=0.0,
+                    lateral_clearance_right_m=0.0,
+                    trigger_replan=False,
+                    reason="PATH_CLEAR",
+                    passing_state=self._passing_state.value,
+                )
             self._last_assessment = out
             return out
 
@@ -415,24 +649,45 @@ class CorridorPassingManager:
             self._obstruction_streak = 0
             self._open_space_streak = 0
 
-        corridor_ready = self._obstruction_streak >= self._dwa_cfg.proactive_hysteresis_steps
-        open_space_ready = (
-            self._open_space_streak >= self._dwa_cfg.proactive_open_space_hysteresis_steps
-        )
-        should_trigger = (corridor_ready or open_space_ready) and self._cooldown_s <= 0.0
-        reason = (
-            (
-                "OPEN_SPACE_OVERTAKE_TRIGGERED"
-                if open_space_ready
-                else "CORRIDOR_LATERAL_PASS_TRIGGERED"
+        if self._passing_state in (PassingState.PASSING_ARMED, PassingState.PASSING_ACTIVE):
+            if not lateral_passable:
+                self._passing_state = PassingState.ABORT_HOLD
+                should_trigger = False
+                reason = "ABORT_HOLD"
+            else:
+                reversal_bypass = obstructing_obs.obstacle_id in reversed_ids
+                should_trigger = (self._cooldown_s <= 0.0) or reversal_bypass
+                reason = (
+                    "CORRIDOR_LATERAL_PASS_TRIGGERED"
+                    if should_trigger
+                    else "COOLDOWN_ACTIVE"
+                )
+        elif self._passing_state == PassingState.ABORT_HOLD:
+            if lateral_passable and self._cooldown_s <= 0.0:
+                should_trigger = True
+                reason = "ABORT_HOLD_RECOVERY_REPLAN"
+            else:
+                should_trigger = False
+                reason = "ABORT_HOLD"
+        else:
+            corridor_ready = self._obstruction_streak >= self._dwa_cfg.proactive_hysteresis_steps
+            open_space_ready = (
+                self._open_space_streak >= self._dwa_cfg.proactive_open_space_hysteresis_steps
             )
-            if should_trigger
-            else (
-                "COOLDOWN_ACTIVE"
-                if self._cooldown_s > 0.0 and (corridor_ready or open_space_ready)
-                else ("NO_LATERAL_PASSING_SPACE" if not lateral_passable else "HYSTERESIS_ACCUMULATING")
+            should_trigger = (corridor_ready or open_space_ready) and self._cooldown_s <= 0.0
+            reason = (
+                (
+                    "OPEN_SPACE_OVERTAKE_TRIGGERED"
+                    if open_space_ready
+                    else "CORRIDOR_LATERAL_PASS_TRIGGERED"
+                )
+                if should_trigger
+                else (
+                    "COOLDOWN_ACTIVE"
+                    if self._cooldown_s > 0.0 and (corridor_ready or open_space_ready)
+                    else ("NO_LATERAL_PASSING_SPACE" if not lateral_passable else "HYSTERESIS_ACCUMULATING")
+                )
             )
-        )
         out = CorridorAssessment(
             path_obstructed=True,
             obstructing_obstacle_id=obstructing_obs.obstacle_id,
@@ -444,6 +699,7 @@ class CorridorPassingManager:
             lateral_clearance_right_m=lat_right,
             trigger_replan=should_trigger,
             reason=reason,
+            passing_state=self._passing_state.value,
         )
         self._last_assessment = out
         return out
@@ -475,7 +731,14 @@ class CorridorPassingManager:
             None,
         )
         if obs_target is None:
-            return (None, [])
+            active_rec = self._active_obstacles.get(assessment.obstructing_obstacle_id)
+            if active_rec is None:
+                return (None, [])
+            obs_target_x, obs_target_y = active_rec.last_center_m
+            obs_target_radius = getattr(active_rec.last_geometry, "radius_m", self._robot_cfg.radius_m)
+        else:
+            obs_target_x, obs_target_y = obs_target.x_m, obs_target.y_m
+            obs_target_radius = obs_target.radius_m
 
         rows, cols = base_occupancy_grid.shape
         margin_m = self._dwa_cfg.safety_margin_m
@@ -507,10 +770,10 @@ class CorridorPassingManager:
                         )
             if side in ("left", "right"):
                 sign = -1.0 if side == "left" else 1.0  # block opposite side to force chosen side
-                d_probe = obs_target.radius_m + 0.1
+                d_probe = obs_target_radius + 0.1
                 while d_probe <= 2.5:
-                    bx = obs_target.x_m + sign * nx * d_probe
-                    by = obs_target.y_m + sign * ny * d_probe
+                    bx = obs_target_x + sign * nx * d_probe
+                    by = obs_target_y + sign * ny * d_probe
                     if 0.0 <= bx < self._world_cfg.width_m and 0.0 <= by < self._world_cfg.height_m:
                         rr, cc = world_to_grid(bx, by, resolution_m, (rows, cols))
                         grid_copy[rr, cc] = 1
@@ -673,6 +936,13 @@ class CorridorPassingManager:
 
         self._last_candidates = evaluations
         if not accepted_list:
+            if self._passing_state in (
+                PassingState.PASSING_ARMED,
+                PassingState.PASSING_ACTIVE,
+                PassingState.ABORT_HOLD,
+            ):
+                self._passing_state = PassingState.ABORT_HOLD
+                self._cooldown_s = min(0.25, self._dwa_cfg.proactive_replan_cooldown_s)
             return (None, evaluations)
 
         best = max(
@@ -690,4 +960,20 @@ class CorridorPassingManager:
         self._replan_count += 1
         if self._first_replan_time_s is None:
             self._first_replan_time_s = sim_time_s
+        if self._locked_tangent is None:
+            self._locked_tangent = (tx, ty)
+            self._locked_origin_m = (robot_state.x_m, robot_state.y_m)
+        if obs_target is not None and obs_target.obstacle_id not in self._active_obstacles:
+            self._active_obstacles[obs_target.obstacle_id] = ActivePassingObstacle(
+                obstacle_id=obs_target.obstacle_id,
+                last_geometry=_obstacle_geometry(obs_target),
+                last_center_m=(obs_target.x_m, obs_target.y_m),
+                last_vx_mps=obs_target.vx_mps,
+                last_vy_mps=obs_target.vy_mps,
+                position_uncertainty_m=obs_target.position_uncertainty_m,
+                last_seen_sim_time_s=observation_frame.sim_time_s,
+                observation_lost=False,
+                geom_passed=False,
+            )
+        self._passing_state = PassingState.PASSING_ARMED
         return (best.path_world_m, evaluations)
