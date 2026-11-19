@@ -597,7 +597,7 @@ def evaluate_trajectory_with_braking(
         if min_clearance < safety_margin_m:
             if step_idx == 0 or not stop_on_margin_violation:
                 horizon_safe = False
-            elif horizon_safe and step_idx >= 2:
+            elif horizon_safe and step_idx >= 2 and abs(v_mps) > 0.05:
                 return (False, min_clearance, None, None)
 
     if not horizon_safe and stop_on_margin_violation:
@@ -658,17 +658,17 @@ def evaluate_trajectory_with_braking(
                             < safety_margin_m
                         ):
                             return (False, min_clearance, None, None)
-                if causal_reversal_horizon_s > imm_times[-1]:
-                    obs_spd = math.hypot(ovx, ovy)
-                    ux_o = ovx / obs_spd
-                    uy_o = ovy / obs_spd
-                    lat_start = abs((rx0 - ox0) * (-uy_o) + (ry0 - oy0) * ux_o)
-                    lat_traj_end = abs((trajectory[-1][0] - ox0) * (-uy_o) + (trajectory[-1][1] - oy0) * ux_o)
-                    eff_rev_h = (
-                        causal_reversal_horizon_s
-                        if lat_traj_end > lat_start + causal_lateral_escape_threshold_m
-                        else max(causal_reversal_horizon_s, causal_straight_reversal_horizon_s)
-                    )
+                obs_spd = math.hypot(ovx, ovy)
+                ux_o = ovx / obs_spd
+                uy_o = ovy / obs_spd
+                lat_start = abs((rx0 - ox0) * (-uy_o) + (ry0 - oy0) * ux_o)
+                lat_traj_end = abs((trajectory[-1][0] - ox0) * (-uy_o) + (trajectory[-1][1] - oy0) * ux_o)
+                eff_rev_h = (
+                    causal_reversal_horizon_s
+                    if lat_traj_end > lat_start + causal_lateral_escape_threshold_m
+                    else max(causal_reversal_horizon_s, causal_straight_reversal_horizon_s)
+                )
+                if eff_rev_h > imm_times[-1]:
                     sx, sy, _ = imm_poses[-1]
                     t_a = imm_times[-1]
                     t_b = eff_rev_h
@@ -1218,6 +1218,7 @@ def plan_lateral_holding_maneuver(
     sim_objects: list[SimObject] | None = None,
     observation_frame: ObservationFrame | None = None,
     uncertainty_growth_rate_mps: float = 0.02,
+    lateral_offsets_m: tuple[float, ...] | None = None,
 ) -> HoldingManeuverResult | None:
     """Plan and validate a physically feasible unicycle maneuver to a left/right
     holding pose that remains >= safety_margin_m over the maneuver, braking path,
@@ -1235,19 +1236,27 @@ def plan_lateral_holding_maneuver(
     )
     px, py = -uy, ux
 
-    lat = dwa_cfg.waiting_lateral_offset_m
-    candidate_specs: list[tuple[str, tuple[float, float]]] = [
-        ("CURVED_LATERAL_LEFT", (robot_state.x_m + px * lat, robot_state.y_m + py * lat)),
-        ("CURVED_LATERAL_RIGHT", (robot_state.x_m - px * lat, robot_state.y_m - py * lat)),
-        (
-            "CURVED_LATERAL_BACK_LEFT",
-            (robot_state.x_m + px * (0.85 * lat) - ux * 0.4, robot_state.y_m + py * (0.85 * lat) - uy * 0.4),
-        ),
-        (
-            "CURVED_LATERAL_BACK_RIGHT",
-            (robot_state.x_m - px * (0.85 * lat) - ux * 0.4, robot_state.y_m - py * (0.85 * lat) - uy * 0.4),
-        ),
-    ]
+    offsets = (
+        lateral_offsets_m
+        if lateral_offsets_m is not None
+        else (dwa_cfg.waiting_lateral_offset_m,)
+    )
+    candidate_specs: list[tuple[str, tuple[float, float]]] = []
+    for lat in offsets:
+        candidate_specs.extend(
+            [
+                ("CURVED_LATERAL_LEFT", (robot_state.x_m + px * lat, robot_state.y_m + py * lat)),
+                ("CURVED_LATERAL_RIGHT", (robot_state.x_m - px * lat, robot_state.y_m - py * lat)),
+                (
+                    "CURVED_LATERAL_BACK_LEFT",
+                    (robot_state.x_m + px * (0.85 * lat) - ux * 0.4, robot_state.y_m + py * (0.85 * lat) - uy * 0.4),
+                ),
+                (
+                    "CURVED_LATERAL_BACK_RIGHT",
+                    (robot_state.x_m - px * (0.85 * lat) - ux * 0.4, robot_state.y_m - py * (0.85 * lat) - uy * 0.4),
+                ),
+            ]
+        )
 
     static_boxes = [
         (o.x_m, o.y_m, o.x_m + o.width_m, o.y_m + o.height_m)
@@ -2416,9 +2425,11 @@ class DWAPlanner:
                 and waiting_assessment.state != WaitingZoneState.HOLD_UNSAFE_EVADE
                 and start_clear >= self._dwa_cfg.safety_margin_m
             ):
-                non_accel_cf = [
-                    c for c in collision_free if c[0] <= eff_robot.v_mps + 1e-6
-                ]
+                non_accel_cf = (
+                    [c for c in collision_free if c[0] <= eff_robot.v_mps + 1e-6]
+                    if eff_robot.v_mps > 0.10
+                    else []
+                )
                 cf_pool = non_accel_cf if non_accel_cf else collision_free
                 p2_cf = max(
                     cf_pool,
@@ -2486,9 +2497,11 @@ class DWAPlanner:
             # If still no Priority 1-4 recovery command, fall back to highest-clearance
             # collision-free standstill/braking or Priority 5 emergency braking.
             if chosen_cmd is None and collision_free:
-                non_accel_cf = [
-                    c for c in collision_free if c[0] <= eff_robot.v_mps + 1e-6
-                ]
+                non_accel_cf = (
+                    [c for c in collision_free if c[0] <= eff_robot.v_mps + 1e-6]
+                    if eff_robot.v_mps > 0.10
+                    else []
+                )
                 cf_pool = non_accel_cf if non_accel_cf else collision_free
                 p_cf = max(
                     cf_pool,
@@ -2507,6 +2520,37 @@ class DWAPlanner:
                 chosen_brake_t = p_cf[5]
                 chosen_priority = 1 if abs(p_cf[0]) < 0.05 else 2
                 chosen_reason = "SAFETY_MARGIN_VIOLATION"
+
+            if (
+                chosen_cmd is None
+                and not collision_free
+                and start_clear >= self._dwa_cfg.safety_margin_m
+            ):
+                lat_evade = plan_lateral_holding_maneuver(
+                    eff_robot,
+                    lookahead_target,
+                    dt_s,
+                    self._world_cfg,
+                    self._robot_cfg,
+                    self._dwa_cfg,
+                    static_obstacles,
+                    dynamic_obstacles,
+                    sim_objects=active_sim_objects,
+                    observation_frame=observation_frame,
+                    uncertainty_growth_rate_mps=growth_rate,
+                    lateral_offsets_m=(0.45, 0.65, 0.85),
+                )
+                if lat_evade is not None:
+                    chosen_holding_pose = lat_evade.holding_pose_m
+                    chosen_cmd = (lat_evade.v_cmd_mps, lat_evade.omega_cmd_radps)
+                    chosen_clear = lat_evade.min_clearance_m
+                    chosen_traj = lat_evade.trajectory_xy
+                    chosen_brake_c = lat_evade.min_braking_clearance_m
+                    chosen_brake_t = lat_evade.min_braking_time_s
+                    chosen_priority = 4
+                    chosen_reason = "LATERAL_HOLDING_POSE"
+                    cf_exists = True
+                    reverse_used = False
 
             if chosen_cmd is not None:
                 if abs(chosen_cmd[0]) < 0.05:
