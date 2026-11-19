@@ -649,6 +649,10 @@ class CorridorPassingManager:
             self._obstruction_streak = 0
             self._open_space_streak = 0
 
+        corridor_ready = self._obstruction_streak >= self._dwa_cfg.proactive_hysteresis_steps
+        open_space_ready = (
+            self._open_space_streak >= self._dwa_cfg.proactive_open_space_hysteresis_steps
+        )
         if self._passing_state in (PassingState.PASSING_ARMED, PassingState.PASSING_ACTIVE):
             if not lateral_passable:
                 self._passing_state = PassingState.ABORT_HOLD
@@ -656,11 +660,18 @@ class CorridorPassingManager:
                 reason = "ABORT_HOLD"
             else:
                 reversal_bypass = obstructing_obs.obstacle_id in reversed_ids
-                should_trigger = (self._cooldown_s <= 0.0) or reversal_bypass
+                should_trigger = (
+                    ((corridor_ready or open_space_ready) and self._cooldown_s <= 0.0)
+                    or reversal_bypass
+                )
                 reason = (
                     "CORRIDOR_LATERAL_PASS_TRIGGERED"
                     if should_trigger
-                    else "COOLDOWN_ACTIVE"
+                    else (
+                        "COOLDOWN_ACTIVE"
+                        if self._cooldown_s > 0.0 and (corridor_ready or open_space_ready)
+                        else "HYSTERESIS_ACCUMULATING"
+                    )
                 )
         elif self._passing_state == PassingState.ABORT_HOLD:
             if lateral_passable and self._cooldown_s <= 0.0:
@@ -670,10 +681,6 @@ class CorridorPassingManager:
                 should_trigger = False
                 reason = "ABORT_HOLD"
         else:
-            corridor_ready = self._obstruction_streak >= self._dwa_cfg.proactive_hysteresis_steps
-            open_space_ready = (
-                self._open_space_streak >= self._dwa_cfg.proactive_open_space_hysteresis_steps
-            )
             should_trigger = (corridor_ready or open_space_ready) and self._cooldown_s <= 0.0
             reason = (
                 (
