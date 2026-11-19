@@ -75,8 +75,9 @@ In `algorithms/dwa.py` (`_find_reverse_candidates`, lines `2219–2223`), when `
    - Skips `score_trajectory` over the stale `self._path_world_m` while `abort_hold_active` is `True`.
    - Selects non-accelerating `is_safe=True` braking candidates (`ABORT_HOLD_BRAKING`) toward `target_brake_v = max(window.v_min_mps, min(0.0, window.v_max_mps))`, skips `Priority 2` forward recovery, falls through to `Priority 3/4` if braking is unavailable, and enforces non-accelerating deceleration toward `target_brake_v` in the post-`Priority 4` `collision_free` fallback.
 
-### 5.2 Recorded Targeted Test Results (`27` tests: `26 passed, 1 failed`)
+### 5.2 Recorded Targeted Test Results (`28` tests: `27 passed, 1 failed`)
 - `tests/test_corridor_passing_state_machine.py`: **5 passed**
+- `tests/test_phase62_safe_waiting_reverse.py -k CORRIDOR-False`: **1 passed** (resolved via hysteresis guard in `PASSING_ARMED`/`PASSING_ACTIVE` preventing premature replan back to centerline)
 - `tests/test_phase654_corridor_passing.py`: **9 passed**
 - `tests/test_phase6553_narrow_gate_standoff.py`: **7 passed**
 - `tests/test_phase80_reproduction.py`: **5 passed, 1 failed**

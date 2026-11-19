@@ -83,8 +83,9 @@ Aşağıdaki sonuçlar `analysis/results/phase656_final_audit_report.md` kapsam�
 ### Güncel Hedefli Doğrulama (Koridor Geçişi ve `ABORT_HOLD` Sertleştirmesi)
 
 - **Mimari Güncelleme**: `CorridorPassingManager` içine `IDLE` / `PASSING_ARMED` / `PASSING_ACTIVE` / `ABORT_HOLD` durum makinesi, kilitli geçiş ekseni üzerinde destek fonksiyonu tabanlı çoklu engel takibi (`ActivePassingObstacle`), yön-terslenmesi durumunda hedefli cooldown aşımı ve `DWAPlanner` içinde izole `ABORT_HOLD` frenleme koruması eklenmiştir.
-- **Hedefli Test Sonuçları (`27` toplam test: `26 passed`, `1 failed`)** *(yukarıdaki `191` tam test takımı koşumundan ayrı hedefli regresyon paketidir)*:
+- **Hedefli Test Sonuçları (`28` toplam test: `27 passed`, `1 failed`)** *(yukarıdaki `191` tam test takımı koşumundan ayrı hedefli regresyon paketidir)*:
   - `tests/test_corridor_passing_state_machine.py`: **5 passed**
+  - `tests/test_phase62_safe_waiting_reverse.py -k CORRIDOR-False`: **1 passed** (standart `CORRIDOR` senaryosu çarpışmasız geçti)
   - `tests/test_phase654_corridor_passing.py`: **9 passed**
   - `tests/test_phase6553_narrow_gate_standoff.py`: **7 passed**
   - `tests/test_phase80_reproduction.py`: **5 passed, 1 failed** — Başarısız senaryo: `CORRIDOR__L1-DO-01__02` (`COLLISION_ABORT`, `min_swept_m = -0.040569`).
