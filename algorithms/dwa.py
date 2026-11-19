@@ -595,9 +595,8 @@ def evaluate_trajectory_with_braking(
         if min_clearance <= 0.0:
             return (False, min_clearance, None, None)
         if min_clearance < safety_margin_m:
-            if step_idx == 0 or not stop_on_margin_violation:
-                horizon_safe = False
-            elif horizon_safe and step_idx >= 2 and abs(v_mps) > 0.05:
+            horizon_safe = False
+            if stop_on_margin_violation and step_idx >= 2 and abs(v_mps) > 0.05:
                 return (False, min_clearance, None, None)
 
     if not horizon_safe and stop_on_margin_violation:
