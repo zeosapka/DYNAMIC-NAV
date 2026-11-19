@@ -13,7 +13,11 @@ import math
 from typing import TYPE_CHECKING
 
 from algorithms.astar import segment_to_square_distance_m
-from algorithms.corridor_passing import CorridorPassingManager, build_static_occupancy_grid
+from algorithms.corridor_passing import (
+    CorridorPassingManager,
+    PassingState,
+    build_static_occupancy_grid,
+)
 from algorithms.observation import (
     ObservationFrame,
     ObservedObstacle,
@@ -435,6 +439,10 @@ def evaluate_trajectory_with_braking(
     observed_sim_objects: list[ObservedObstacle] | None = None,
     obs_sim_time_s: float = 0.0,
     uncertainty_growth_rate_mps: float = 0.0,
+    causal_stop_safety_enabled: bool = False,
+    causal_reversal_horizon_s: float = 0.0,
+    causal_straight_reversal_horizon_s: float = 0.0,
+    causal_lateral_escape_threshold_m: float = 0.10,
 ) -> tuple[bool, float, float | None, float | None]:
     """Evaluate continuous swept clearance along both the prediction trajectory
     and the complete deceleration braking trajectory.
@@ -591,13 +599,97 @@ def evaluate_trajectory_with_braking(
         if min_clearance <= 0.0:
             return (False, min_clearance, None, None)
         if min_clearance < safety_margin_m:
-            if step_idx == 0 or not stop_on_margin_violation:
-                horizon_safe = False
-            elif horizon_safe and step_idx >= 2:
+            horizon_safe = False
+            if stop_on_margin_violation and step_idx >= 2 and abs(v_mps) > 0.05:
                 return (False, min_clearance, None, None)
 
     if not horizon_safe and stop_on_margin_violation:
         return (False, min_clearance, None, None)
+
+    # 1b. Causal sudden-stop and bounded-reversal immediate braking safety check
+    if (
+        stop_on_margin_violation
+        and causal_stop_safety_enabled
+        and max_brake_decel_mps2 > 0.0
+        and abs(v_mps) > 1e-6
+        and len(trajectory) >= 2
+        and c_dyn_preds
+    ):
+        imm_poses, imm_times = simulate_braking_trajectory(
+            trajectory[1],
+            v_mps,
+            predict_dt_s,
+            max_brake_decel_mps2,
+            reaction_time_s,
+        )
+        if len(imm_poses) > 1:
+            rx0, ry0, _ = trajectory[0]
+            inv_obs_dt = 1.0 / max(1e-6, obs_dt)
+            for preds in c_dyn_preds:
+                if len(preds) < 2:
+                    continue
+                ox0, oy0, orad = preds[0]
+                ox1, oy1, _ = preds[1]
+                ovx = (ox1 - ox0) * inv_obs_dt
+                ovy = (oy1 - oy0) * inv_obs_dt
+                if math.hypot(ovx, ovy) <= 0.05:
+                    continue
+                r_sum = robot_radius_m + orad
+                if math.hypot(rx0 - ox0, ry0 - oy0) - r_sum < safety_margin_m:
+                    continue
+                for b_idx in range(1, len(imm_poses)):
+                    bx0, by0, _ = imm_poses[b_idx - 1]
+                    bx1, by1, _ = imm_poses[b_idx]
+                    if (
+                        _swept_circle_clearance_m(
+                            bx0, by0, bx1, by1, ox0, oy0, ox0, oy0, r_sum
+                        )
+                        < safety_margin_m
+                    ):
+                        return (False, min_clearance, None, None)
+                    if causal_reversal_horizon_s > 0.0:
+                        t0 = min(imm_times[b_idx - 1], causal_reversal_horizon_s)
+                        t1 = min(imm_times[b_idx], causal_reversal_horizon_s)
+                        rx_a = ox0 - ovx * t0
+                        ry_a = oy0 - ovy * t0
+                        rx_b = ox0 - ovx * t1
+                        ry_b = oy0 - ovy * t1
+                        if (
+                            _swept_circle_clearance_m(
+                                bx0, by0, bx1, by1, rx_a, ry_a, rx_b, ry_b, r_sum
+                            )
+                            < safety_margin_m
+                        ):
+                            return (False, min_clearance, None, None)
+                obs_spd = math.hypot(ovx, ovy)
+                ux_o = ovx / obs_spd
+                uy_o = ovy / obs_spd
+                lat_start = abs((rx0 - ox0) * (-uy_o) + (ry0 - oy0) * ux_o)
+                lat_traj_end = abs((trajectory[-1][0] - ox0) * (-uy_o) + (trajectory[-1][1] - oy0) * ux_o)
+                eff_rev_h = (
+                    causal_reversal_horizon_s
+                    if lat_traj_end > lat_start + causal_lateral_escape_threshold_m
+                    else max(causal_reversal_horizon_s, causal_straight_reversal_horizon_s)
+                )
+                if eff_rev_h > imm_times[-1]:
+                    sx, sy, _ = imm_poses[-1]
+                    t_a = imm_times[-1]
+                    t_b = eff_rev_h
+                    if (
+                        _swept_circle_clearance_m(
+                            sx,
+                            sy,
+                            sx,
+                            sy,
+                            ox0 - ovx * t_a,
+                            oy0 - ovy * t_a,
+                            ox0 - ovx * t_b,
+                            oy0 - ovy * t_b,
+                            r_sum,
+                        )
+                        < safety_margin_m
+                    ):
+                        return (False, min_clearance, None, None)
 
     # 2. Complete braking trajectory validation
     min_brake_c: float | None = None
@@ -1195,7 +1287,7 @@ def plan_lateral_holding_maneuver(
         target_static_c = _point_clearance(
             tx, ty, robot_cfg.radius_m, world_cfg, static_obstacles, [], static_boxes=static_boxes
         )
-        if target_static_c < dwa_cfg.safety_margin_m:
+        if target_static_c < dwa_cfg.safety_margin_m - 1e-6:
             continue
 
         # Simulate closed-loop unicycle rollout using exact Robot.step acceleration limits
@@ -1776,6 +1868,7 @@ class DWAPlanner:
             )
 
         proactive_triggered = False
+        abort_hold_active = False
         if self._proactive_replan_enabled_for_eval and self._dwa_cfg.proactive_replan_enabled:
             eff_obs_frame = observation_frame
             if eff_obs_frame is None:
@@ -1868,6 +1961,10 @@ class DWAPlanner:
                         self._path_world_m,
                         self._dwa_cfg.lookahead_distance_m,
                     )
+            abort_hold_active = (
+                assessment.reason == "ABORT_HOLD"
+                or self._corridor_manager.passing_state == PassingState.ABORT_HOLD
+            )
 
         pred_steps = max(1, round(self._dwa_cfg.predict_time_s / self._dwa_cfg.predict_dt_s))
         has_first_substep = 1e-9 < dt_s < self._dwa_cfg.predict_dt_s - 1e-9
@@ -1944,6 +2041,9 @@ class DWAPlanner:
         evaluated_candidates: list[
             tuple[float, float, float, list[tuple[float, float]], float | None, float | None]
         ] = []
+        safe_evaluated_candidates: list[
+            tuple[float, float, float, list[tuple[float, float]], float | None, float | None]
+        ] = []
 
         candidate_xy_list: list[list[tuple[float, float]]] = []
         rejected_xy_list: list[list[tuple[float, float]]] = []
@@ -1982,12 +2082,22 @@ class DWAPlanner:
                 observed_sim_objects=observed_sim_objects,
                 obs_sim_time_s=obs_sim_t,
                 uncertainty_growth_rate_mps=growth_rate,
+                causal_stop_safety_enabled=self._dwa_cfg.causal_stop_safety_enabled,
+                causal_reversal_horizon_s=self._dwa_cfg.causal_reversal_horizon_s,
+                causal_straight_reversal_horizon_s=self._dwa_cfg.causal_straight_reversal_horizon_s,
+                causal_lateral_escape_threshold_m=self._dwa_cfg.causal_lateral_escape_threshold_m,
             )
             evaluated_candidates.append(
                 (v, omega, min_clear, traj_xy, brake_clear, brake_time)
             )
             if not is_safe:
                 rejected_xy_list.append(traj_xy)
+                continue
+
+            safe_evaluated_candidates.append(
+                (v, omega, min_clear, traj_xy, brake_clear, brake_time)
+            )
+            if abort_hold_active:
                 continue
 
             sc = score_trajectory(
@@ -2104,9 +2214,56 @@ class DWAPlanner:
             reverse_used = False
             cf_exists = len(collision_free) > 0
 
+            # Isolated ABORT_HOLD braking branch: never score old path; select only from
+            # evaluate_trajectory_with_braking(is_safe=True) non-accelerating candidates.
+            if (
+                abort_hold_active
+                and waiting_assessment.state
+                not in (
+                    WaitingZoneState.GATE_CLEAR_HOLD_UNSAFE,
+                    WaitingZoneState.HOLD_UNSAFE_EVADE,
+                )
+                and safe_evaluated_candidates
+            ):
+                target_brake_v = max(window.v_min_mps, min(0.0, window.v_max_mps))
+                v_lo = min(0.0, eff_robot.v_mps) - 1e-6
+                v_hi = max(0.0, eff_robot.v_mps) + 1e-6
+                safe_brake_pool = [
+                    c for c in safe_evaluated_candidates if v_lo <= c[0] <= v_hi
+                ]
+                if safe_brake_pool:
+                    near_target = [
+                        c
+                        for c in safe_brake_pool
+                        if abs(c[0] - target_brake_v) <= self._dwa_cfg.abort_hold_brake_v_tol_mps
+                    ]
+                    if near_target:
+                        p_abort = max(
+                            near_target,
+                            key=lambda c: (round(c[2], 6), -abs(c[1])),
+                        )
+                    else:
+                        p_abort = max(
+                            safe_brake_pool,
+                            key=lambda c: (
+                                -round(abs(c[0] - target_brake_v), 4),
+                                -round(abs(c[0]), 4),
+                                round(c[2], 6),
+                                -abs(c[1]),
+                            ),
+                        )
+                    chosen_cmd = (p_abort[0], p_abort[1])
+                    chosen_clear = p_abort[2]
+                    chosen_traj = p_abort[3]
+                    chosen_brake_c = p_abort[4]
+                    chosen_brake_t = p_abort[5]
+                    chosen_priority = 1
+                    chosen_reason = "ABORT_HOLD_BRAKING"
+
             # Priority 1: Safe standstill or controlled braking when holding pose is safe
             if (
-                waiting_assessment.state
+                chosen_cmd is None
+                and waiting_assessment.state
                 in (
                     WaitingZoneState.GATE_OCCUPIED_HOLD_SAFE,
                     WaitingZoneState.GATE_CLEAR_HOLD_SAFE,
@@ -2129,7 +2286,7 @@ class DWAPlanner:
                     chosen_reason = "SAFE_STANDSTILL_BRAKING"
 
             # Priority 2: Safe clearance-increasing / highest-clearance maneuver
-            if chosen_cmd is None and recovery_candidates:
+            if chosen_cmd is None and not abort_hold_active and recovery_candidates:
                 if start_clear < self._dwa_cfg.safety_margin_m:
                     p2 = max(
                         recovery_candidates,
@@ -2319,13 +2476,26 @@ class DWAPlanner:
 
             if (
                 chosen_cmd is None
+                and not abort_hold_active
                 and collision_free
                 and waiting_assessment.state != WaitingZoneState.HOLD_UNSAFE_EVADE
                 and start_clear >= self._dwa_cfg.safety_margin_m
             ):
+                non_accel_cf = (
+                    [c for c in collision_free if c[0] <= eff_robot.v_mps + 1e-6]
+                    if eff_robot.v_mps > 0.10
+                    else []
+                )
+                cf_pool = non_accel_cf if non_accel_cf else collision_free
                 p2_cf = max(
-                    collision_free,
-                    key=lambda c: (round(c[2], 6), -c[0], -abs(c[1])),
+                    cf_pool,
+                    key=lambda c: (
+                        1 if (c[4] is None or c[4] > 0.0) else 0,
+                        round(c[2], 4),
+                        -max(0.0, c[0]),
+                        -abs(c[0]),
+                        -abs(c[1]),
+                    ),
                 )
                 chosen_cmd = (p2_cf[0], p2_cf[1])
                 chosen_clear = p2_cf[2]
@@ -2383,10 +2553,39 @@ class DWAPlanner:
             # If still no Priority 1-4 recovery command, fall back to highest-clearance
             # collision-free standstill/braking or Priority 5 emergency braking.
             if chosen_cmd is None and collision_free:
-                p_cf = max(
-                    collision_free,
-                    key=lambda c: (round(c[2], 6), -abs(c[0]), -abs(c[1])),
-                )
+                if abort_hold_active:
+                    target_brake_v = max(window.v_min_mps, min(0.0, window.v_max_mps))
+                    v_lo = min(0.0, eff_robot.v_mps) - 1e-6
+                    v_hi = max(0.0, eff_robot.v_mps) + 1e-6
+                    non_accel_cf = [c for c in collision_free if v_lo <= c[0] <= v_hi]
+                    cf_pool = non_accel_cf if non_accel_cf else collision_free
+                    p_cf = max(
+                        cf_pool,
+                        key=lambda c: (
+                            1 if (c[4] is None or c[4] > 0.0) else 0,
+                            -round(abs(c[0] - target_brake_v), 4),
+                            -round(abs(c[0]), 4),
+                            round(c[2], 4),
+                            -abs(c[1]),
+                        ),
+                    )
+                else:
+                    non_accel_cf = (
+                        [c for c in collision_free if c[0] <= eff_robot.v_mps + 1e-6]
+                        if eff_robot.v_mps > 0.10
+                        else []
+                    )
+                    cf_pool = non_accel_cf if non_accel_cf else collision_free
+                    p_cf = max(
+                        cf_pool,
+                        key=lambda c: (
+                            1 if (c[4] is None or c[4] > 0.0) else 0,
+                            round(c[2], 4),
+                            -max(0.0, c[0]),
+                            -abs(c[0]),
+                            -abs(c[1]),
+                        ),
+                    )
                 chosen_cmd = (p_cf[0], p_cf[1])
                 chosen_clear = p_cf[2]
                 chosen_traj = p_cf[3]

@@ -220,6 +220,14 @@ class DWAConfig:
     proactive_min_clearance_improvement_m: float = 0.10
     proactive_open_space_enabled: bool = True
     proactive_open_space_hysteresis_steps: int = 8
+    causal_stop_safety_enabled: bool = True
+    causal_reversal_horizon_s: float = 0.35
+    causal_straight_reversal_horizon_s: float = 0.85
+    causal_lateral_escape_threshold_m: float = 0.10
+    passing_completion_margin_m: float = 0.15
+    passing_lateral_engage_offset_m: float = 0.08
+    passing_max_lost_uncertainty_m: float = 1.50
+    abort_hold_brake_v_tol_mps: float = 1e-3
 
 
 @dataclass(frozen=True)

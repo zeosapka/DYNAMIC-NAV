@@ -1,0 +1,395 @@
+{
+  "reproduced_25": [
+    {
+      "variant_id": "CORRIDOR__L1-IC-01__02",
+      "group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "hist": "GOAL_REACHED",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.155393,
+        "min_swept": 0.155201,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "CORRIDOR__L1-IC-02__01",
+      "group": "CORRIDOR_HEADING_PERTURBATION_PASSING_TIMING",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.15536,
+        "min_swept": 0.155226,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "CORRIDOR__L1-IC-02__02",
+      "group": "CORRIDOR_HEADING_PERTURBATION_PASSING_TIMING",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.15536,
+        "min_swept": 0.155226,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "CORRIDOR__L1-IC-04__01",
+      "group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "hist": "GOAL_REACHED",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.155297,
+        "min_swept": 0.155123,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "CORRIDOR__L1-IC-05__01",
+      "group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "hist": "GOAL_REACHED",
+      "cur": {
+        "termination": "COLLISION_ABORT",
+        "goal_reached": false,
+        "col": 1,
+        "mviol": 1,
+        "min_inst": -0.021133,
+        "min_swept": -0.021133,
+        "first_unsafe": {
+          "t_s": 17.25,
+          "type": "MARGIN_VIOLATION",
+          "swept_m": 0.09863,
+          "v_cmd": 1.583,
+          "w_cmd": -0.4,
+          "pred_clear": 0.1681503221493873,
+          "brake_clear": 0.2428375432741987
+        }
+      }
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-IC-01__02",
+      "group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.153796,
+        "min_swept": 0.153777,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-IC-02__01",
+      "group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.154344,
+        "min_swept": 0.154048,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-IC-02__02",
+      "group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.154344,
+        "min_swept": 0.154048,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-IC-04__01",
+      "group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.15444,
+        "min_swept": 0.154363,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-IC-05__01",
+      "group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.15444,
+        "min_swept": 0.154363,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "SUDDEN-STOP__L1-IC-02__01",
+      "group": "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.292878,
+        "min_swept": 0.291842,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "SUDDEN-STOP__L1-IC-02__02",
+      "group": "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.292878,
+        "min_swept": 0.291842,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "STOP-AND-GO__L1-DO-01__01",
+      "group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "hist": "GOAL_REACHED",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 1,
+        "min_inst": 0.148023,
+        "min_swept": 0.148023,
+        "first_unsafe": {
+          "t_s": 5.7,
+          "type": "MARGIN_VIOLATION",
+          "swept_m": 0.14802,
+          "v_cmd": 0.25,
+          "w_cmd": -2.4,
+          "pred_clear": 0.13546990313965745,
+          "brake_clear": null
+        }
+      }
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-DO-01__01",
+      "group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.150151,
+        "min_swept": 0.150019,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "MULTIPLE-DYNAMIC-OBSTACLES__L1-DO-01__02",
+      "group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "hist": "GOAL_REACHED",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.186525,
+        "min_swept": 0.185338,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "SUDDEN-STOP__L1-DO-01__01",
+      "group": "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.221031,
+        "min_swept": 0.220711,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "SUDDEN-STOP__L1-DO-02__01",
+      "group": "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.290414,
+        "min_swept": 0.290394,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "STOP-AND-GO__L1-DO-03__01",
+      "group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "hist": "GOAL_REACHED",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 1,
+        "min_inst": 0.093183,
+        "min_swept": 0.093101,
+        "first_unsafe": {
+          "t_s": 5.05,
+          "type": "MARGIN_VIOLATION",
+          "swept_m": 0.14295,
+          "v_cmd": 0.833,
+          "w_cmd": -1.6,
+          "pred_clear": 0.10442379880130004,
+          "brake_clear": null
+        }
+      }
+    },
+    {
+      "variant_id": "SUDDEN-STOP__L1-DO-03__01",
+      "group": "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.217819,
+        "min_swept": 0.217803,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "SUDDEN-STOP__L1-DO-03__02",
+      "group": "SUDDEN_STOP_CAUSAL_REVERSAL_TRAP",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.362156,
+        "min_swept": 0.361632,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "CORRIDOR__L1-SG-01__01",
+      "group": "GEOMETRIC_WIDTH_REDUCTION_INFEASIBLE",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "COLLISION_ABORT",
+        "goal_reached": false,
+        "col": 1,
+        "mviol": 1,
+        "min_inst": -0.038844,
+        "min_swept": -0.038844,
+        "first_unsafe": {
+          "t_s": 17.55,
+          "type": "MARGIN_VIOLATION",
+          "swept_m": 0.1111,
+          "v_cmd": 0.0,
+          "w_cmd": -2.0,
+          "pred_clear": 0.05911893979969729,
+          "brake_clear": null
+        }
+      }
+    },
+    {
+      "variant_id": "CORRIDOR__L1-RD-02__01",
+      "group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "hist": "GOAL_REACHED",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.150026,
+        "min_swept": 0.150026,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-RD-01__01",
+      "group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.153157,
+        "min_swept": 0.152697,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "NARROW-GATE__L1-RD-02__01",
+      "group": "NARROW_GATE_TIMING_AND_HOLDING_MARGIN",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "GOAL_REACHED",
+        "goal_reached": true,
+        "col": 0,
+        "mviol": 0,
+        "min_inst": 0.15444,
+        "min_swept": 0.154363,
+        "first_unsafe": null
+      }
+    },
+    {
+      "variant_id": "MULTIPLE-DYNAMIC-OBSTACLES__L1-RD-01__01",
+      "group": "DYNAMICS_OR_SPEED_SCALE_MARGIN_DIP",
+      "hist": "COLLISION_ABORT",
+      "cur": {
+        "termination": "COLLISION_ABORT",
+        "goal_reached": false,
+        "col": 1,
+        "mviol": 1,
+        "min_inst": -0.055516,
+        "min_swept": -0.055516,
+        "first_unsafe": {
+          "t_s": 11.3,
+          "type": "MARGIN_VIOLATION",
+          "swept_m": 0.13422,
+          "v_cmd": 0.95,
+          "w_cmd": -2.8,
+          "pred_clear": 0.05525810806560494,
+          "brake_clear": null
+        }
+      }
+    }
+  ],
+  "still_unsafe_count": 5
+}
