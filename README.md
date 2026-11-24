@@ -82,13 +82,14 @@ Aşağıdaki sonuçlar `analysis/results/phase656_final_audit_report.md` kapsam�
 
 ### Güncel Hedefli Doğrulama (Koridor Geçişi ve `ABORT_HOLD` Sertleştirmesi)
 
-- **Mimari Güncelleme**: `CorridorPassingManager` içine `IDLE` / `PASSING_ARMED` / `PASSING_ACTIVE` / `ABORT_HOLD` durum makinesi, kilitli geçiş ekseni üzerinde destek fonksiyonu tabanlı çoklu engel takibi (`ActivePassingObstacle`), yön-terslenmesi durumunda hedefli cooldown aşımı ve `DWAPlanner` içinde izole `ABORT_HOLD` frenleme koruması eklenmiştir.
-- **Hedefli Test Sonuçları (`28` toplam test: `27 passed`, `1 failed`)** *(yukarıdaki `191` tam test takımı koşumundan ayrı hedefli regresyon paketidir)*:
+- **Mimari Güncelleme**: `CorridorPassingManager` içine `IDLE` / `PASSING_ARMED` / `PASSING_ACTIVE` / `ABORT_HOLD` durum makinesi, kilitli geçiş ekseni üzerinde destek fonksiyonu tabanlı çoklu engel takibi (`ActivePassingObstacle`), aktif geçiş sırasında histerezis ve yan-seçim bağlılığı (`keep_committed_side`), yön-terslenmesi durumunda hedefli cooldown aşımı ve `DWAPlanner` içinde izole `ABORT_HOLD` frenleme koruması eklenmiştir.
+- **Tam Pytest Test Takımı (`python -m pytest -v`)**: **`202 / 202` test başarılı** (`0` başarısız, `467.93 s`).
+- **Hedefli Doğrulama Özeti**:
   - `tests/test_corridor_passing_state_machine.py`: **5 passed**
-  - `tests/test_phase62_safe_waiting_reverse.py -k CORRIDOR-False`: **1 passed** (standart `CORRIDOR` senaryosu çarpışmasız geçti)
+  - `tests/test_phase62_safe_waiting_reverse.py` (`CORRIDOR-False` dahil): **17 passed**
   - `tests/test_phase654_corridor_passing.py`: **9 passed**
   - `tests/test_phase6553_narrow_gate_standoff.py`: **7 passed**
-  - `tests/test_phase80_reproduction.py`: **5 passed, 1 failed** — Başarısız senaryo: `CORRIDOR__L1-DO-01__02` (`COLLISION_ABORT`, `min_swept_m = -0.040569`).
+  - `tests/test_phase80_reproduction.py` (`CORRIDOR__L1-DO-01__02` dahil): **6 passed** (`DO-01`: `goal_reached=True`, `col=0`, `mviol=0`, `min_swept_m=0.165947 m`, `completion_time=18.5 s`, deterministik).
 
 ## 9. Kurulum
 
@@ -148,7 +149,6 @@ DYNAMIC-NAV/
 
 ## 13. Sistemin Sınırlılıkları
 
-- **`CORRIDOR__L1-DO-01__02` Çarpışma Sınırlılığı**: `ABORT_HOLD` frenleme davranışı devriye sınırında yön değiştiren engele (`vx = -1.15 m/s`) karşı robotu durdurmaktadır (`v = 0.05 -> 0.00 m/s`), ancak robotun durduğu yanal konum (`y = 7.05 m`) yaklaşan engelin `y = 7.50 m` eksenine güvenli uzaklıkta değildir; bu nedenle duran robota çarpışma (`COLLISION_ABORT`, `min_swept_m = -0.040569`) devam etmektedir.
 - **Kapı Önü Bekleme Gecikmesi**: `NARROW-GATE` bekleme ve yanal tutunma adımlarında en kötü durum DWA süresi `50 ms` bütçesini aşabilmektedir (`P99 = 232.48 ms`, `%17.25 > 50 ms`).
 - **Kapsam Dışı Pertürbasyonlar**: Faz 6.5.5'te tespit edilen `NARROW-GATE` dışındaki bazı Seviye 1 pertürbasyonları (`SUDDEN-STOP` zamanlama kaymaları, `CORRIDOR` başlangıç yönelim sapmaları) ile Seviye 2/3 güçlü pertürbasyonlar Faz 6.5.5.7 sonrası yeniden doğrulanmamıştır.
 - **Sensör Gürültüsü**: `ObservationPipeline` gecikme ve belirsizlik parametrelerini desteklemekle birlikte Faz 6.5.6 denetimi varsayılan sıfır-gürültü (`ObservationConfig`) ayarlarıyla yürütülmüştür.

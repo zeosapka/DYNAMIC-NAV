@@ -952,9 +952,14 @@ class CorridorPassingManager:
                 self._cooldown_s = min(0.25, self._dwa_cfg.proactive_replan_cooldown_s)
             return (None, evaluations)
 
+        keep_committed_side = self._passing_state in (
+            PassingState.PASSING_ARMED,
+            PassingState.PASSING_ACTIVE,
+        )
         best = max(
             accepted_list,
             key=lambda e: (
+                1 if (keep_committed_side and e.side == self._last_chosen_side) else 0,
                 round(min(e.dwa_predicted_clearance_m, e.dwa_braking_clearance_m if e.dwa_braking_clearance_m is not None else math.inf), 2),
                 1 if e.side == self._last_chosen_side else 0,
                 round(e.geometric_min_clearance_m, 6),
