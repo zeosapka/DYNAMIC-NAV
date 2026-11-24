@@ -175,3 +175,4 @@ DYNAMIC-NAV, Faz 5.0'daki çarpışmalardan Faz 6.5.6 tarihsel denetimine (`191/
 2. Fox, D., Burgard, W., & Thrun, S. (1997). The Dynamic Window Approach to Collision Avoidance. *IEEE Robotics & Automation Magazine*, 4(1), 23–33.
 3. Siegwart, R., Nourbakhsh, I. R., & Scaramuzza, D. (2011). *Introduction to Autonomous Mobile Robots* (2nd ed.). MIT Press.
 4. DYNAMIC-NAV Proje Deposu: `config.py`, `simulation/entities.py`, `algorithms/astar.py`, `algorithms/dwa.py`, `algorithms/corridor_passing.py`, `algorithms/observation.py`, `analysis/metrics.py`, `analysis/results/phase656_final_audit_report.md`, `analysis/results/phase80_root_cause_report.md`.
+5. Yazılım Bağımlılıkları: `Python 3.12.10`, `Pygame 2.6.1`, `NumPy 2.5.5`, `Matplotlib 3.11.2`, `Pytest 9.2.0`. (`Shapely`, `OpenCV` ve `PythonRobotics` harici kodu kullanılmamıştır; tüm algoritmalar özgün olarak geliştirilmiştir.)

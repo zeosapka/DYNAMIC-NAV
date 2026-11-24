@@ -16,7 +16,7 @@ Bu belge, DYNAMIC-NAV projesinin geliştirme, dokümantasyon, test değerlendirm
 
 - **Kod Geliştirme ve Hata Ayıklama Desteği:** Python/Pygame arayüzü (`interface/`), görselleştirme bileşenleri ve yardımcı betiklerde kod inceleme ve hata ayıklama desteği alınmıştır.
 - **Algoritma Dokümantasyonu:** A\* küresel yol planlama (`algorithms/astar.py`), DWA yerel kaçınma (`algorithms/dwa.py`), koridor geçiş durum makinesi (`algorithms/corridor_passing.py`) ve sürekli süpürme açıklığı mekanizmalarının teknik açıklamalarının düzenlenmesinde destek alınmıştır.
-- **Deney Sonuçlarının Yorumlanmasına Destek:** `202/202` `pytest` çıktıları (yerel ve GitHub Actions doğrulaması) ile Faz 5.0–8.0 arası kıyaslama ve dayanıklılık kayıtlarının tablo/grafik özetlerinin hazırlanmasında destek sağlanmıştır.
+- **Deney Sonuçlarının Yorumlanmasına Destek:** `206/206` `pytest` çıktıları (yerel ve GitHub Actions doğrulaması) ile Faz 5.0–8.0 arası kıyaslama ve dayanıklılık kayıtlarının tablo/grafik özetlerinin hazırlanmasında destek sağlanmıştır.
 - **Akademik Rapor Biçimlendirme:** `README.md`, akademik proje raporu ve idari belgelerin akademik Türkçe dil tutarlılığı ve sayfa düzeninde destek alınmıştır.
 - **Demo Videosu Araç Desteği:** Gerçek Pygame uygulamasından yakalanan görüntülere Türkçe seslendirme eklemek için `edge-tts` (`tr-TR-AhmetNeural`) ve altyazı gömme/miksaj için `FFmpeg`/`FFprobe` kullanılmıştır.
 

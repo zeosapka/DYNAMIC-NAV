@@ -1,0 +1,40 @@
+{
+  "_comment": "DYNAMIC-NAV Custom Scenario Example (All units in SI: meters, radians, m/s, seconds).",
+  "_usage": "python main.py --scenario-json examples/custom_scenario_example.json",
+  "name": "CUSTOM-UNSEEN-DIAGONAL",
+  "description": "Unseen diagonal start/goal scenario with a patrolling dynamic obstacle and two static blocks.",
+  "behavior": "CROSSING",
+  "robot_start_m": [2.5, 3.0],
+  "robot_theta_rad": 0.4,
+  "goal_m": [17.5, 12.0],
+  "static_obstacles": [
+    {
+      "_comment": "x_m, y_m = bottom-left corner in [0, 20] x [0, 15]; width_m, height_m > 0",
+      "x_m": 6.0,
+      "y_m": 6.5,
+      "width_m": 2.0,
+      "height_m": 2.5
+    },
+    {
+      "x_m": 12.0,
+      "y_m": 4.0,
+      "width_m": 2.0,
+      "height_m": 3.0
+    }
+  ],
+  "dynamic_obstacles": [
+    {
+      "_comment": "behavior: HEAD_ON | CROSSING | CORRIDOR | STOP_AND_GO | SUDDEN_STOP",
+      "obstacle_id": "DYN-EX-1",
+      "x_m": 11.0,
+      "y_m": 10.5,
+      "vx_mps": 0.0,
+      "vy_mps": -0.75,
+      "radius_m": 0.35,
+      "behavior": "CROSSING",
+      "waypoint_a_m": [11.0, 7.5],
+      "waypoint_b_m": [11.0, 12.5],
+      "reverse_at_bounds": true
+    }
+  ]
+}

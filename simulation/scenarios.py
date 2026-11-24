@@ -5,8 +5,11 @@ and are strictly reproducible without random generation.
 """
 
 from dataclasses import dataclass
+import json
+import math
+from pathlib import Path
 
-from config import StaticObstacleConfig
+from config import RobotConfig, StaticObstacleConfig, WorldConfig
 from simulation.dynamic_obstacles import DynamicObstacle, MovementBehavior
 
 
@@ -375,3 +378,160 @@ class ScenarioManager:
                 f"Unknown scenario '{name}'. Available: {list(SCENARIO_CATALOG.keys())}"
             )
         return SCENARIO_CATALOG[key]
+
+    @staticmethod
+    def load_json(
+        json_path: str | Path,
+        world_cfg: WorldConfig = WorldConfig(),
+        robot_cfg: RobotConfig = RobotConfig(),
+    ) -> ScenarioDefinition:
+        """Load and validate a custom ScenarioDefinition from a JSON file."""
+        return load_scenario_from_json(json_path, world_cfg=world_cfg, robot_cfg=robot_cfg)
+
+
+def _point_in_or_near_aabb(
+    px: float,
+    py: float,
+    obs: StaticObstacleConfig,
+    margin_m: float,
+) -> bool:
+    cx = max(obs.x_m, min(px, obs.x_m + obs.width_m))
+    cy = max(obs.y_m, min(py, obs.y_m + obs.height_m))
+    return math.hypot(px - cx, py - cy) < margin_m
+
+
+def _validate_point_in_world(
+    name: str,
+    x_m: float,
+    y_m: float,
+    world_cfg: WorldConfig,
+    clearance_m: float,
+) -> None:
+    if not (math.isfinite(x_m) and math.isfinite(y_m)):
+        raise ValueError(f"{name} coordinates must be finite: ({x_m}, {y_m}).")
+    if (
+        x_m < clearance_m
+        or x_m > world_cfg.width_m - clearance_m
+        or y_m < clearance_m
+        or y_m > world_cfg.height_m - clearance_m
+    ):
+        raise ValueError(
+            f"{name} ({x_m}, {y_m}) is out of world bounds [0, {world_cfg.width_m}] x [0, {world_cfg.height_m}] "
+            f"with clearance {clearance_m} m."
+        )
+
+
+def load_scenario_from_json(
+    json_path: str | Path,
+    world_cfg: WorldConfig = WorldConfig(),
+    robot_cfg: RobotConfig = RobotConfig(),
+) -> ScenarioDefinition:
+    """Parse and validate a custom scenario JSON file into a ScenarioDefinition (SI units)."""
+    path = Path(json_path)
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(raw, dict):
+        raise ValueError("Scenario JSON root must be an object.")
+
+    name = str(raw.get("name", path.stem)).strip() or path.stem
+    description = str(raw.get("description", "Custom JSON scenario"))
+    start_raw = raw.get("robot_start_m")
+    goal_raw = raw.get("goal_m")
+    if not (isinstance(start_raw, (list, tuple)) and len(start_raw) == 2):
+        raise ValueError("robot_start_m must be a 2-element [x_m, y_m] list.")
+    if not (isinstance(goal_raw, (list, tuple)) and len(goal_raw) == 2):
+        raise ValueError("goal_m must be a 2-element [x_m, y_m] list.")
+
+    sx, sy = float(start_raw[0]), float(start_raw[1])
+    gx, gy = float(goal_raw[0]), float(goal_raw[1])
+    theta = float(raw.get("robot_theta_rad", 0.0))
+    if not math.isfinite(theta):
+        raise ValueError(f"robot_theta_rad must be finite: {theta}.")
+
+    _validate_point_in_world("robot_start_m", sx, sy, world_cfg, robot_cfg.radius_m)
+    _validate_point_in_world("goal_m", gx, gy, world_cfg, robot_cfg.radius_m)
+
+    static_list: list[StaticObstacleConfig] = []
+    for idx, obs_raw in enumerate(raw.get("static_obstacles", [])):
+        ox = float(obs_raw["x_m"])
+        oy = float(obs_raw["y_m"])
+        ow = float(obs_raw["width_m"])
+        oh = float(obs_raw["height_m"])
+        if not all(math.isfinite(v) for v in (ox, oy, ow, oh)) or ow <= 0.0 or oh <= 0.0:
+            raise ValueError(f"static_obstacles[{idx}] has invalid dimensions or non-finite values.")
+        if ox < 0.0 or oy < 0.0 or ox + ow > world_cfg.width_m or oy + oh > world_cfg.height_m:
+            raise ValueError(f"static_obstacles[{idx}] exceeds world bounds.")
+        sobs = StaticObstacleConfig(x_m=ox, y_m=oy, width_m=ow, height_m=oh)
+        if _point_in_or_near_aabb(sx, sy, sobs, robot_cfg.radius_m):
+            raise ValueError(f"robot_start_m overlaps static_obstacles[{idx}].")
+        if _point_in_or_near_aabb(gx, gy, sobs, robot_cfg.radius_m):
+            raise ValueError(f"goal_m overlaps static_obstacles[{idx}].")
+        static_list.append(sobs)
+
+    dyn_list: list[DynamicObstacleSpec] = []
+    max_obs_speed = 5.0
+    for idx, d_raw in enumerate(raw.get("dynamic_obstacles", [])):
+        oid = str(d_raw.get("obstacle_id", f"DYN-CUSTOM-{idx + 1}"))
+        dx = float(d_raw["x_m"])
+        dy = float(d_raw["y_m"])
+        vx = float(d_raw.get("vx_mps", 0.0))
+        vy = float(d_raw.get("vy_mps", 0.0))
+        rad = float(d_raw.get("radius_m", 0.35))
+        if not all(math.isfinite(v) for v in (dx, dy, vx, vy, rad)) or rad <= 0.0:
+            raise ValueError(f"dynamic_obstacles[{idx}] has invalid radius or non-finite values.")
+        if math.hypot(vx, vy) > max_obs_speed:
+            raise ValueError(
+                f"dynamic_obstacles[{idx}] speed {math.hypot(vx, vy):.2f} m/s exceeds {max_obs_speed} m/s."
+            )
+        _validate_point_in_world(f"dynamic_obstacles[{idx}]", dx, dy, world_cfg, rad)
+        if math.hypot(dx - sx, dy - sy) <= robot_cfg.radius_m + rad:
+            raise ValueError(f"dynamic_obstacles[{idx}] overlaps robot_start_m.")
+
+        beh_name = str(d_raw.get("behavior", "HEAD_ON")).upper()
+        try:
+            beh = MovementBehavior[beh_name]
+        except KeyError as exc:
+            raise ValueError(f"Unknown dynamic obstacle behavior '{beh_name}'.") from exc
+
+        wp_a = d_raw.get("waypoint_a_m")
+        wp_b = d_raw.get("waypoint_b_m")
+        wp_a_t = (float(wp_a[0]), float(wp_a[1])) if wp_a is not None else None
+        wp_b_t = (float(wp_b[0]), float(wp_b[1])) if wp_b is not None else None
+        if wp_a_t is not None:
+            _validate_point_in_world(f"dynamic_obstacles[{idx}].waypoint_a_m", wp_a_t[0], wp_a_t[1], world_cfg, rad)
+        if wp_b_t is not None:
+            _validate_point_in_world(f"dynamic_obstacles[{idx}].waypoint_b_m", wp_b_t[0], wp_b_t[1], world_cfg, rad)
+
+        dyn_list.append(
+            DynamicObstacleSpec(
+                obstacle_id=oid,
+                x_m=dx,
+                y_m=dy,
+                vx_mps=vx,
+                vy_mps=vy,
+                radius_m=rad,
+                behavior=beh,
+                active=bool(d_raw.get("active", True)),
+                waypoint_a_m=wp_a_t,
+                waypoint_b_m=wp_b_t,
+                reverse_at_bounds=bool(d_raw.get("reverse_at_bounds", True)),
+                move_duration_s=float(d_raw.get("move_duration_s", 2.0)),
+                stop_duration_s=float(d_raw.get("stop_duration_s", 1.5)),
+            )
+        )
+
+    top_beh_name = str(raw.get("behavior", dyn_list[0].behavior.name if dyn_list else "HEAD_ON")).upper()
+    try:
+        top_beh = MovementBehavior[top_beh_name]
+    except KeyError as exc:
+        raise ValueError(f"Unknown scenario behavior '{top_beh_name}'.") from exc
+
+    return ScenarioDefinition(
+        name=name,
+        behavior=top_beh,
+        description=description,
+        robot_start_m=(sx, sy),
+        robot_theta_rad=theta,
+        goal_m=(gx, gy),
+        static_obstacles=tuple(static_list),
+        dynamic_obstacles=tuple(dyn_list),
+    )

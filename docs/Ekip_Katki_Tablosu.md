@@ -19,5 +19,5 @@ DYNAMIC-NAV projesi **Eren Çakmaz**, **Ahmet Gürlek** ve **Arda Başaran** tar
 | Ekip Üyesi | Odak Alanı | İlgili Modüller ve Çıktılar | Onay Durumu |
 |---|---|---|---|
 | **Eren Çakmaz** | Algoritma ve Planlama | `algorithms/astar.py`, `algorithms/dwa.py`, `algorithms/corridor_passing.py`, küresel/yerel yol planlama ve `ABORT_HOLD` güvenliği | Onaylandı |
-| **Ahmet Gürlek** | Simülasyon ve Test | `config.py`, `simulation/`, `tests/`, kinematik model, dinamik engel senaryoları ve `202/202` `pytest` doğrulaması | Onaylandı |
+| **Ahmet Gürlek** | Simülasyon ve Test | `config.py`, `simulation/`, `tests/`, kinematik model, dinamik engel senaryoları ve `206/206` `pytest` doğrulaması | Onaylandı |
 | **Arda Başaran** | Arayüz, Entegrasyon ve Dokümantasyon | `interface/`, `analysis/`, `README.md`, Türkçe arayüz entegrasyonu, demo videosu (`229.73 s`) ve akademik raporlama | Onaylandı |

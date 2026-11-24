@@ -15,7 +15,7 @@ Sistem; küresel ızgara tabanlı **A\*** yol planlamasını, kinematik olarak u
 ## 3. Nihai Akademik Teknik Rapor
 
 - **Teknik Rapor (Markdown)**: [`docs/DYNAMIC-NAV_Teknik_Rapor.md`](docs/DYNAMIC-NAV_Teknik_Rapor.md)
-- **Teknik Rapor (PDF, 5 sayfa A4)**: [`docs/DYNAMIC-NAV_Teknik_Rapor.pdf`](docs/DYNAMIC-NAV_Teknik_Rapor.pdf)
+- **Teknik Rapor (PDF, 6 sayfa A4)**: [`docs/DYNAMIC-NAV_Teknik_Rapor.pdf`](docs/DYNAMIC-NAV_Teknik_Rapor.pdf)
 
 ## 4. Sistem Mimarisi
 
@@ -28,7 +28,7 @@ DYNAMIC-NAV/
 ├── algorithms/                   # A*, DWA, CorridorPassingManager, ObservationPipeline, PathFollower
 ├── interface/                    # Pygame görselleştirme ve kullanıcı arayüzü
 ├── analysis/                     # Sürekli süpürme açıklığı denetimi, kıyaslama ve results/ kanıtları
-├── tests/                        # 202 otomatik Pytest birim, nedensellik ve entegrasyon testi
+├── tests/                        # 206 otomatik Pytest birim, nedensellik ve entegrasyon testi
 ├── docs/                         # Nihai akademik teslim belgeleri ve demo videosu
 └── archive/                      # Ara demo sürümleri ve tarihsel raporlar
 ```
@@ -39,10 +39,18 @@ DYNAMIC-NAV/
 - **DWA Yerel Planlayıcı (`algorithms/dwa.py`)**: `7 x 17 = 119` hız penceresi adayını `T_p = 1.2 s` ufukta benzetir; tepki süresi (`0.10 s`) ve frenleme ivmesi (`5.0 m/s^2`) ile tam duruş mesafesini doğrular, gerektiğinde güvenli bekleme ve geri kaçış önceliklerini çalıştırır.
 - **Proaktif Koridor Geçiş Yöneticisi (`algorithms/corridor_passing.py`)**: `IDLE`, `PASSING_ARMED`, `PASSING_ACTIVE` ve `ABORT_HOLD` durum makinesi ile kilitli geçiş ekseni boyunca çoklu dinamik engeli (`ActivePassingObstacle`) izler; yön-terslenmesi durumunda nedensel cooldown aşımı ve `keep_committed_side` yan-şerit bağlılığı sağlar.
 
-## 6. Dinamik Engel Senaryoları
+## 6. Dinamik Engel Senaryoları ve Özel Senaryo Tanımlama
 
 `simulation/scenarios.py` içinde 8 deterministik senaryo tanımlıdır:
 - `HEAD-ON`, `CROSSING`, `CORRIDOR`, `STOP-AND-GO`, `NARROW-GATE`, `MULTIPLE-DYNAMIC-OBSTACLES`, `SUDDEN-STOP`, `SUDDEN-STOP-FINITE-DECEL`.
+
+Kaynak kodunu değiştirmeden yeni senaryolar da tanımlanabilir:
+1. **Etkileşimli Arayüz**: Simülasyon ekranında `BAŞLANGIÇ`, `HEDEF`, `STATİK ENGEL` ve `GEOMETRİ` düğmeleriyle konumlar ve engeller düzenlenebilir.
+2. **Özel JSON Senaryo Dosyası**: [`examples/custom_scenario_example.json`](examples/custom_scenario_example.json) şablonu düzenlenerek çalıştırılabilir (`load_scenario_from_json` sınır dışı, `NaN`, engel çakışması ve hız sınırlarını doğrular):
+
+```powershell
+python main.py --scenario-json examples/custom_scenario_example.json
+```
 
 ## 7. Güvenlik ve Çarpışma Kontrolü
 
@@ -52,16 +60,37 @@ DYNAMIC-NAV/
 
 ## 8. Kurulum ve Çalıştırma
 
-**Python 3.12.10** ortamında [`requirements.txt`](requirements.txt) (`pygame>=2.5.0`, `numpy>=1.26.0`, `matplotlib>=3.8.0`, `pytest>=8.0.0`) ile doğrulanmıştır:
+**Python 3.12.10** ortamında [`requirements.txt`](requirements.txt) ile doğrulanmıştır (test edilen sürümler: `pygame 2.6.1`, `numpy 2.5.5`, `matplotlib 3.11.2`, `pytest 9.2.0`; `shapely` veya `opencv-python` kullanılmamaktadır).
+
+### Windows (PowerShell)
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\activate
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 python main.py
 ```
 
-Başsız (Headless) ortamlar için `$env:SDL_VIDEODRIVER = "dummy"` ayarlanarak çalıştırılabilir.
+### Linux / macOS (bash / zsh)
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+python main.py
+```
+
+### Başsız (Headless) Ortam Değişkenleri ve Sorun Giderme
+
+- **SDL/Pygame Ortam Değişkenleri** (ekran/ses sunucusu olmayan ortamlarda):
+  - Windows PowerShell: `$env:SDL_VIDEODRIVER = "dummy"; $env:SDL_AUDIODRIVER = "dummy"`
+  - Linux / macOS: `export SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy`
+- **Olası Hatalar ve Çözümleri**:
+  - *PowerShell script execution policy hatası*: `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` çalıştırıp `.venv\Scripts\Activate.ps1` komutunu tekrarlayın.
+  - *`No available video device` (Linux/CI)*: `SDL_VIDEODRIVER=dummy` değişkenini tanımlayın.
+  - *`ModuleNotFoundError: config`*: Komutları depo kök dizininden (`DYNAMIC-NAV/`) çalıştırın.
 
 ## 9. Test Komutları ve Güncel Test Sonucu
 
@@ -71,8 +100,13 @@ Tüm test paketini çalıştırmak için:
 python -m pytest -v
 ```
 
-- **Yerel Tam Test Paketi**: **`202 passed`**, `0 failed`, `0 skipped` (`467.93 s`).
-- **GitHub Actions CI ([`.github/workflows/tests.yml`](.github/workflows/tests.yml))**: **`202 passed`**, `0 failed`, `0 skipped` (`Python 3.12`, `ubuntu-latest`).
+- **Yerel Tam Test Paketi**: **`206 passed`**, `0 failed`, `0 skipped` (`467.93 s`).
+- **GitHub Actions CI ([`.github/workflows/tests.yml`](.github/workflows/tests.yml))**: **`206 passed`**, `0 failed`, `0 skipped` (`Python 3.12`, `ubuntu-latest`).
+
+### Bağımlılıklar ve Kaynakça
+
+- **Kullanılan Kütüphaneler**: `Python 3.12.10`, `pygame 2.6.1`, `numpy 2.5.5`, `matplotlib 3.11.2`, `pytest 9.2.0`.
+- **Harici Kod / Kullanılmayan Kütüphaneler**: `shapely` ve `opencv-python` kullanılmamaktadır. `PythonRobotics` veya başka harici bir projeden doğrudan kod kopyalanmamıştır; A\*, DWA ve fizik motoru tamamen özgün olarak geliştirilmiştir.
 
 ## 10. Deneysel Sonuçlar
 
