@@ -98,5 +98,7 @@ Detaylı deneysel özet için [`docs/Deneysel_Sonuclar.md`](docs/Deneysel_Sonucl
 ## 13. Ekip Bilgileri
 
 - **Kurum:** Sakarya Uygulamalı Bilimler Üniversitesi — Elektrik-Elektronik Mühendisliği
+- **Danışman:** Doç. Dr. Ali Furkan Kamanlı
 - **Proje Ekibi:** Eren Çakmaz, Ahmet Gürlek, Arda Başaran
-- **Danışman / Teslim Tarihi / İmzalar:** [`docs/Ekip_Katki_Tablosu.md`](docs/Ekip_Katki_Tablosu.md) içinde `[EKİP ONAYI GEREKLİ]` olarak insan onayı beklemektedir.
+- **Teslim Tarihi:** 24 Kasım 2026
+- **Görev Dağılımı ve Onaylar:** [`docs/Ekip_Katki_Tablosu.md`](docs/Ekip_Katki_Tablosu.md) | [`docs/AI_Kullanim_Beyani.md`](docs/AI_Kullanim_Beyani.md)

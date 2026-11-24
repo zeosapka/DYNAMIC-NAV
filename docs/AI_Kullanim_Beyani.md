@@ -3,6 +3,8 @@
 **Kurum:** Sakarya Uygulamalı Bilimler Üniversitesi — Elektrik-Elektronik Mühendisliği  
 **Proje:** DYNAMIC-NAV — Dinamik Engellerden Kaçınan Mobil Robot Simülasyon Sistemi  
 **Proje Ekibi:** Eren Çakmaz, Ahmet Gürlek, Arda Başaran  
+**Danışman:** Doç. Dr. Ali Furkan Kamanlı  
+**Teslim Tarihi:** 24 Kasım 2026
 
 ---
 
@@ -22,4 +24,4 @@ Bu belge, DYNAMIC-NAV projesinin geliştirme, dokümantasyon, test değerlendirm
 
 Tüm algoritmalar, simülasyon fiziği ve güvenlik kısıtları proje ekibi tarafından çalıştırılarak doğrulanmıştır. Projeye ilişkin tüm teknik kararlar, test onayları ve nihai teslim sorumluluğu **Eren Çakmaz**, **Ahmet Gürlek** ve **Arda Başaran**'a aittir.
 
-- **İmza / Tarih:** `[EKİP ONAYI GEREKLİ]`
+- **Ekip Onayı:** Onaylandı — Eren Çakmaz, Ahmet Gürlek, Arda Başaran (24 Kasım 2026)
