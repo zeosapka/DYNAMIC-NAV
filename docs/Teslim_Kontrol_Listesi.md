@@ -30,3 +30,11 @@
 | 8 | **AI Kullanım Beyanı (MD + PDF, 1 sayfa)** | [`AI_Kullanim_Beyani.md`](AI_Kullanim_Beyani.md), [`AI_Kullanim_Beyani.pdf`](AI_Kullanim_Beyani.pdf) (`1` sayfa A4) | **TAMAMLANDI** |
 | 9 | **Ekip Katkı Tablosu (MD + PDF, 1 sayfa)** | [`Ekip_Katki_Tablosu.md`](Ekip_Katki_Tablosu.md), [`Ekip_Katki_Tablosu.pdf`](Ekip_Katki_Tablosu.pdf) (`1` sayfa A4, tüm ekip onayları tamamlandı) | **TAMAMLANDI** |
 | 10 | **Arşivlenmiş Ara Sürümler** | `archive/demo_versions/` (3 ara video), `archive/historical_reports/` (`phase71_akademik_rapor.*`, `phase73_rapor.md`) | **TAMAMLANDI** |
+
+---
+
+## 3. GitHub Deposu ve Teslim Paketi Erişimi
+
+- **GitHub Deposu:** [https://github.com/zeosapka/DYNAMIC-NAV](https://github.com/zeosapka/DYNAMIC-NAV)
+
+Teslim edilen `DYNAMIC-NAV_delivery.zip` arşivi ile yukarıdaki GitHub deposu birbirini tamamlayan iki erişim noktasıdır: ZIP paketi çevrimdışı inceleme ve arşivleme için tam teslim içeriğini sunarken, GitHub deposu kaynak kodlara, geliştirme geçmişine, dokümantasyona ve güncel sürüme çevrimiçi erişim sağlar.

@@ -136,3 +136,9 @@ Detaylı deneysel özet için [`docs/Deneysel_Sonuclar.md`](docs/Deneysel_Sonucl
 - **Proje Ekibi:** Eren Çakmaz, Ahmet Gürlek, Arda Başaran
 - **Teslim Tarihi:** 24 Kasım 2026
 - **Görev Dağılımı ve Onaylar:** [`docs/Ekip_Katki_Tablosu.md`](docs/Ekip_Katki_Tablosu.md) | [`docs/AI_Kullanim_Beyani.md`](docs/AI_Kullanim_Beyani.md)
+
+## 14. Proje Deposu (GitHub Repository)
+
+- **GitHub Deposu:** [https://github.com/zeosapka/DYNAMIC-NAV](https://github.com/zeosapka/DYNAMIC-NAV)
+
+Projenin tüm kaynak kodlarına, geliştirme geçmişine, dokümantasyonuna ve güncel sürümüne bu GitHub deposu üzerinden erişilebilir.
