@@ -24,7 +24,20 @@
     "no_invented_individual_achievements": true,
     "individual_git_attribution_available": false,
     "items_marked_for_team_confirmation": true,
-    "source_code_tests_and_demo_video_untouched": true
+    "source_code_tests_and_demo_video_untouched": false,
+    "latest_main_commit": "e3b6ac3",
+    "latest_pytest_passed": 202,
+    "latest_pytest_total": 202,
+    "github_actions_ci_passed": true,
+    "do01_resolved": {
+      "variant_id": "CORRIDOR__L1-DO-01__02",
+      "goal_reached": true,
+      "physical_collision_episode_count": 0,
+      "safety_margin_violation_episode_count": 0,
+      "min_swept_m": 0.165947,
+      "completion_time_s": 18.5,
+      "deterministic": true
+    }
   },
   "pending_team_or_submission_items": [
     "Ekip üyelerinin bireysel sorumluluk paylaşımı için yazılı imzalı onayı ([EKİP ONAYI GEREKLİ])",

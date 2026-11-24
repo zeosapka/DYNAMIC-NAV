@@ -75,15 +75,17 @@ In `algorithms/dwa.py` (`_find_reverse_candidates`, lines `2219–2223`), when `
    - Skips `score_trajectory` over the stale `self._path_world_m` while `abort_hold_active` is `True`.
    - Selects non-accelerating `is_safe=True` braking candidates (`ABORT_HOLD_BRAKING`) toward `target_brake_v = max(window.v_min_mps, min(0.0, window.v_max_mps))`, skips `Priority 2` forward recovery, falls through to `Priority 3/4` if braking is unavailable, and enforces non-accelerating deceleration toward `target_brake_v` in the post-`Priority 4` `collision_free` fallback.
 
-### 5.2 Recorded Final Test Results (`202 / 202` passed)
+### 5.2 Recorded Final Test Results (`202 / 202` passed on `main` @ `e3b6ac3`)
 - `tests/test_corridor_passing_state_machine.py`: **5 passed**
 - `tests/test_phase62_safe_waiting_reverse.py`: **17 passed** (including `CORRIDOR-False`, resolved via hysteresis guard in `PASSING_ARMED`/`PASSING_ACTIVE`)
 - `tests/test_phase654_corridor_passing.py`: **9 passed**
 - `tests/test_phase6553_narrow_gate_standoff.py`: **7 passed**
 - `tests/test_phase80_reproduction.py`: **6 passed** (including `CORRIDOR__L1-DO-01__02`)
-- Full suite (`python -m pytest -v`): **202 passed** (`467.93 s`, `0` failed)
+- Full suite (`python -m pytest -v`, local): **202 passed** (`467.93 s`, `0` failed)
+- GitHub Actions CI (`Pytest (Python 3.12)`, Run `45395241408` on `e3b6ac3`): **202 passed** (`176.40 s`, `0` failed)
 
-### 5.3 `CORRIDOR__L1-DO-01__02` Root Cause & Resolution
+### 5.3 `CORRIDOR__L1-DO-01__02` Prior Failures, Root Cause & Resolution
+- **Prior Failure Record**: On `cf348a3` (historical baseline), `DO-01` failed with `min_swept_m = -0.036039 m`; intermediate `ABORT_HOLD` hardening without side-commitment recorded `-0.003664 m` and `-0.040569 m` (`COLLISION_ABORT`).
 - **Root Cause**: During active passing (`PASSING_ACTIVE` on the lower/right lane at `y = 7.09 m`), a replan at `t = 14.40 s` switched sides to `"left"` (above `y = 7.50 m`) solely because `"left"` had higher 1.2 s constant-velocity predicted clearance (`0.524 m` vs `0.334 m`), steering the robot across `y = 7.50 m` right before `d0` reversed at `t = 15.00 s`.
 - **Fix (`algorithms/corridor_passing.py`)**: Added `keep_committed_side` priority in `generate_and_validate_candidates` when `self._passing_state in (PASSING_ARMED, PASSING_ACTIVE)` so an already-committed, still-valid (`accepted=True`) passing side is preserved rather than crossing the obstacle's centerline mid-maneuver.
 - **Verified `DO-01` Metrics**: `goal_reached=True`, `physical_collision_episode_count=0`, `safety_margin_violation_episode_count=0`, `min_swept_m=0.165947 m`, `min_clearance_m=0.165947 m`, `stop_count=1`, `replan_attempts=0` (`proactive_replans=4`), `completion_time_s=18.5 s`, deterministic (`True`).
