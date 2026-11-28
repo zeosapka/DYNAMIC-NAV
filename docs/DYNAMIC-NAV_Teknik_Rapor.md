@@ -11,7 +11,7 @@
 
 Otonom mobil robotların dinamik, dar ve kısmen öngörülemez ortamlarda güvenli biçimde gezinmesi; algılama kısıtları, kinematik sınırlar ve hesaplama zaman bütçesi nedeniyle önemli bir mühendislik problemidir. Bu çalışmada, iki boyutlu sürekli uzayda diferansiyel sürüşlü bir mobil robotun statik ve hareketli engellerden çarpışmasız kaçınmasını sağlayan **DYNAMIC-NAV** simülasyon ve navigasyon sistemi tasarlanmış, iyileştirilmiş ve doğrulanmıştır. Sistem; katı Uluslararası Birimler Sistemi (SI) disiplinine sahip deterministik bir fizik çekirdeği (`simulation/`), kesin Öklid engel şişirmeli 8-yönlü A\* küresel yol planlayıcısı (`algorithms/astar.py`), proaktif yan-geçiş durum makinesi (`algorithms/corridor_passing.py`), nedensel gözlem hattı (`algorithms/observation.py`) ve sürekli süpürme açıklığı doğrulamalı Dinamik Pencere Yaklaşımı (DWA) yerel planlayıcısını (`algorithms/dwa.py`) bütünleştirmektedir.
 
-Algoritma geliştirme süreci Faz 5.0 (`ASTAR_DWA` `3/5` başarı, `2` çarpışma) ve Faz 6.2 (`6/6` başarı, `0` çarpışma, `SUDDEN-STOP`'ta `0,1390 m` güvenlik payı ihlali) üzerinden Faz 6.5.5 (`120` varyant, `360` koşum, `%85,0` başlangıç başarısı) dayanıklılık taramasıyla ilerletilmiştir. Faz 6.5.6 tarihsel doğrulamasında `191/191` `pytest` testi (`175,52 s`), `8/8` temel senaryo (`min_swept = 0,152024 m`) ve `14/14` `NARROW-GATE` Seviye 1 varyantı (`42` koşum, `min_swept = 0,150019 m`, `%100` determinizm) sıfır çarpışma ve sıfır güvenlik payı ihlaliyle (`>= 0,150000 m`) tamamlanmıştır. Devamındaki Faz 8.0 sertleştirmesiyle `CorridorPassingManager` durum makinesi (`PASSING_ARMED`, `PASSING_ACTIVE`, `ABORT_HOLD`, `keep_committed_side`) ve `DWAPlanner` izole `ABORT_HOLD` frenleme koruması eklenmiş; güncel `main` dalında yerel tam test paketi (`456,42 s` / `467,93 s`) ve GitHub Actions CI (`Pytest (Python 3.12)`, `190,96 s`) **`202/202`** başarıyla geçmiş, `CORRIDOR__L1-DO-01__02` senaryosu `0` çarpışma, `0` pay ihlali ve `min_swept = 0,165947 m` ile tamamlanmıştır. Gerçek-zaman garantisi ve fiziksel robot donanım testi iddia edilmemektedir.
+Algoritma geliştirme süreci Faz 5.0 (`ASTAR_DWA` `3/5` başarı, `2` çarpışma) ve Faz 6.2 (`6/6` başarı, `0` çarpışma, `SUDDEN-STOP`'ta `0,1390 m` güvenlik payı ihlali) üzerinden Faz 6.5.5 (`120` varyant, `360` koşum, `%85,0` başlangıç başarısı) dayanıklılık taramasıyla ilerletilmiştir. Faz 6.5.6 tarihsel doğrulamasında `191/191` `pytest` testi (`175,52 s`), `8/8` temel senaryo (`min_swept = 0,152024 m`) ve `14/14` `NARROW-GATE` Seviye 1 varyantı (`42` koşum, `min_swept = 0,150019 m`, `%100` determinizm) sıfır çarpışma ve sıfır güvenlik payı ihlaliyle (`>= 0,150000 m`) tamamlanmıştır. Faz 8.0 sertleştirmesiyle `CorridorPassingManager` durum makinesi (`PASSING_ARMED`, `PASSING_ACTIVE`, `ABORT_HOLD`, `keep_committed_side`) ve `DWAPlanner` frenleme koruması eklenmiş; bu raporda kaydedilen tarihsel yerel ve GitHub Actions koşularında **`202/202`** test geçmiştir. Bu incelemede, mevcut çalışma kopyasında `python -m pytest -v` komutuyla **`206/206`** testin `225,85 s` içinde geçtiği ayrıca gözlenmiştir. Bu yeni yerel koşu, tarihsel CI sonucunu değiştirmez. `CORRIDOR__L1-DO-01__02` senaryosunun tarihsel sonucu `0` çarpışma, `0` güvenlik payı ihlali ve `min_swept = 0,165947 m`'dir. Gerçek-zaman garantisi ve fiziksel robot donanım testi iddia edilmemektedir.
 
 **Anahtar Kelimeler:** Mobil Robot Navigasyonu, Dinamik Engel Kaçınması, A\* Yol Planlama, Dinamik Pencere Yaklaşımı (DWA), Sürekli Süpürme Açıklığı, Deterministik Simülasyon.
 
@@ -152,8 +152,9 @@ Faz 6.5.6 `NARROW-GATE` Seviye 1 dayanıklılık testlerinde (`14` varyant × `3
 ### 6.3. Nihai Sertleştirme ve `DO-01` Doğrulaması (`main`)
 
 Faz 8.0 kapsamında `CorridorPassingManager` durum makinesi (`PASSING_ARMED`, `PASSING_ACTIVE`, `ABORT_HOLD`, çoklu engel takibi, reversal cooldown aşımı, `keep_committed_side`) ve `DWAPlanner` izole `ABORT_HOLD` frenleme koruması uygulanmıştır. Güncel `main` dalında:
-- **Yerel Tam Test Paketi (`python -m pytest -v`)**: **`202/202` PASSED** (`456,42 s`, `0` failed, `0` skipped).
-- **GitHub Actions CI (`Pytest (Python 3.12)`)**: **`202/202` PASSED** (`190,96 s`, `0` failed, `0` skipped).
+- **Tarihsel yerel tam test paketi (`python -m pytest -v`)**: **`202/202` PASSED** (`456,42 s`, `0` failed, `0` skipped).
+- **Tarihsel GitHub Actions CI (`Pytest (Python 3.12)`)**: **`202/202` PASSED** (`190,96 s`, `0` failed, `0` skipped).
+- **Bu incelemede mevcut çalışma kopyasında çalıştırılan yerel paket**: **`206/206` PASSED** (`225,85 s`, `0` failed, `0` skipped).
 - **`CORRIDOR__L1-DO-01__02` (`obs_speed_scale = 1,15`)**: Önceki `COLLISION_ABORT` (`-0,036039 m` / `-0,040569 m`) hatası `keep_committed_side` ile giderilmiş; **`goal_reached = True`**, **`0` çarpışma**, **`0` güvenlik payı ihlali**, **`min_swept_m = 0,165947 m`**, **`completion_time_s = 18,5 s`**, **`%100` determinizm** doğrulanmıştır (**Şekil 4**).
 
 ![Şekil 4. DO-01 Nihai Yörünge ve Sürekli Süpürme Açıklığı Profili](figures/fig4_do01_trajectory_and_clearance.png)
@@ -167,7 +168,7 @@ Faz 8.0 kapsamında `CorridorPassingManager` durum makinesi (`PASSING_ARMED`, `P
 
 ## 8. Sonuç
 
-DYNAMIC-NAV, Faz 5.0'daki çarpışmalardan Faz 6.5.6 tarihsel denetimine (`191/191`) ve ardından Faz 8.0 nihai sertleştirmesiyle `main` dalında **`202/202`** `pytest` başarısına (yerel ve GitHub Actions `Pytest (Python 3.12)`) ulaştırılmış; `CORRIDOR-False` ve `CORRIDOR__L1-DO-01__02` senaryoları sıfır çarpışma, sıfır güvenlik payı ihlali ve `%100` determinizmle doğrulanmıştır.
+DYNAMIC-NAV, Faz 5.0'daki çarpışmalardan Faz 6.5.6 tarihsel denetimine (`191/191`) ve ardından Faz 8.0 sertleştirme kayıtlarındaki `202/202` yerel/CI test başarısına ulaşmıştır. Mevcut çalışma kopyasında yapılan ek yerel doğrulamada `206/206` test geçmiştir. `CORRIDOR-False` ve `CORRIDOR__L1-DO-01__02` tarihsel senaryoları sıfır çarpışma, sıfır güvenlik payı ihlali ve `%100` determinizmle doğrulanmıştır.
 
 ## 9. Kaynaklar
 

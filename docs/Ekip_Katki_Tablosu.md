@@ -16,8 +16,10 @@ DYNAMIC-NAV projesi **Eren Çakmaz**, **Ahmet Gürlek** ve **Arda Başaran** tar
 
 ## 2. Proje Görev Dağılımı
 
-| Ekip Üyesi | Odak Alanı | İlgili Modüller ve Çıktılar | Onay Durumu |
+| Ekip Üyesi | Odak Alanı ve Çıktılar | Karşılaşılan Teknik Sorun ve Çözüm | Onay Durumu |
 |---|---|---|---|
-| **Eren Çakmaz** | Algoritma ve Planlama | `algorithms/astar.py`, `algorithms/dwa.py`, `algorithms/corridor_passing.py`, küresel/yerel yol planlama ve `ABORT_HOLD` güvenliği | Onaylandı |
-| **Ahmet Gürlek** | Simülasyon ve Test | `config.py`, `simulation/`, `tests/`, kinematik model, dinamik engel senaryoları ve `206/206` `pytest` doğrulaması | Onaylandı |
-| **Arda Başaran** | Arayüz, Entegrasyon ve Dokümantasyon | `interface/`, `analysis/`, `README.md`, Türkçe arayüz entegrasyonu, demo videosu (`229.73 s`) ve akademik raporlama | Onaylandı |
+| **Eren Çakmaz** | Algoritma ve Planlama: `algorithms/astar.py`, `algorithms/dwa.py`, `algorithms/corridor_passing.py`; küresel/yerel planlama ve `ABORT_HOLD` güvenliği | Izgara yolu engel köşelerinde gerekli açıklığı tek başına garanti etmiyordu; engel şişirme ve sürekli segment açıklığı kontrolleri eklendi. Dinamik engellerin koridor geçişini bozduğu durumlar için geçiş durum makinesi ve şerit bağlılığı geliştirildi. | Onaylandı |
+| **Ahmet Gürlek** | Simülasyon ve Test: `config.py`, `simulation/`, `tests/`; kinematik model ve dinamik engel senaryoları | Zaman adımı sınırlarında dinamik engel dur/kalk geçişlerinde zamanlama ve tekrar üretilebilirlik sorunları ele alındı; `dt_s` tabanlı geçiş hesabı ve regresyon testleri kullanıldı. Senaryo ve hız/geometri sınırları için girdi doğrulaması eklendi. | Onaylandı |
+| **Arda Başaran** | Arayüz, Entegrasyon ve Dokümantasyon: `interface/`, `analysis/`, `README.md`; demo (`229.73 s`) ve teknik raporlama | Anlık açıklık tek başına adımlar arasındaki olası çarpışmayı göstermiyordu; deney analizine süpürülmüş açıklık ve çarpışma/güvenlik payı ayrımı eklendi. Test ve deney sonuçları raporlanabilir metriklerle dışa aktarıldı. | Onaylandı |
+
+Sorun ve çözüm örnekleri ekip görev alanları ile proje test/analiz kayıtlarından derlenmiştir; tabloda kişisel hata sahipliği iddia edilmemektedir. Ekip üyeleri teslim öncesinde kendi katkı anlatımlarını doğrulamalıdır.

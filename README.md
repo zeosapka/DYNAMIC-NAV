@@ -92,7 +92,7 @@ python main.py
   - *`No available video device` (Linux/CI)*: `SDL_VIDEODRIVER=dummy` değişkenini tanımlayın.
   - *`ModuleNotFoundError: config`*: Komutları depo kök dizininden (`DYNAMIC-NAV/`) çalıştırın.
 
-## 9. Test Komutları ve Güncel Test Sonucu
+## 9. Test Komutları ve Doğrulama Sonuçları
 
 Tüm test paketini çalıştırmak için:
 
@@ -100,8 +100,8 @@ Tüm test paketini çalıştırmak için:
 python -m pytest -v
 ```
 
-- **Yerel Tam Test Paketi**: **`206 passed`**, `0 failed`, `0 skipped` (`467.93 s`).
-- **GitHub Actions CI ([`.github/workflows/tests.yml`](.github/workflows/tests.yml))**: **`206 passed`**, `0 failed`, `0 skipped` (`Python 3.12`, `ubuntu-latest`).
+- **Bu çalışma kopyasında yerel tam test paketi**: **`206 passed`**, `0 failed`, `0 skipped` (`pytest 9.2.0`, Python 3.12.10).
+- **Tarihsel GitHub Actions CI ([`.github/workflows/tests.yml`](.github/workflows/tests.yml))**: Commit `e3b6ac3` ve `11afc39` üzerindeki doğrulamalarda **`202 passed`**, `0 failed`, `0 skipped` (`Python 3.12`, `ubuntu-latest`). Bu `206` testlik yerel çalıştırma için henüz CI sonucu raporlanmamıştır.
 
 ### Bağımlılıklar ve Kaynakça
 

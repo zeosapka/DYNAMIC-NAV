@@ -5,12 +5,14 @@
 
 ---
 
-## 1. Güncel Tam Test Paketi ve CI Doğrulaması (`202/202`)
+## 1. Test Paketi ve CI Doğrulaması
 
-- **Yerel Tam Paket (`python -m pytest -v`)**: **`202 passed`**, `0` failed, `0` skipped (`467,93 s`).
-- **GitHub Actions CI (`Pytest (Python 3.12)`)**:
+- **Bu incelemede mevcut çalışma kopyasında yerel çalıştırma (`python -m pytest -v`)**: **`206 passed`**, `0` failed, `0` skipped (`225,85 s`).
+- **Tarihsel GitHub Actions CI (`Pytest (Python 3.12)`)**:
   - Commit `e3b6ac3` (Run `45395241408`): **`202 passed`**, `0` failed, `0` skipped (`176,40 s`).
   - Commit `11afc39` (Run `45397374119`): **`202 passed`**, `0` failed, `0` skipped (`218,45 s`).
+
+Önceki yerel `202` test kaydı tarihsel olarak korunmuştur; yukarıdaki `206` sonucu bu inceleme sırasında alınan yeni yerel çalıştırmaya aittir. Bu yeni çalıştırmaya karşılık gelen bir CI koşusu bu belgede raporlanmamaktadır.
 
 ---
 

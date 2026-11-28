@@ -26,7 +26,7 @@
 | 4 | **Deneysel Sonuçlar Özeti** | [`Deneysel_Sonuclar.md`](Deneysel_Sonuclar.md) + `analysis/results/` ham JSON/CSV kanıtları | **TAMAMLANDI** |
 | 5 | **Genellenebilirlik & Örnek Senaryo JSON** | [`examples/custom_scenario_example.json`](../examples/custom_scenario_example.json) + `main.py --scenario-json` | **TAMAMLANDI** |
 | 6 | **Nihai Demo Videosu (3–5 dk)** | [`Demo_Video.mp4`](Demo_Video.mp4) (`229.73 s` = `03:49.73`, `1920x1080`, Türkçe ses + altyazı) | **TAMAMLANDI** |
-| 7 | **Otomatik Testler & CI** | `tests/` — **`206` `pytest`** (yerel + GitHub Actions `Pytest (Python 3.12)`) | **TAMAMLANDI** |
+| 7 | **Otomatik Testler & CI** | `tests/` — mevcut çalışma kopyasında **`206` yerel `pytest` testi geçti**; tarihsel GitHub Actions kayıtlarında **`202` test geçti** (`Python 3.12`) | **TAMAMLANDI** |
 | 8 | **AI Kullanım Beyanı (MD + PDF, 1 sayfa)** | [`AI_Kullanim_Beyani.md`](AI_Kullanim_Beyani.md), [`AI_Kullanim_Beyani.pdf`](AI_Kullanim_Beyani.pdf) (`1` sayfa A4) | **TAMAMLANDI** |
 | 9 | **Ekip Katkı Tablosu (MD + PDF, 1 sayfa)** | [`Ekip_Katki_Tablosu.md`](Ekip_Katki_Tablosu.md), [`Ekip_Katki_Tablosu.pdf`](Ekip_Katki_Tablosu.pdf) (`1` sayfa A4, tüm ekip onayları tamamlandı) | **TAMAMLANDI** |
 | 10 | **Arşivlenmiş Ara Sürümler** | `archive/demo_versions/` (3 ara video), `archive/historical_reports/` (`phase71_akademik_rapor.*`, `phase73_rapor.md`) | **TAMAMLANDI** |
